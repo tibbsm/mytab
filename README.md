@@ -103,3 +103,13 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+
+### Notes
+* https://developer.chrome.com/docs/extensions/ 
+* https://github.com/GoogleChrome/chrome-extensions-samples
+* https://svelte.dev/tutorial/basics
+* https://github.com/nodegui/svelte-nodegui
+* https://dev.to/paulasantamaria/creating-a-simple-chrome-extension-36m
+* https://maurogarcia.dev/maurogarcia.dev/posts/how-to-build-your-next-chrome-extension-with-svelte/
+
