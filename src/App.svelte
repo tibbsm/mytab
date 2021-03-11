@@ -13,6 +13,14 @@
 	QUOTA_BYTES number 102400
 	* Storage Size QUOTA_BYTES_PER_ITEM number 8192
 
+	[] Move todos to README or something
+	[] Store completed task
+	[] Reurring tasks
+	[] Notes
+		[] 	Storable
+	[] Deal with memory limits on google
+		[] Download | Backup to Drive | ...App
+		
  -->
 <script>
     let newItem = '';
