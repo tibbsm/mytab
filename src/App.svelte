@@ -1,3 +1,19 @@
+<!-- 
+	TODOs
+	[] Done list
+		[] Done list per day or something
+
+20210101: [{},{},...],
+20210102: [{},{},...]
+
+	[] Add storage listener
+		* chrome.storage.onChanged.addListener(function(changes, namespace) 
+	
+	* TOTAL Storage Size 
+	QUOTA_BYTES number 102400
+	* Storage Size QUOTA_BYTES_PER_ITEM number 8192
+
+ -->
 <script>
     let newItem = '';
 	
