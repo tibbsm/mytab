@@ -20,16 +20,21 @@
 		[] 	Storable
 	[] Deal with memory limits on google
 		[] Download | Backup to Drive | ...App
-		
+
  -->
 <script>
     let newItem = '';
 	
     let todoList = [];
+	let doneList = [];
 	
 	chrome.storage.sync.get(["todos"], function(items){
 		if (items['todos'] && Array.isArray(JSON.parse(items['todos'])))
 			todoList = JSON.parse(items['todos']);
+	});
+	chrome.storage.sync.get(["done"], function(items){
+		if (items['done'] && Array.isArray(JSON.parse(items['done'])))
+			doneList = JSON.parse(items['done']);
 	});
 
 	function addToList() {
@@ -46,6 +51,11 @@
 
 	function updateList(index) {
 		todoList[index].status = !todoList[index].status;
+		if (todoList[index].status) {
+			doneList.append(todoList[index])
+			todoList.splice(index, 1);
+			todoList = todoList;
+		}
 		chrome.storage.sync.set({ "todos": JSON.stringify(todoList) });
 	}
 
