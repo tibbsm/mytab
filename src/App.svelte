@@ -27,8 +27,12 @@
 <script>
     let newItem = '';
 	
-    let todoList = [];
-	let doneList = [];
+    let todoList = [
+		{text: 'testTodo', status: false}
+	];
+	let doneList = [
+		{text: 'testDone', status: true}
+	];
 	
 	// chrome.storage.sync.get(["todos"], function(items){
 	// 	if (items['todos'] && Array.isArray(JSON.parse(items['todos'])))
