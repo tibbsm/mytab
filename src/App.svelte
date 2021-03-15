@@ -27,33 +27,35 @@
 <script>
     let newItem = '';
 	
-    let todoList = [
-		{text: 'testTodo', status: false}
-	];
-	let doneList = [
-		{text: 'testDone', status: true}
-	];
+    let todoList = [];
+	let doneList = [];
 	
-	// chrome.storage.sync.get(["todos"], function(items){
-	// 	if (items['todos'] && Array.isArray(JSON.parse(items['todos'])))
-	// 		todoList = JSON.parse(items['todos']);
-	// });
-	// chrome.storage.sync.get(["done"], function(items){
-	// 	if (items['done'] && Array.isArray(JSON.parse(items['done'])))
-	// 		doneList = JSON.parse(items['done']);
-	// 	console.log(doneList)
-	// });
+	chrome.storage.sync.get(["todos"], function(items){
+		if (items['todos'] && Array.isArray(JSON.parse(items['todos'])))
+			todoList = JSON.parse(items['todos']);
+	});
+	chrome.storage.sync.get(["done"], function(items){
+		if (items['done'] && Array.isArray(JSON.parse(items['done'])))
+			doneList = JSON.parse(items['done']);
+		console.log(doneList)
+	});
 
 	function addToList() {
 		todoList = [...todoList, {text: newItem, status: false}];
 		newItem = '';
-		// chrome.storage.sync.set({ "todos": JSON.stringify(todoList) });
+		chrome.storage.sync.set({ "todos": JSON.stringify(todoList) });
 	}
 	
 	function removeFromList(index) {
 		todoList.splice(index, 1);
 		todoList = todoList;
-		// chrome.storage.sync.set({ "todos": JSON.stringify(todoList) });
+		chrome.storage.sync.set({ "todos": JSON.stringify(todoList) });
+    }
+
+	function removeFromDone(index) {
+		doneList.splice(index, 1);
+		doneList = doneList;
+		chrome.storage.sync.set({ "done": JSON.stringify(doneList) });
     }
 
 	function updateList(index) {
@@ -64,8 +66,20 @@
 			todoList = todoList;
 			doneList = doneList;
 		}
-		// chrome.storage.sync.set({ "todos": JSON.stringify(todoList) });
-		// chrome.storage.sync.set({ "done": JSON.stringify(doneList) });
+		chrome.storage.sync.set({ "todos": JSON.stringify(todoList) });
+		chrome.storage.sync.set({ "done": JSON.stringify(doneList) });
+	}
+
+	function undoDone(index) {
+		doneList[index].status = !doneList[index].status;
+		if (!doneList[index].status) {
+			todoList.push(doneList[index])
+			doneList.splice(index, 1);
+			doneList = doneList;
+			todoList = todoList;
+		}
+		chrome.storage.sync.set({ "todos": JSON.stringify(doneList) });
+		chrome.storage.sync.set({ "done": JSON.stringify(todoList) });
 	}
 
 	// chrome.storage.sync.clear(function(){ console.log('cleared') });
@@ -92,6 +106,8 @@
 <br/>
 {#each doneList as item, index}
 	<span class:checked={item.status}>✅ {item.text}</span>
+	<span on:click={() => removeFromDone(index)}>❌</span>
+	<span on:click={() => undoDone(index)}>◀︎</span>
 	<br/>
 {/each} 
 
