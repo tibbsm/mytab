@@ -23,6 +23,9 @@
 	[] Add way to dev on this easier?
 		* At least on the functionality part anyways. The storage is a bit more straight forward.
 
+
+	[] WYSIWYT Editor that saves
+		[] Debounced saves & save button
  -->
 <script>
     let newItem = '';
