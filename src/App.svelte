@@ -26,6 +26,7 @@
 
 	[] WYSIWYT Editor that saves
 		[] Debounced saves & save button
+	[] Create seperate file for todos, wysiwyt editor, etc..
  -->
 <script>
     let newItem = '';
@@ -40,7 +41,6 @@
 	chrome.storage.sync.get(["done"], function(items){
 		if (items['done'] && Array.isArray(JSON.parse(items['done'])))
 			doneList = JSON.parse(items['done']);
-		console.log(doneList)
 	});
 
 	function addToList() {
