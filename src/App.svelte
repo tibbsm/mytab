@@ -27,6 +27,7 @@
 	[] WYSIWYT Editor that saves
 		[] Debounced saves & save button
 	[] Create seperate file for todos, wysiwyt editor, etc..
+	[] Calendar of todos past (recent)
  -->
 <script>
     let newItem = '';
