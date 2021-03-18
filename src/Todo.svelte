@@ -39,8 +39,8 @@
 		doneList[index].status = !doneList[index].status;
 		if (!doneList[index].status) {
 			todoList.push(...doneList.splice(index, 1))
-			// doneList = doneList;
-			// todoList = todoList;
+			doneList = doneList;
+			todoList = todoList;
 		}
         saveLists({ "todos": todoList, "done": doneList });
 	}
