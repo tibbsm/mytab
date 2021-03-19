@@ -2,48 +2,29 @@
 <script>
     let newItem = '';
 	
-    let todoList = [];
-	let doneList = [];
+    let todos = [];
+    $: todoList = todos.filter(todo => !todo.status);
+    $: doneList = todos.filter(todo => todo.status);
 	
     initializeTodos();
 
 	function addToList() {
-		todoList = [...todoList, {text: newItem, status: false}];
+		todos = [
+            ...todos, 
+            {
+                id: Date.now().toString(),
+                text: newItem, 
+                status: false
+            }
+        ];
 		newItem = '';
-        saveLists({"todos": todoList})
+        saveLists({"todos": todos})
 	}
 	
-	function removeFromList(index) {
-		todoList.splice(index, 1);
-		todoList = todoList;
-		saveLists({"todos": todoList})
+	function removeFromList(id) {
+		todos = todos.filter(todo => todo.id !== id);
+		saveLists({"todos": todos})
     }
-
-	function removeFromDone(index) {
-		doneList.splice(index, 1);
-		doneList = doneList;
-		saveLists({"done": doneList})
-    }
-
-	function updateList(index) {
-		todoList[index].status = !todoList[index].status;
-		if (todoList[index].status) {
-			doneList.push(...todoList.splice(index, 1))
-			todoList = todoList;
-			doneList = doneList;
-		}
-		saveLists({ "todos": todoList, "done": doneList });
-	}
-
-	function undoDone(index) {
-		doneList[index].status = !doneList[index].status;
-		if (!doneList[index].status) {
-			todoList.push(...doneList.splice(index, 1))
-			doneList = doneList;
-			todoList = todoList;
-		}
-        saveLists({ "todos": todoList, "done": doneList });
-	}
 
     function saveLists(lists) {
         chrome.storage.sync.set(
@@ -53,46 +34,56 @@
     }
 
     function initializeTodos() {
-        chrome.storage.sync.get(["todos","done"], function(items){
-            if (items['todos'] && Array.isArray(JSON.parse(items['todos'])))
-                todoList = JSON.parse(items['todos']);
-            if (items['done'] && Array.isArray(JSON.parse(items['done'])))
-                doneList = JSON.parse(items['done']);
+        chrome.storage.sync.get(["todos"], function(items){
+            console.log(items);
+            if (items['todos'] && Array.isArray(JSON.parse(items['todos']))) {
+                todos = JSON.parse(items['todos']);
+                console.log('initialized todos to: ', todos);
+            } else {
+                todos = [];
+            }
         });
     }
 
     // chrome.storage.sync.getBytesInUse(null, (bytesInUse) => console.log(bytesInUse)); // get bytes
     // chrome.storage.sync.get(null, (items) => console.log(items)); // get all
-    // chrome.storage.sync.clear(function(){ console.log('cleared') });
-    
+
+    function clear() {
+        chrome.storage.sync.clear(() => {
+            console.log('cleared');
+            initializeTodos();
+        });
+    }
 </script>
 
 <input bind:value={newItem} type="text" placeholder="new todo item..">
 <button on:click={addToList}>Add</button>
 
 <h1>To Do</h1>
-<br/>
-{#each todoList as item, index}
+{#each todoList as item}
 	<input 
-		on:change={() => updateList(index)}
+		on:change={() => item.status = !item.status }
 		bind:checked={item.status} 
 		type="checkbox"
 	>
 	<span class:checked={item.status}>{item.text}</span>
-	<span on:click={() => removeFromList(index)}>❌</span>
+	<span on:click={() => removeFromList(item.id)}>❌</span>
 	<br/>
 {/each} 
 
-<br/>
 <h1>Done!</h1>
-<br/>
-{#each doneList as item, index}
-	<span class:checked={item.status}>✅ {item.text}</span>
-	<span on:click={() => removeFromDone(index)}>❌</span>
-	<span on:click={() => undoDone(index)}>◀︎</span>
+{#each doneList as item}
+	<input 
+		on:change={() => item.status = !item.status }
+		bind:checked={item.status} 
+		type="checkbox"
+	>
+	<span class:checked={item.status}>{item.text}</span>
+	<span on:click={() => removeFromList(item.id)}>❌</span>
 	<br/>
 {/each} 
 
+<button on:click={() => clear()}>clear</button>
 
 <style> 
 	.checked {
