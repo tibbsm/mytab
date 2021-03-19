@@ -8,11 +8,15 @@
 
 	[] Add storage listener
 		* chrome.storage.onChanged.addListener(function(changes, namespace) 
-	
-	* TOTAL Storage Size 
-	QUOTA_BYTES number 102400
-	* Storage Size QUOTA_BYTES_PER_ITEM number 8192
+		* Multiple tab updates
 
+	* TOTAL Storage Size 
+		QUOTA_BYTES number 102400
+	* Storage Size 
+		QUOTA_BYTES_PER_ITEM number 8192
+		* Make these visable (green/yellow/red) and warn to backup
+
+	[] Save to Google Drive 
 	[] Move todos to README or something
 	[] Store completed task
 	[] Reurring tasks
