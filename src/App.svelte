@@ -17,6 +17,7 @@
 		* Make these visable (green/yellow/red) and warn to backup
 
 	[] Save to Google Drive 
+	
 	[] Move todos to README or something
 	[] Store completed task
 	[] Reurring tasks
