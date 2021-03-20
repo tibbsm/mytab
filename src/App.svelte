@@ -19,9 +19,10 @@
 	[] Save to Google Drive 
 	[] Move todos to README or something
 	[] Store completed task
-	[] Reurring tasks
+	[] Recurring tasks
 	[] Notes
 		[] 	Storable
+
 	[] Deal with memory limits on google
 		[] Download | Backup to Drive | ...App
 	[] Add way to dev on this easier?
