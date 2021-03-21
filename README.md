@@ -2,7 +2,6 @@
 
 A simple, customizable tab template for new tabs in chrome. 
 
-
 TODOs
 [] Done list
     [] Track todos (github style tracker)
@@ -37,3 +36,6 @@ TODOs
     * At least on the functionality part anyways. The storage is a bit more straight forward.
 
 [x] Move todos to README or something
+
+* MDN Svelte Todo 
+  * https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props

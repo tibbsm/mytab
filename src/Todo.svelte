@@ -1,4 +1,3 @@
-<!-- use this stuff https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props -->
 <script>
     let newItem = '';
 	
