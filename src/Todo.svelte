@@ -9,36 +9,28 @@
     initializeTodos();
 
 	function addToList() {
-		todos = [
-            ...todos, 
-            {
+		todos.push({
                 id: Date.now().toString(),
                 text: newItem, 
                 status: false
-            }
-        ];
+        });
 		newItem = '';
-        saveLists({"todos": todos})
+        saveTodos()
 	}
 	
 	function removeFromList(id) {
 		todos = todos.filter(todo => todo.id !== id);
-		saveLists({"todos": todos})
+		saveTodos()
     }
 
-    function saveLists(lists) {
-        chrome.storage.sync.set(
-            Object.fromEntries(Object.entries(lists).map(([k, v]) => [k, JSON.stringify(v)])),
-            () => console.log(`Saved: `, lists)
-        );
+    function saveTodos() {
+        chrome.storage.sync.set({"todos": todos});
     }
 
     function initializeTodos() {
         chrome.storage.sync.get(["todos"], function(items){
-            console.log(items);
             if (items['todos'] && Array.isArray(JSON.parse(items['todos']))) {
                 todos = JSON.parse(items['todos']);
-                console.log('initialized todos to: ', todos);
             } else {
                 todos = [];
             }
@@ -83,7 +75,7 @@
 	<br/>
 {/each} 
 
-<button on:click={() => clear()}>clear</button>
+<button on:click={() => clear()} disabled>clear</button>
 
 <style> 
 	.checked {
