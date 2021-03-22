@@ -55,9 +55,18 @@
             initializeTodos();
         });
     }
+
+    const onKeyPress = e => {
+        if (e.charCode === 13 && newItem != '') addToList();
+    };
 </script>
 
-<input bind:value={newItem} type="text" placeholder="new todo item..">
+<input 
+    bind:value={newItem} 
+    on:keypress={onKeyPress}
+    type="text" 
+    placeholder="new todo item.."
+>
 <button on:click={addToList}>Add</button>
 
 <h1>To Do ({todoList.length})</h1>
