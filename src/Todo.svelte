@@ -76,11 +76,13 @@
 		bind:checked={item.completed} 
 		type="checkbox"
 	>
+    <!-- CAN I BIND THEM? -->
     <!-- TODO ADD SAVE -->
     <!-- on:change={() => enableSave(item)} -->
 	<input 
         class:checked={item.completed} 
-        value={item.text}
+        bind:value={item.text} 
+        on:keypress={() => setTimeout(()=>saveTodos(),1)}
     >
 	<span on:click={() => removeFromList(item.id)}>❌</span>
 	<br/>

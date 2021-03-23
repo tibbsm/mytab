@@ -29,6 +29,7 @@ TODOs
 		[] Debounced saves & save button
 	[] Create seperate file for todos, wysiwyt editor, etc..
 	
+[] Limit Done list. Dont need to see all of them.
 
 [] tab friendly && shortcuts
 	* dismissable/pinnable shortcuts notes
