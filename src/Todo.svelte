@@ -10,10 +10,10 @@
 
 	function addToList() {
 		todos = [...todos, {
-                id: Date.now().toString(),
+                id: new Date().getTime(),
                 text: newItem, 
                 completed: false,
-                created_at: new Date().toDateString(),
+                created_at: new Date().getTime(),
                 complete_at: null
         }];
 		newItem = '';
@@ -42,7 +42,7 @@
     function changeStatus(todo) {
         todo.completed = !todo.completed;
         if (!todo.completed) todo.complete_at = null;
-        else todo.complete_at = new Date().toDateString();
+        else todo.complete_at = new Date().getTime();
         saveTodos();
     }
 
@@ -76,7 +76,12 @@
 		bind:checked={item.completed} 
 		type="checkbox"
 	>
-	<span class:checked={item.completed}>{item.text}</span>
+    <!-- TODO ADD SAVE -->
+    <!-- on:change={() => enableSave(item)} -->
+	<input 
+        class:checked={item.completed} 
+        value={item.text}
+    >
 	<span on:click={() => removeFromList(item.id)}>❌</span>
 	<br/>
 {/each} 
@@ -93,7 +98,7 @@
 	<br/>
 {/each} 
 
-<button on:click={() => clear()}>clear</button>
+<button on:click={() => clear()} disabled>clear</button>
 
 <style> 
 	.checked {

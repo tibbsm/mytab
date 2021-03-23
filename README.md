@@ -20,7 +20,6 @@ TODOs
 [] Backups
     * Save to Google Drive 
     * Or save it on Dark and risk losing it...
-	[] Store completed task
 
 [] Recurring tasks
 
@@ -30,7 +29,10 @@ TODOs
 		[] Debounced saves & save button
 	[] Create seperate file for todos, wysiwyt editor, etc..
 	
-[] Timestamps
+
+[] tab friendly && shortcuts
+	* dismissable/pinnable shortcuts notes
+	* customizable
 
 [] Add way to dev on this easier?
     * At least on the functionality part anyways. The storage is a bit more straight forward.
@@ -38,6 +40,9 @@ TODOs
 [x] Move todos to README or something
 [x] Done list
 [X] ID number for tasks (object???)
+[X] Add on enter
+[x] Timestamps
+[x] Store completed task
 
 * MDN Svelte Todo 
   * https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props

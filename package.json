@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "cpx": "^1.5.0",
+    "lodash": "^4.17.21",
     "sirv-cli": "^1.0.0"
   }
 }
