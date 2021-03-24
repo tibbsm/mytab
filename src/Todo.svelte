@@ -82,7 +82,7 @@
 	<input 
         class:checked={item.completed} 
         bind:value={item.text} 
-        on:keypress={() => setTimeout(()=>saveTodos(),1)}
+        on:keyup={() => saveTodos()}
     >
 	<span on:click={() => removeFromList(item.id)}>❌</span>
 	<br/>
