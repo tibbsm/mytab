@@ -28,7 +28,7 @@ TODOs
 	[] WYSIWYT Editor that saves
 		[] Debounced saves & save button
 	[] Create seperate file for todos, wysiwyt editor, etc..
-	
+
 [] Limit Done list. Dont need to see all of them.
 
 [] tab friendly && shortcuts
@@ -44,6 +44,7 @@ TODOs
 [X] Add on enter
 [x] Timestamps
 [x] Store completed task
+[x] Save edit on change
 
 * MDN Svelte Todo 
   * https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
