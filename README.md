@@ -45,6 +45,7 @@ TODOs
 [x] Timestamps
 [x] Store completed task
 [x] Save edit on change
+[ ] Do some more tomorrow..
 
 * MDN Svelte Todo 
   * https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
