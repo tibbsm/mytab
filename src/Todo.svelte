@@ -76,9 +76,7 @@
 		bind:checked={item.completed} 
 		type="checkbox"
 	>
-    <!-- CAN I BIND THEM? -->
-    <!-- TODO ADD SAVE -->
-    <!-- on:change={() => enableSave(item)} -->
+    <!-- DEBOUNCE -->
 	<input 
         class:checked={item.completed} 
         bind:value={item.text} 
