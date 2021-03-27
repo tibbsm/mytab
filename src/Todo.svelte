@@ -3,10 +3,12 @@
     let newItem = '';
 	
     let todos = [];
+    let notes = '';
     $: todoList = todos.filter(todo => !todo.completed);
     $: doneList = todos.filter(todo => todo.completed);
 	
     initializeTodos();
+    initializeNotes();
 
 	function addToList() {
 		todos = [...todos, {
@@ -29,6 +31,10 @@
         chrome.storage.sync.set({"todos": JSON.stringify(todos)});
     }
 
+    function saveNotes() {
+        chrome.storage.sync.set({"notes": notes});
+    }
+
     function initializeTodos() {
         chrome.storage.sync.get(["todos"], function(items){
             if (items['todos'] && Array.isArray(JSON.parse(items['todos']))) {
@@ -36,6 +42,12 @@
             } else {
                 todos = [];
             }
+        });
+    }
+
+    function initializeNotes() {
+        chrome.storage.sync.get(["notes"], function(items){
+            notes = items['notes'] || '';
         });
     }
 
@@ -99,6 +111,17 @@
 {/each} 
 
 <button on:click={() => clear()} disabled>clear</button>
+
+<br/><br/>
+
+<h1>Notes</h1>
+<!-- DEBOUNCE -->
+<textarea 
+    bind:value={notes} 
+    on:keyup={() => saveNotes()}
+></textarea>
+<br/>
+
 
 <style> 
 	.checked {
