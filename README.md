@@ -24,10 +24,11 @@ TODOs
 [] Recurring tasks
 
 [] Notes
-    [] Storable
-	[] WYSIWYT Editor that saves
-		[] Debounced saves & save button
-	[] Create seperate file for todos, wysiwyt editor, etc..
+    [] Storable (DOCS)
+	[] Debounced saves & save button
+	[] Use contenteditable
+	[] ~~WYSIWYT Editor that saves~~
+	[] ~~Create seperate file for todos, wysiwyt editor, etc..~~
 
 [] Limit Done list. Dont need to see all of them.
 
@@ -45,7 +46,7 @@ TODOs
 [x] Timestamps
 [x] Store completed task
 [x] Save edit on change
-[ ] Do some more tomorrow..
+
 
 * MDN Svelte Todo 
   * https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
