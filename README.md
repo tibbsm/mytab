@@ -24,11 +24,14 @@ TODOs
 [] Recurring tasks
 
 [] Notes
-    [] Storable (DOCS)
-	[] Debounced saves & save button
-	[] Use contenteditable
-	[] ~~WYSIWYT Editor that saves~~
-	[] ~~Create seperate file for todos, wysiwyt editor, etc..~~
+	[] Debounced saves ~~& save button~~
+	[] ParseHTML to readable text 
+	[x] Use contenteditable
+	[x] Download file
+	[x] test images
+    [x] ~~Storable (DOCS)~~
+	[x] ~~WYSIWYT Editor that saves~~
+	[x] ~~Create seperate file for todos, wysiwyt editor, etc..~~
 
 [] Limit Done list. Dont need to see all of them.
 

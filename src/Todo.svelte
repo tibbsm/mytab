@@ -51,6 +51,14 @@
         });
     }
 
+    function download(content, fileName, contentType) {
+        var a = document.createElement("a");
+        var file = new Blob([content], {type: contentType});
+        a.href = URL.createObjectURL(file);
+        a.download = fileName;
+        a.click();
+    }
+
     function changeStatus(todo) {
         todo.completed = !todo.completed;
         if (!todo.completed) todo.complete_at = null;
@@ -116,15 +124,30 @@
 
 <h1>Notes</h1>
 <!-- DEBOUNCE -->
-<textarea 
-    bind:value={notes} 
+<div 
+    class='notes'
+    bind:innerHTML={notes} 
     on:keyup={() => saveNotes()}
-></textarea>
+    contenteditable
+></div>
+
+<br>
+
+<button
+    on:click={() => download(notes, 'MyTabNotes.txt', 'text/plain')}
+>Save notes</button>
+
 <br/>
 
 
 <style> 
 	.checked {
         text-decoration: line-through;
+    }
+    [contenteditable] {
+        border: 1px solid #707070;
+        min-height: 50px;
+        border-radius: 3px;
+        padding: 5px;
     }
 </style> 
