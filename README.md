@@ -25,7 +25,8 @@ TODOs
 
 [] Notes
 	[] Debounced saves ~~& save button~~
-	[] ParseHTML to readable text 
+	[] Clean up download file fn (copy pasta)
+	[x] ParseHTML to readable text 
 	[x] Use contenteditable
 	[x] Download file
 	[x] test images
