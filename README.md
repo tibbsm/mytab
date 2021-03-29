@@ -23,9 +23,13 @@ TODOs
 
 [] Recurring tasks
 
+[] Sub Tasks
+
 [] Notes
 	[] Debounced saves ~~& save button~~
 	[] Clean up download file fn (copy pasta)
+	[] Handle saving images to file???
+	[] Handle saving images to local storage???
 	[x] ParseHTML to readable text 
 	[x] Use contenteditable
 	[x] Download file
