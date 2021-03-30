@@ -52,18 +52,16 @@
     }
 
     function download(content, fileName, contentType) {
-        var a = document.createElement("a");
-        let rt = content.replace(/<\/?[^>]+(>|$)/g, "\n");
-        var file = new Blob([rt], {type: contentType});
-        a.href = URL.createObjectURL(file);
+        let a = document.createElement("a");
+        let text = content.replace(/<\/?[^>]+(>|$)/g, "\n");
+        a.href = URL.createObjectURL(new Blob([text], {type: contentType}));
         a.download = fileName;
         a.click();
     }
 
     function changeStatus(todo) {
         todo.completed = !todo.completed;
-        if (!todo.completed) todo.complete_at = null;
-        else todo.complete_at = new Date().getTime();
+        todo.complete_at = todo.completed ? new Date().getTime() : null;
         saveTodos();
     }
 
