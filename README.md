@@ -19,17 +19,18 @@ TODOs
 
 [] Backups
     * Save to Google Drive 
-    * Or save it on Dark and risk losing it...
+      * Save by month?
 
 [] Recurring tasks
 
 [] Sub Tasks
 
 [] Notes
+	[] Separate file
 	[] Debounced saves ~~& save button~~
-	[] Clean up download file fn (copy pasta)
 	[] Handle saving images to file???
 	[] Handle saving images to local storage???
+	[x] Clean up download file fn (copy pasta)
 	[x] ParseHTML to readable text 
 	[x] Use contenteditable
 	[x] Download file
@@ -44,8 +45,6 @@ TODOs
 	* dismissable/pinnable shortcuts notes
 	* customizable
 
-[] Add way to dev on this easier?
-    * At least on the functionality part anyways. The storage is a bit more straight forward.
 
 [x] Move todos to README or something
 [x] Done list
@@ -54,6 +53,7 @@ TODOs
 [x] Timestamps
 [x] Store completed task
 [x] Save edit on change
+~~[] Add way to dev on this easier?~~
 
 
 * MDN Svelte Todo 
