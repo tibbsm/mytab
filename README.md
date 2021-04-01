@@ -21,6 +21,7 @@ TODOs
     * Save to Google Drive 
       * Save by month?
 
+[] Linters (ES & Prettier)
 [] Recurring tasks
 
 [] Sub Tasks
