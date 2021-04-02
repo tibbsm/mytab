@@ -56,6 +56,7 @@ TODOs
 [x] Save edit on change
 ~~[] Add way to dev on this easier?~~
 
+* Add something fun and less optimal :D
 
 * MDN Svelte Todo 
   * https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
