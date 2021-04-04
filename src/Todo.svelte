@@ -4,6 +4,7 @@
 	
     let todos = [];
     let notes = '';
+    let memoryUsed = '';
     $: todoList = todos.filter(todo => !todo.completed);
     $: doneList = todos.filter(todo => todo.completed);
 	
@@ -65,7 +66,7 @@
         saveTodos();
     }
 
-    // chrome.storage.sync.getBytesInUse(null, (bytesInUse) => console.log(bytesInUse)); // get bytes
+    chrome.storage.sync.getBytesInUse(null, bytesInUse => memoryUsed = bytesInUse ); // get bytes
     // chrome.storage.sync.get(null, (items) => console.log(items)); // get all
 
     function clear() {
@@ -137,6 +138,8 @@
 >Save notes</button>
 
 <br/>
+
+<p>{memoryUsed} / 102,400 ({((memoryUsed/102400)*100).toFixed(2) + '%'}) Memory Used</p>
 
 
 <style> 

@@ -10,7 +10,7 @@ TODOs
     * Multiple tab updates
 
 [] Storage size indicators
-	* TOTAL Storage Size 
+	[x] TOTAL Storage Size 
 		QUOTA_BYTES number 102400
 
 	* Storage Size 
@@ -46,7 +46,6 @@ TODOs
 	* dismissable/pinnable shortcuts notes
 	* customizable
 
-
 [x] Move todos to README or something
 [x] Done list
 [X] ID number for tasks (object???)
@@ -55,8 +54,6 @@ TODOs
 [x] Store completed task
 [x] Save edit on change
 ~~[] Add way to dev on this easier?~~
-
-* Add something fun and less optimal :D
 
 * MDN Svelte Todo 
   * https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
