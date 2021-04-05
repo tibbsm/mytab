@@ -23,6 +23,7 @@ TODOs
 
 [] Linters (ES & Prettier)
 [] Recurring tasks
+[] Change color of storage text depending on status
 
 [] Sub Tasks
 

@@ -139,10 +139,15 @@
 
 <br/>
 
-<p>{memoryUsed} / 102,400 ({((memoryUsed/102400)*100).toFixed(2) + '%'}) Memory Used</p>
+<p class='memory'>
+    {memoryUsed} / 102,400 ({((memoryUsed/102400)*100).toFixed(2) + '%'}) Memory Used
+</p>
 
 
 <style> 
+    .memory {
+        color: red;
+    }
 	.checked {
         text-decoration: line-through;
     }
