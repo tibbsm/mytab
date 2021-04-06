@@ -12,10 +12,10 @@ TODOs
 [] Storage size indicators
 	[x] TOTAL Storage Size 
 		QUOTA_BYTES number 102400
-
-	* Storage Size 
+	[x] Storage Size 
 		QUOTA_BYTES_PER_ITEM number 8192
 		* Make these visable (green/yellow/red) and warn to backup
+	[ ] Update on updates to todos/note
 
 [] Backups
     * Save to Google Drive 
