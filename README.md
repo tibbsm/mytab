@@ -41,6 +41,7 @@ TODOs
 	[x] ~~WYSIWYT Editor that saves~~
 	[x] ~~Create seperate file for todos, wysiwyt editor, etc..~~
 
+[] DEBOUNCE!!!!
 [] Limit Done list. Dont need to see all of them.
 
 [] tab friendly && shortcuts
