@@ -159,6 +159,7 @@
 <style> 
     .memory {
         color: red;
+        font-weight: bold;
     }
 	.checked {
         text-decoration: line-through;
