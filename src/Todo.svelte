@@ -1,17 +1,21 @@
 <script>
-    chrome.storage.sync.get(null, (items) => console.log(items)); // get all
     let newItem = '';
-	
-    let todos = [];
     let notes = '';
     let memoryUsed = '';
     let notesMemoryUsed = '';
     let todosMemoryUsed = '';
+    let todos = [];
+
     $: todoList = todos.filter(todo => !todo.completed);
     $: doneList = todos.filter(todo => todo.completed);
 	
     initializeTodos();
     initializeNotes();
+
+    chrome.storage.sync.getBytesInUse(null, bytesInUse => memoryUsed = bytesInUse ); // get bytes
+    chrome.storage.sync.getBytesInUse('notes', bytesInUse => notesMemoryUsed = bytesInUse ); // get bytes
+    chrome.storage.sync.getBytesInUse('todos', bytesInUse => todosMemoryUsed = bytesInUse ); // get bytes
+    // chrome.storage.sync.get(null, (items) => console.log(items)); // get all
 
 	function addToList() {
 		todos = [...todos, {
@@ -68,10 +72,6 @@
         saveTodos();
     }
 
-    chrome.storage.sync.getBytesInUse(null, bytesInUse => memoryUsed = bytesInUse ); // get bytes
-    chrome.storage.sync.getBytesInUse('notes', bytesInUse => notesMemoryUsed = bytesInUse ); // get bytes
-    chrome.storage.sync.getBytesInUse('todos', bytesInUse => todosMemoryUsed = bytesInUse ); // get bytes
-    // chrome.storage.sync.get(null, (items) => console.log(items)); // get all
 
     function clear() {
         chrome.storage.sync.clear(() => {
