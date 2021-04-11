@@ -6,7 +6,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 TODOs
 [] Track todos (github style tracker) for the month
-
+	[] create separate component
 
 [] Add storage listener
     * chrome.storage.onChanged.addListener(function(changes, namespace) 
