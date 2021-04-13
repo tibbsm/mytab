@@ -27,6 +27,7 @@ TODOs
 [] Backups
     * Save to Google Drive 
       * Save by month?
+    * Save manually and store in drive at first
 
 
 [] Linters (ES & Prettier)
