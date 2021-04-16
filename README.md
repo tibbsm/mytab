@@ -39,7 +39,7 @@ TODOs
 
 
 [] Notes
-	[] Separate file
+	[x] Separate file
 	[] Debounced saves ~~& save button~~
 	[] Handle saving images to file???
 	[] Handle saving images to local storage???
