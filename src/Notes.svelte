@@ -1,4 +1,5 @@
-<script>
+<script>    
+    import { debounce } from 'lodash-es';
     let notes = '';
     let memoryUsed = '';
     let notesMemoryUsed = '';
@@ -36,7 +37,7 @@
 <div 
     class='notes'
     bind:innerHTML={notes} 
-    on:keyup={() => saveNotes()}
+    on:keyup={debounce(() => saveNotes(), 250)}
     contenteditable
 ></div>
 

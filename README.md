@@ -38,22 +38,23 @@ TODOs
 [] Sub Tasks
 
 
-[] Notes
+
+[x] Notes
+	[x] Debounced saves ~~& save button~~
 	[x] Separate file
-	[] Debounced saves ~~& save button~~
-	[] Handle saving images to file???
-	[] Handle saving images to local storage???
 	[x] Clean up download file fn (copy pasta)
 	[x] ParseHTML to readable text 
 	[x] Use contenteditable
 	[x] Download file
 	[x] test images
+	[x] Handle saving images to local storage???
+	[x] ~~Handle saving images to file???~~
     [x] ~~Storable (DOCS)~~
 	[x] ~~WYSIWYT Editor that saves~~
 	[x] ~~Create seperate file for todos, wysiwyt editor, etc..~~
 
 
-[] DEBOUNCE!!!!
+[x] DEBOUNCE!!!!
 [] Limit Done list. Dont need to see all of them.
 
 
