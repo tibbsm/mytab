@@ -1,4 +1,5 @@
 <script>
+    import { debounce } from 'lodash-es';
     let newItem = '';
     let todos = [];
 
@@ -71,11 +72,10 @@
 		bind:checked={item.completed} 
 		type="checkbox"
 	>
-    <!-- DEBOUNCE -->
 	<input 
         class:checked={item.completed} 
         bind:value={item.text} 
-        on:keyup={() => saveTodos()}
+        on:keyup={debounce(() => saveTodos(), 250)}
     >
 	<span on:click={() => removeFromList(item.id)}>❌</span>
 	<br/>
