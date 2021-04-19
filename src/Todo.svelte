@@ -72,17 +72,17 @@
 		bind:checked={item.completed} 
 		type="checkbox"
 	>
-	<input 
+	<textarea 
         class:checked={item.completed} 
         bind:value={item.text} 
         on:keyup={debounce(() => saveTodos(), 250)}
-    >
+    ></textarea>
 	<span on:click={() => removeFromList(item.id)}>❌</span>
 	<br/>
 {/each} 
 
 <h1>Done! ({doneList.length})</h1>
-{#each doneList as item}
+{#each doneList.slice(3) as item}
 	<input 
         on:change={() => changeStatus(item)}
 		bind:checked={item.completed} 
@@ -101,5 +101,8 @@
 <style> 
 	.checked {
         text-decoration: line-through;
+    }
+    input {
+        text-overflow: ellipsis;
     }
 </style> 

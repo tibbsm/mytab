@@ -33,7 +33,6 @@
 
 
 <h1>Notes</h1>
-<!-- DEBOUNCE -->
 <div 
     class='notes'
     bind:innerHTML={notes} 
@@ -50,13 +49,9 @@
 <br/>
 
 <p class='memory'>
-    {memoryUsed} / 102,400 ({((memoryUsed/102400)*100).toFixed(2) + '%'}) Memory Used
-</p>
-<p class='memory'>
-    {notesMemoryUsed} / 8,192 ({((notesMemoryUsed/8192)*100).toFixed(2) + '%'}) Memory Used (Notes)
-</p>
-<p class='memory'>
-    {todosMemoryUsed} / 8,192 ({((todosMemoryUsed/8192)*100).toFixed(2) + '%'}) Memory Used (To Do's)
+    TOTAL: {memoryUsed} / 102,400 ({((memoryUsed/102400)*100).toFixed(2) + '%'}) |
+    NOTES: {notesMemoryUsed} / 8,192 ({((notesMemoryUsed/8192)*100).toFixed(2) + '%'}) |
+    TODOS: {todosMemoryUsed} / 8,192 ({((todosMemoryUsed/8192)*100).toFixed(2) + '%'}) 
 </p>
 
 <style> 
