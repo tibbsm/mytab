@@ -1,5 +1,6 @@
 <script>    
     import { debounce } from 'lodash-es';
+    
     let notes = '';
     let memoryUsed = '';
     let notesMemoryUsed = '';
