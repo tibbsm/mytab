@@ -38,7 +38,6 @@ TODOs
 [] Sub Tasks
 
 
-
 [x] Notes
 	[x] Debounced saves ~~& save button~~
 	[x] Separate file
