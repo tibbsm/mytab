@@ -55,7 +55,7 @@ TODOs
 
 
 [x] DEBOUNCE!!!!
-[] Limit Done list. Dont need to see all of them.
+[x] Limit Done list. Dont need to see all of them.
 
 
 [] tab friendly && shortcuts
