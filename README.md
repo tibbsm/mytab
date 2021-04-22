@@ -1,8 +1,6 @@
 # My Tab
 
-
 A simple, customizable tab template for new tabs in chrome. 
-
 
 TODOs
 [] Track todos (github style tracker) for the month
@@ -14,7 +12,6 @@ TODOs
     * chrome.storage.onChanged.addListener(function(changes, namespace) 
     * Multiple tab updates
 
-
 [] Storage size indicators
 	[x] TOTAL Storage Size 
 		QUOTA_BYTES number 102400
@@ -23,20 +20,15 @@ TODOs
 		* Make these visable (green/yellow/red) and warn to backup
 	[ ] Update on updates to todos/note
 
-
 [] Backups
     * Save to Google Drive 
       * Save by month?
     * Save manually and store in drive at first
 
-
 [] Linters (ES & Prettier)
 [] Recurring tasks
 [] Change color of storage text depending on status
-
-
 [] Sub Tasks
-
 
 [x] Notes
 	[x] Debounced saves ~~& save button~~
@@ -52,16 +44,12 @@ TODOs
 	[x] ~~WYSIWYT Editor that saves~~
 	[x] ~~Create seperate file for todos, wysiwyt editor, etc..~~
 
-
-[x] DEBOUNCE!!!!
-[x] Limit Done list. Dont need to see all of them.
-
-
 [] tab friendly && shortcuts
 	* dismissable/pinnable shortcuts notes
 	* customizable
 
-
+[x] Limit Done list. Dont need to see all of them.
+[x] DEBOUNCE!!!!
 [x] Move todos to README or something
 [x] Done list
 [X] ID number for tasks (object???)
