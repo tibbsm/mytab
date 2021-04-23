@@ -3,6 +3,7 @@
 A simple, customizable tab template for new tabs in chrome. 
 
 TODOs
+* It's time for the github style tracker...
 [] Track todos (github style tracker) for the month
 	[] mvp => iterative
 	[] create separate component
