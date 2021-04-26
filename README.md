@@ -12,10 +12,6 @@ TODOs
 	[] create separate component
 	[] make pretty
 
-[] Add storage listener
-    * chrome.storage.onChanged.addListener(function(changes, namespace) 
-    * Multiple tab updates
-
 [] Storage size indicators
 	[x] TOTAL Storage Size 
 		QUOTA_BYTES number 102400
@@ -61,7 +57,9 @@ TODOs
 [x] Timestamps
 [x] Store completed task
 [x] Save edit on change
-~~[] Add way to dev on this easier?~~
+[x] ~~Add way to dev on this easier?~~
+[x] ~~Add storage listener~~
+    * chrome.storage.onChanged.addListener(function(changes, namespace) 
 
 * MDN Svelte Todo 
   * https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
