@@ -22,8 +22,10 @@
 	}
 	
 	function removeFromList(id) {
-		todos = todos.filter(todo => todo.id !== id);
-		saveTodos();
+        if (confirm('Are you sure?')) {
+            todos = todos.filter(todo => todo.id !== id);
+		    saveTodos();
+        } 
     }
 
     function saveTodos() {
