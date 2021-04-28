@@ -30,6 +30,13 @@ TODOs
 [] Change color of storage text depending on status
 [] Sub Tasks
 
+
+[] tab friendly && shortcuts
+	* dismissable/pinnable shortcuts notes
+	* customizable
+
+[] Draggable
+* https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0
 [x] Notes
 	[x] Debounced saves ~~& save button~~
 	[x] Separate file
@@ -43,11 +50,6 @@ TODOs
     [x] ~~Storable (DOCS)~~
 	[x] ~~WYSIWYT Editor that saves~~
 	[x] ~~Create seperate file for todos, wysiwyt editor, etc..~~
-
-[] tab friendly && shortcuts
-	* dismissable/pinnable shortcuts notes
-	* customizable
-
 [x] Limit Done list. Dont need to see all of them.
 [x] DEBOUNCE!!!!
 [x] Move todos to README or something
