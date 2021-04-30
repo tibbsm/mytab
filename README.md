@@ -36,7 +36,8 @@ TODOs
 	* customizable
 
 [] Draggable
-* https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0
+  * https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0
+
 [x] Notes
 	[x] Debounced saves ~~& save button~~
 	[x] Separate file
