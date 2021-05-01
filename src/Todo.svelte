@@ -85,7 +85,7 @@
 {/each} 
 
 <h1>Done! ({doneList.length})</h1>
-{#each doneList.slice(3) as item}
+{#each doneList.slice(-3) as item}
 	<input 
         on:change={() => changeStatus(item)}
 		bind:checked={item.completed} 
