@@ -2,7 +2,7 @@
 
 A simple, customizable tab template for new tabs in chrome. 
 
-TODOs
+## TODOs
 * It's time for the github style tracker...
   * https://levelup.gitconnected.com/how-to-create-a-tracker-like-the-github-contribution-graph-with-node-js-and-google-sheets-5e915c668c1
 	[] Track todos (github style tracker) for the month
