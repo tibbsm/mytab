@@ -8,7 +8,6 @@ TODOs
 	[] Track todos (github style tracker) for the month
 	[] mvp => iterative
 	[] create separate component
-	[] make pretty
 
 [] Storage size indicators
 	[x] TOTAL Storage Size 
