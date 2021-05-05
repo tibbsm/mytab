@@ -18,8 +18,6 @@ A simple, customizable tab template for new tabs in chrome.
 	[ ] Update on updates to todos/note
 
 [] Backups
-    * Save to Google Drive 
-      * Save by month?
     * Save manually and store in drive at first
 
 [] Linters (ES & Prettier)
