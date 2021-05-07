@@ -16,6 +16,7 @@ A simple, customizable tab template for new tabs in chrome.
 		QUOTA_BYTES_PER_ITEM number 8192
 		* Make these visable (green/yellow/red) and warn to backup
 	[ ] Update on updates to todos/note
+		* Do I even need this?
 
 [] Backups
     * Save manually and store in drive at first
