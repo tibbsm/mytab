@@ -48,18 +48,21 @@
 >Save notes</button>
 
 <br/>
+<br/>
 
-<p class='memory'>
-    TOTAL: {memoryUsed} / 102,400 ({((memoryUsed/102400)*100).toFixed(2) + '%'}) |
-    NOTES: {notesMemoryUsed} / 8,192 ({((notesMemoryUsed/8192)*100).toFixed(2) + '%'}) |
-    TODOS: {todosMemoryUsed} / 8,192 ({((todosMemoryUsed/8192)*100).toFixed(2) + '%'}) 
-</p>
+<label for="total">Total Memory:</label>
+<meter id="total" min="0" max="102400" value={memoryUsed}></meter>
+<br/>
+
+<label for="notes">Notes Memory:</label>
+<meter id="notes" min="0" max="8192" value={notesMemoryUsed}></meter>
+<br/>
+
+<label for="todos">Todos Memory:</label>
+<meter id="todos" min="0" max="8192" value={todosMemoryUsed}></meter>
+<br/>
 
 <style> 
-    .memory {
-        color: red;
-        font-weight: bold;
-    }
     [contenteditable] {
         border: 1px solid #707070;
         min-height: 50px;
