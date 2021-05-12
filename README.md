@@ -10,6 +10,7 @@ A simple, customizable tab template for new tabs in chrome.
 	[] create separate component
 
 * show more button (past todos)
+  * Use var in slice()?? onclick change var?
 
 * More personalized or are we getting close to what I need
 * Use meter html tags, etc
