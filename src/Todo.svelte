@@ -3,9 +3,12 @@
     
     let newItem = '';
     let todos = [];
+    let showMore = false;
 
     $: todoList = todos.filter(todo => !todo.completed);
-    $: doneList = todos.filter(todo => todo.completed);
+    $: doneList = showMore ? 
+        todos.filter(todo => todo.completed) :
+        todos.filter(todo => todo.completed).slice(-3);
 	
     initializeTodos();
 
@@ -85,7 +88,7 @@
 {/each} 
 
 <h1>Done! ({doneList.length})</h1>
-{#each doneList.slice(-3) as item}
+{#each doneList as item}
 	<input 
         on:change={() => changeStatus(item)}
 		bind:checked={item.completed} 
@@ -96,7 +99,11 @@
 	<br/>
 {/each} 
 
-<button on:click={() => clear()} disabled>clear</button>
+<button on:click={() => showMore = !showMore}>
+{ showMore ? 'Show Less' : 'Show More' }
+</button>
+
+<button on:click={() => clear()} disabled>Clear</button>
 
 <br/><br/>
 
