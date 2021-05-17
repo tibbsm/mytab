@@ -25,6 +25,7 @@ A simple, customizable tab template for new tabs in chrome.
 	[ ] Update on updates to todos/note
 		* Do I even need this?
 
+[] Storage meter onhover show numbers
 [] Backups
     * Save manually and store in drive at first
 
