@@ -32,7 +32,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] Linters (ES & Prettier)
 [] Recurring tasks
 [] Change color of storage text depending on status
-[] Sub Tasks
+[] Sub Tasks (do i need it?)
 
 [] tab friendly && shortcuts
 	* dismissable/pinnable shortcuts notes
