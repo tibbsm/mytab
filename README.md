@@ -9,9 +9,6 @@ A simple, customizable tab template for new tabs in chrome.
 	[] mvp => iterative
 	[] create separate component
 
-* show more button (past todos)
-  * Use var in slice()/substring()?? onclick change var??
-
 * More personalized or are we getting close to what I need
 * Use meter html tags, etc
   * https://news.ycombinator.com/item?id=27054348
