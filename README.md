@@ -9,7 +9,6 @@ A simple, customizable tab template for new tabs in chrome.
 	[] mvp => iterative
 	[] create separate component
 
-* More personalized or are we getting close to what I need
 * Use meter html tags, etc
   * https://news.ycombinator.com/item?id=27054348
 
