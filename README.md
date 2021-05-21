@@ -29,7 +29,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] Recurring tasks
 [] Change color of storage text depending on status
 [] Sub Tasks (do i need it?)
-
+[] undo last delete/etc. 
 [] tab friendly && shortcuts
 	* dismissable/pinnable shortcuts notes
 	* customizable
