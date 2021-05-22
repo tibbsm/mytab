@@ -22,8 +22,7 @@ A simple, customizable tab template for new tabs in chrome.
 		* Do I even need this?
 
 [] Storage meter onhover show numbers
-[] Backups
-    * Save manually and store in drive at first
+[] Save to Drive (notes)
 
 [] Linters (ES & Prettier)
 [] Recurring tasks
