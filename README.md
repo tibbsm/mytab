@@ -8,6 +8,8 @@ A simple, customizable tab template for new tabs in chrome.
 	[] Track todos (github style tracker) for the month
 	[] mvp => iterative
 	[] create separate component
+* Todos by date/month
+* customizable (drag drop)
 
 * Use meter html tags, etc
   * https://news.ycombinator.com/item?id=27054348
