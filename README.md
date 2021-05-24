@@ -10,6 +10,7 @@ A simple, customizable tab template for new tabs in chrome.
 	[] create separate component
 * Todos by date/month
 * customizable (drag drop)
+* Uptime (how long chrome is open / tab open, etc)
 
 * Use meter html tags, etc
   * https://news.ycombinator.com/item?id=27054348
