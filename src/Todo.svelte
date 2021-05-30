@@ -87,7 +87,12 @@
 	<br/>
 {/each} 
 
-<h1>Done! ({doneList.length})</h1>
+<h1>Done! ({doneList.length})
+    <button on:click={() => showMore = !showMore}>
+    { showMore ? 'Show Less' : 'Show More' }
+    </button>
+</h1>
+
 {#each doneList as item}
 	<input 
         on:change={() => changeStatus(item)}
@@ -98,10 +103,6 @@
 	<span on:click={() => removeFromList(item.id)}>❌</span>
 	<br/>
 {/each} 
-
-<button on:click={() => showMore = !showMore}>
-{ showMore ? 'Show Less' : 'Show More' }
-</button>
 
 <button on:click={() => clear()} disabled>Clear</button>
 
