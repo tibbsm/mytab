@@ -116,4 +116,7 @@
     input {
         text-overflow: ellipsis;
     }
+    span {
+		color: var(--medium);
+	}
 </style> 

@@ -70,4 +70,12 @@
         border-radius: 3px;
         padding: 5px;
     }
+
+    .notes {
+        background-color: var(--white);
+    }
+
+    label {
+        color: var(--light);
+    }
 </style> 
