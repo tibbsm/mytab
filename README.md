@@ -17,6 +17,7 @@ A simple, customizable tab template for new tabs in chrome.
 * fun stuff
 * kanban
 * fix textarea style
+* 
 
 * Use meter html tags, etc
   * https://news.ycombinator.com/item?id=27054348
