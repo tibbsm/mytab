@@ -113,8 +113,9 @@
 	.checked {
         text-decoration: line-through;
     }
-    input {
-        text-overflow: ellipsis;
+    textarea {
+        width: auto;
+        height: auto;
     }
     span {
 		color: var(--medium);
