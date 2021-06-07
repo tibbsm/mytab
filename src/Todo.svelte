@@ -113,10 +113,6 @@
 	.checked {
         text-decoration: line-through;
     }
-    textarea {
-        width: auto;
-        height: auto;
-    }
     span {
 		color: var(--medium);
 	}
