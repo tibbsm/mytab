@@ -104,6 +104,8 @@
 	<br/>
 {/each} 
 
+<br/><br/>
+
 <button on:click={() => clear()} disabled>Clear</button>
 
 <br/><br/>
