@@ -29,7 +29,6 @@ A simple, customizable tab template for new tabs in chrome.
 		* Make these visable (green/yellow/red) and warn to backup
 	[ ] Update on updates to todos/note
 		* Do I even need this?
-
 [] Storage meter onhover show numbers
 [] Save to Drive (notes)
 [] Linters (ES & Prettier)
