@@ -21,13 +21,13 @@ A simple, customizable tab template for new tabs in chrome.
 * Use meter html tags, etc
   * https://news.ycombinator.com/item?id=27054348
 
-[] Storage size indicators
+[x] Storage size indicators
 	[x] TOTAL Storage Size 
 		QUOTA_BYTES number 102400
 	[x] Storage Size 
 		QUOTA_BYTES_PER_ITEM number 8192
 		* Make these visable (green/yellow/red) and warn to backup
-	[ ] Update on updates to todos/note
+	[x] Update on updates to todos/note
 		* Do I even need this?
 [] Storage meter onhover show numbers
 [] Save to Drive (notes)
