@@ -29,11 +29,11 @@ A simple, customizable tab template for new tabs in chrome.
 		* Make these visable (green/yellow/red) and warn to backup
 	[x] Update on updates to todos/note
 		* Do I even need this?
-[] Storage meter onhover show numbers
+[x] ~~Storage meter onhover show numbers~~
+[x] Change color of storage text depending on status
 [] Save to Drive (notes)
 [] Linters (ES & Prettier)
 [] Recurring tasks
-[] Change color of storage text depending on status
 [] Sub Tasks (do i need it?)
 [] undo last delete/etc. 
 [] tab friendly && shortcuts
