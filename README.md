@@ -21,16 +21,6 @@ A simple, customizable tab template for new tabs in chrome.
 * Use meter html tags, etc
   * https://news.ycombinator.com/item?id=27054348
 
-[x] Storage size indicators
-	[x] TOTAL Storage Size 
-		QUOTA_BYTES number 102400
-	[x] Storage Size 
-		QUOTA_BYTES_PER_ITEM number 8192
-		* Make these visable (green/yellow/red) and warn to backup
-	[x] Update on updates to todos/note
-		* Do I even need this?
-[x] ~~Storage meter onhover show numbers~~
-[x] Change color of storage text depending on status
 [] Save to Drive (notes)
 [] Linters (ES & Prettier)
 [] Recurring tasks
@@ -41,7 +31,6 @@ A simple, customizable tab template for new tabs in chrome.
 	* customizable
 [] Draggable
   * https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0
-
 [x] Notes
 	[x] Debounced saves ~~& save button~~
 	[x] Separate file
@@ -55,6 +44,16 @@ A simple, customizable tab template for new tabs in chrome.
     [x] ~~Storable (DOCS)~~
 	[x] ~~WYSIWYT Editor that saves~~
 	[x] ~~Create seperate file for todos, wysiwyt editor, etc..~~
+[x] Storage size indicators
+	[x] TOTAL Storage Size 
+		QUOTA_BYTES number 102400
+	[x] Storage Size 
+		QUOTA_BYTES_PER_ITEM number 8192
+		* Make these visable (green/yellow/red) and warn to backup
+	[x] Update on updates to todos/note
+		* Do I even need this?
+[x] ~~Storage meter onhover show numbers~~
+[x] Change color of storage text depending on status
 [x] Limit Done list. Dont need to see all of them.
 [x] DEBOUNCE!!!!
 [x] Move todos to README or something
