@@ -9,7 +9,7 @@ A simple, customizable tab template for new tabs in chrome.
 	[] mvp => iterative
 	[] create separate component
 * Todos by date/month
-* customizable (drag drop)
+  * log file/list of tasks completed of 
 * Uptime (how long chrome is open / tab open, etc)
 * calendar
 * max height for notes
