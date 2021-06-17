@@ -18,8 +18,6 @@ A simple, customizable tab template for new tabs in chrome.
 * kanban
 * fix textarea style
 * fonts
-* Use meter html tags, etc
-  * https://news.ycombinator.com/item?id=27054348
 
 [] Save to Drive (notes)
 [] Linters (ES & Prettier)
