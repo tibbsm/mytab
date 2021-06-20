@@ -18,6 +18,7 @@ A simple, customizable tab template for new tabs in chrome.
 * kanban
 * fix textarea style
 * fonts
+  
 
 [] Linters (ES & Prettier)
 [] Recurring tasks
