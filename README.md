@@ -19,7 +19,6 @@ A simple, customizable tab template for new tabs in chrome.
 * fix textarea style
 * fonts
   
-
 [] Linters (ES & Prettier)
 [] Recurring tasks
 [] Sub Tasks (do i need it?)
