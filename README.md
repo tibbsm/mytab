@@ -28,6 +28,7 @@ A simple, customizable tab template for new tabs in chrome.
 	* customizable
 [] Draggable
   * https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0
+[] create notes dir for research
 [x] ~~Save to Drive (notes)~~
 [x] Notes
 	[x] Debounced saves ~~& save button~~
