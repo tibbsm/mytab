@@ -59,11 +59,19 @@
     }
 
     const onKeyPress = e => {
-        if (e.charCode === 13 && newItem != '') addToList();
+        if (e.charCode === 13) {
+            const currentId = document.activeElement.id;
+            if (currentId == 'new-todo-input' && newItem != '') {
+                addToList();
+            } else if (currentId.startsWith('todo-delete-')) {
+                document.activeElement.click();
+            }
+        } 
     };
 </script>
 
 <input 
+    id="new-todo-input"
     bind:value={newItem} 
     on:keypress={onKeyPress}
     type="text" 
@@ -83,7 +91,12 @@
         bind:value={item.text} 
         on:keyup={debounce(() => saveTodos(), 250)}
     ></textarea>
-	<span on:click={() => removeFromList(item.id)} tabindex=0>❌</span>
+	<span 
+        id='todo-delete-{item.id}'
+        on:click={() => removeFromList(item.id)} 
+        on:keypress={onKeyPress}
+        tabindex=0
+    >❌</span>
 	<br/>
 {/each} 
 
@@ -100,7 +113,12 @@
 		type="checkbox"
 	>
 	<span class:checked={item.completed}>{item.text}</span>
-	<span on:click={() => removeFromList(item.id)} tabindex=0>❌</span>
+	<span 
+        id='todo-delete-{item.id}'
+        on:click={() => removeFromList(item.id)} 
+        on:keypress={onKeyPress}
+        tabindex=0
+    >❌</span>
 	<br/>
 {/each} 
 
