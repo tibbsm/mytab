@@ -83,7 +83,7 @@
         bind:value={item.text} 
         on:keyup={debounce(() => saveTodos(), 250)}
     ></textarea>
-	<span on:click={() => removeFromList(item.id)}>❌</span>
+	<span on:click={() => removeFromList(item.id)} tabindex=0>❌</span>
 	<br/>
 {/each} 
 
@@ -100,7 +100,7 @@
 		type="checkbox"
 	>
 	<span class:checked={item.completed}>{item.text}</span>
-	<span on:click={() => removeFromList(item.id)}>❌</span>
+	<span on:click={() => removeFromList(item.id)} tabindex=0>❌</span>
 	<br/>
 {/each} 
 
