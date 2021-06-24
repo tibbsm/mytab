@@ -12,3 +12,5 @@
 6) Save notes
    
 * So it's pretty good right now. Just add the delete keys and skip add
+
+* https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard#avoid_using_tabindex_attribute_greater_than_zero
