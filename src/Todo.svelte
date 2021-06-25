@@ -3,9 +3,8 @@
     
     let newItem = '';
     let todos = [];
-    let lastId = [];
+    let lastTodos = [];
     let showMore = false;
-    let keyHistory = [];
 
     $: todoList = todos.filter(todo => !todo.completed);
     $: doneList = showMore ? 
@@ -28,20 +27,23 @@
 	
 	function removeFromList(id) {
         if (confirm('Are you sure?')) {
-            lastId.push(['delete',todo]);
+            lastTodos.push(['delete', todos.filter(todo => todo.id == id)]);
             todos = todos.filter(todo => todo.id !== id);
 		    saveTodos();
         } 
     }
 
     function undo() {
-        let [action, lastTodo] = todos.pop();
+        if (lastTodos.length < 1) return;
+        let [action, lastTodo] = lastTodos.pop();
+
         if (action == 'status') {
-            lastTodo.completed = !lastTodo.completed;
+            let index = todos.findIndex(todo => todo.id == lastTodo.id);
+            todos[index].completed = !todos[index].completed; 
+            todos = todos;
         } else if (action == 'delete') {
-            todos.push(lastTodo);
+            todos = [...todos, ...lastTodo];
         }
-        
     }
 
     function saveTodos() {
@@ -59,7 +61,7 @@
     }
 
     function changeStatus(todo) {
-        lastId.push(['status',todo]);
+        lastTodos.push(['status',todo]);
         todo.completed = !todo.completed;
         todo.complete_at = todo.completed ? new Date().getTime() : null;
         saveTodos();
@@ -73,11 +75,8 @@
     }
 
     const onKeyDown = e => {
-        if (keyHistory.length > 1) {
-            keyHistory.shift();
-        } 
-        keyHistory.push(e.charCode);
-        if (e.charCode === 13) {
+
+        if (e.key === 'Enter') {
             const currentId = document.activeElement.id;
             if (currentId == 'new-todo-input' && newItem != '') {
                 addToList();
@@ -85,19 +84,19 @@
                 document.activeElement.click();
             }
         } 
-        // fixme command key not triggering keypress
-        if (keyHistory.sort() == [90,91].sort()) {
+        
+        if (e.metaKey && e.key == 'z') {
             undo();
         }
+
     };
 </script>
 
-<svelte:window on:keypress={onKeyDown}/>
+<svelte:window on:keydown={onKeyDown}/>
 
 <input 
     id="new-todo-input"
     bind:value={newItem} 
-    on:keypress={onKeyDown}
     type="text" 
     placeholder="new todo item.."
 >
@@ -118,7 +117,6 @@
 	<span 
         id='todo-delete-{item.id}'
         on:click={() => removeFromList(item.id)} 
-        on:keypress={onKeyDown}
         tabindex=0
     >❌</span>
 	<br/>
@@ -140,7 +138,6 @@
 	<span 
         id='todo-delete-{item.id}'
         on:click={() => removeFromList(item.id)} 
-        on:keypress={onKeyDown}
         tabindex=0
     >❌</span>
 	<br/>
