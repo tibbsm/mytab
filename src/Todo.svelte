@@ -3,7 +3,9 @@
     
     let newItem = '';
     let todos = [];
+    let lastId = [];
     let showMore = false;
+    let keyHistory = [];
 
     $: todoList = todos.filter(todo => !todo.completed);
     $: doneList = showMore ? 
@@ -26,9 +28,20 @@
 	
 	function removeFromList(id) {
         if (confirm('Are you sure?')) {
+            lastId.push(['delete',todo]);
             todos = todos.filter(todo => todo.id !== id);
 		    saveTodos();
         } 
+    }
+
+    function undo() {
+        let [action, lastTodo] = todos.pop();
+        if (action == 'status') {
+            lastTodo.completed = !lastTodo.completed;
+        } else if (action == 'delete') {
+            todos.push(lastTodo);
+        }
+        
     }
 
     function saveTodos() {
@@ -46,6 +59,7 @@
     }
 
     function changeStatus(todo) {
+        lastId.push(['status',todo]);
         todo.completed = !todo.completed;
         todo.complete_at = todo.completed ? new Date().getTime() : null;
         saveTodos();
@@ -59,6 +73,10 @@
     }
 
     const onKeyPress = e => {
+        if (keyHistory.length > 1) {
+            keyHistory.shift();
+        } 
+        keyHistory.push(e.charCode);
         if (e.charCode === 13) {
             const currentId = document.activeElement.id;
             if (currentId == 'new-todo-input' && newItem != '') {
@@ -67,8 +85,14 @@
                 document.activeElement.click();
             }
         } 
+        // fixme command key not triggering keypress
+        if (keyHistory.sort() == [90,91].sort()) {
+            undo();
+        }
     };
 </script>
+
+<svelte:window on:keypress={onKeyPress}/>
 
 <input 
     id="new-todo-input"
