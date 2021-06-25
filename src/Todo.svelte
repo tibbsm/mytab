@@ -72,7 +72,7 @@
         });
     }
 
-    const onKeyPress = e => {
+    const onKeyDown = e => {
         if (keyHistory.length > 1) {
             keyHistory.shift();
         } 
@@ -92,12 +92,12 @@
     };
 </script>
 
-<svelte:window on:keypress={onKeyPress}/>
+<svelte:window on:keypress={onKeyDown}/>
 
 <input 
     id="new-todo-input"
     bind:value={newItem} 
-    on:keypress={onKeyPress}
+    on:keypress={onKeyDown}
     type="text" 
     placeholder="new todo item.."
 >
@@ -118,7 +118,7 @@
 	<span 
         id='todo-delete-{item.id}'
         on:click={() => removeFromList(item.id)} 
-        on:keypress={onKeyPress}
+        on:keypress={onKeyDown}
         tabindex=0
     >❌</span>
 	<br/>
@@ -140,7 +140,7 @@
 	<span 
         id='todo-delete-{item.id}'
         on:click={() => removeFromList(item.id)} 
-        on:keypress={onKeyPress}
+        on:keypress={onKeyDown}
         tabindex=0
     >❌</span>
 	<br/>
