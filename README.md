@@ -19,7 +19,8 @@ A simple, customizable tab template for new tabs in chrome.
 [] Sub Tasks (do i need it?)  
 [] Draggable  
   * https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0  
-  * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API  
+  * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API 
+  * Drag/drop keyboard shortcuts 
 [] dismissable/pinnable/customizable shortcuts notes  
 [x] create notes dir for research  
 [x] undo last delete/etc.   
