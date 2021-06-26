@@ -7,13 +7,6 @@ A simple, customizable tab template for new tabs in chrome.
   * https://levelup.gitconnected.com/how-to-create-a-tracker-like-the-github-contribution-graph-with-node-js-and-google-sheets-5e915c668c1
 	[] Track todos (github style tracker) for the month
 	[] create separate component
-* Uptime (how long chrome is open / tab open, etc)
-* time and date (clock)
-* notes and drawings to improve the ext.
-* kanban
-* fix textarea style
-* fonts
-  
 [] Linters (ES & Prettier)  
 [] Recurring tasks  
 [] Sub Tasks (do i need it?)  
@@ -21,6 +14,14 @@ A simple, customizable tab template for new tabs in chrome.
   * https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0  
   * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API 
   * Drag/drop keyboard shortcuts 
+* Uptime (how long chrome is open / tab open, etc)  
+  * https://developer.chrome.com/docs/extensions/reference/
+* time and date (clock)
+* notes and drawings to improve the ext.
+* kanban
+* fix textarea style
+* fonts
+  
 [] dismissable/pinnable/customizable shortcuts notes  
 [x] create notes dir for research  
 [x] undo last delete/etc.   
