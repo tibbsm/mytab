@@ -8,21 +8,21 @@ A simple, customizable tab template for new tabs in chrome.
 	[] Track todos (github style tracker) for the month
 	[] create separate component
 [] Linters (ES & Prettier)  
-[] Recurring tasks  
-[] Sub Tasks (do i need it?)  
+[] Sub Tasks
 [] Draggable  
   * https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0  
   * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API 
   * Drag/drop keyboard shortcuts 
 * Uptime (how long chrome is open / tab open, etc)  
   * https://developer.chrome.com/docs/extensions/reference/
-* time and date (clock)
 * notes and drawings to improve the ext.
 * kanban
 * fix textarea style
-* fonts
-  
+  * onclick/onfocus switch to editable
 [] dismissable/pinnable/customizable shortcuts notes  
+  
+[x] fonts
+[x] time and date (clock)
 [x] create notes dir for research  
 [x] undo last delete/etc.   
 [x] tab friendly && shortcuts  
