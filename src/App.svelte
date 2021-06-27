@@ -1,10 +1,20 @@
 <script>
 	import Notes from './Notes.svelte';
 	import Todo from './Todo.svelte';
+	import Time from './Time.svelte';
 </script>
+
+<svelte:head>
+	<title>My Tab</title>
+	<html lang="en" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+</svelte:head>
 
 <Todo />
 <Notes />
+<Time />
 
 <style> 
 	:global(:root) {
@@ -13,6 +23,9 @@
 		--medium: #892cdc;
 		--light: #bc6ff1;
 		--white: #FFFFFF;
+	}
+	:global(*) {
+		font-family: 'Roboto', sans-serif;
 	}
 	:global(body) {
 		background-color: var(--black);
