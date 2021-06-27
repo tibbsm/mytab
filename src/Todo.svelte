@@ -26,11 +26,9 @@
 	}
 	
 	function removeFromList(id) {
-        if (confirm('Are you sure?')) {
-            lastTodos.push(['delete', todos.filter(todo => todo.id == id)]);
-            todos = todos.filter(todo => todo.id !== id);
-		    saveTodos();
-        } 
+        lastTodos.push(['delete', todos.filter(todo => todo.id == id)]);
+        todos = todos.filter(todo => todo.id !== id);
+        saveTodos();
     }
 
     function undo() {
