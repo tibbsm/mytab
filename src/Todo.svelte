@@ -75,7 +75,6 @@
     }
 
     const onKeyDown = e => {
-
         if (e.key === 'Enter') {
             const currentId = document.activeElement.id;
             if (currentId == 'new-todo-input' && newItem != '') {
@@ -88,7 +87,6 @@
         if (e.metaKey && e.key == 'z') {
             undo();
         }
-
     };
 </script>
 
