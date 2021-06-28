@@ -7,6 +7,7 @@
     let showMore = false;
 
     $: todoList = todos.filter(todo => !todo.completed);
+    $: doneCount = todos.filter(todo => todo.completed).length;
     $: doneList = showMore ? 
         todos.filter(todo => todo.completed) :
         todos.filter(todo => todo.completed).slice(-3);
@@ -118,7 +119,7 @@
 	<br/>
 {/each} 
 
-<h1>Done! ({doneList.length})
+<h1>Done! ({doneCount})
     <button on:click={() => showMore = !showMore}>
     { showMore ? 'Show Less' : 'Show More' }
     </button>
