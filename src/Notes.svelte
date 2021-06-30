@@ -2,16 +2,8 @@
     import { debounce } from 'lodash-es';
     
     let notes = '';
-    $: memoryUsed = '';
-    $: notesMemoryUsed = '';
-    $: todosMemoryUsed = '';
 	
     initializeNotes();
-
-    chrome.storage.sync.getBytesInUse(null, bytesInUse => memoryUsed = bytesInUse ); // get bytes
-    chrome.storage.sync.getBytesInUse('notes', bytesInUse => notesMemoryUsed = bytesInUse ); // get bytes
-    chrome.storage.sync.getBytesInUse('todos', bytesInUse => todosMemoryUsed = bytesInUse ); // get bytes
-    // chrome.storage.sync.get(null, (items) => console.log(items)); // get all
 
     function saveNotes() {
         chrome.storage.sync.set({"notes": notes});
@@ -47,21 +39,6 @@
     on:click={() => download(notes, 'MyTabNotes.txt', 'text/plain')}
 >Save notes</button>
 
-<br/>
-<br/>
-
-<label for="total">Total Memory:</label>
-<meter id="total" min="0" max="102400" value={memoryUsed}></meter>
-<br/>
-
-<label for="notes">Notes Memory:</label>
-<meter id="notes" min="0" max="8192" value={notesMemoryUsed}></meter>
-<br/>
-
-<label for="todos">Todos Memory:</label>
-<meter id="todos" min="0" max="8192" value={todosMemoryUsed}></meter>
-<br/>
-
 <style> 
     [contenteditable] {
         border: 1px solid #707070;
@@ -73,9 +50,5 @@
 
     .notes {
         background-color: var(--white);
-    }
-
-    label {
-        color: var(--light);
     }
 </style> 

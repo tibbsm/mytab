@@ -2,6 +2,7 @@
 	import Notes from './Notes.svelte';
 	import Todo from './Todo.svelte';
 	import Time from './Time.svelte';
+	import Memory from './Memory.svelte'
 </script>
 
 <svelte:head>
@@ -14,6 +15,7 @@
 
 <Todo />
 <Notes />
+<Memory />
 <Time />
 
 <style> 
