@@ -2,9 +2,9 @@
     import { debounce } from 'lodash-es';
     
     let notes = '';
-    let memoryUsed = '';
-    let notesMemoryUsed = '';
-    let todosMemoryUsed = '';
+    $: memoryUsed = '';
+    $: notesMemoryUsed = '';
+    $: todosMemoryUsed = '';
 	
     initializeNotes();
 
