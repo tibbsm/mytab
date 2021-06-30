@@ -73,6 +73,12 @@
         });
     }
 
+    function clearDone() {
+        let done = todos.filter(todo => todo.completed);
+        todos = todos.filter(todo => !todo.completed);
+        lastTodos.push(['delete', done]);
+    }
+
     const onKeyDown = e => {
         if (e.key === 'Enter') {
             const currentId = document.activeElement.id;
@@ -142,7 +148,7 @@
 
 <br/><br/>
 
-<button on:click={() => clear()} disabled>Clear</button>
+<button on:click={() => clearDone()}>Clear Done</button>
 
 <br/><br/>
 
