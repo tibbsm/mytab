@@ -9,7 +9,6 @@ A simple, customizable tab template for new tabs in chrome.
 	[] create separate component
 [] Linters (ES & Prettier)  
 [] Sub Tasks
-[] update memory meter on new/delete todo
 [] Draggable  
   * https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0  
   * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API 
@@ -26,6 +25,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] dismissable/pinnable/customizable shortcuts notes  
   
 [x] fonts
+[x] update memory meter on new/delete todo
 [x] Clear done button
 [x] Save undo state
 [x] time and date (clock)
