@@ -5,6 +5,8 @@
     let todos = [];
     let lastTodos = [];
     let showMore = false;
+    let isLeapYear = new Date().getFullYear() % 4 == 0;
+    let daysInYear = isLeapYear ? new Array(366) : new Array(365);
 
     $: todoList = todos.filter(todo => !todo.completed);
     $: doneCount = todos.filter(todo => todo.completed).length;
@@ -97,6 +99,12 @@
 
 <svelte:window on:keydown={onKeyDown}/>
 
+<div class="tracker-grid">
+    {#each daysInYear as day, i}
+        <div class="square" data="{i}" day="{day}"></div>
+    {/each} 
+</div>
+
 <input 
     id="new-todo-input"
     bind:value={newItem} 
@@ -160,4 +168,20 @@
     span {
 		color: var(--medium);
 	}
+
+    .tracker-grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 60rem;
+        height: 10rem;
+    }
+
+    .square {
+        background-color: green;
+        width: 1rem;
+        height: 1rem;
+        margin: 0.1rem;
+        border-radius: 2px;
+    }
 </style> 
