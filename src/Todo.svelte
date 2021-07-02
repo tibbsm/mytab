@@ -175,6 +175,7 @@
         flex-direction: column;
         width: 60rem;
         height: 10rem;
+        padding: 2rem 1rem;
     }
 
     .square {
