@@ -185,4 +185,12 @@
         margin: 0.1rem;
         border-radius: 2px;
     }
+
+    .square:hover {
+        opacity: 0.8;
+    }
+
+    .square:before {
+        content: attr(day);
+    }
 </style> 
