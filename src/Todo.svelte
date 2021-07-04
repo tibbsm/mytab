@@ -101,7 +101,7 @@
 
 <div class="tracker-grid">
     {#each daysInYear as day, i}
-        <div class="square" data="{i}" day="{day}"></div>
+        <div class="square" data="{i}" data-day="{i}"></div>
     {/each} 
 </div>
 
@@ -191,6 +191,7 @@
     }
 
     .square:before {
-        content: attr(day);
+        content: attr(data-day);
+        display: none;
     }
 </style> 
