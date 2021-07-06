@@ -5,8 +5,8 @@
     let todos = [];
     let lastTodos = [];
     let showMore = false;
-    let isLeapYear = new Date().getFullYear() % 4 == 0;
     // FIXME: Leap calculation ain't this simple...
+    let isLeapYear = new Date().getFullYear() % 4 == 0;
     let daysInYear = isLeapYear ? new Array(366) : new Array(365);
 
     $: todoList = todos.filter(todo => !todo.completed);
