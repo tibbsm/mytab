@@ -14,8 +14,25 @@
     $: doneList = showMore ? 
         todos.filter(todo => todo.completed) :
         todos.filter(todo => todo.completed).slice(-3);
+    $: trackerInfo = calculateTrackerInfo(todos)
 	
     initializeTodos();
+
+    // FIXME
+    function calculateTrackerInfo(todos) {
+        let daysInYear = isLeapYear ? new Array(366) : new Array(365);
+        todos.forEach(todo => {
+            daysInYear[0];
+        })
+        return [];
+    }
+
+    // function daysIntoYear(date){
+    //     return (
+    //         (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - 
+    //         Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
+    //     );
+    // }
 
 	function addToList() {
 		todos = [...todos, {
