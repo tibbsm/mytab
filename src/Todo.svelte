@@ -22,17 +22,17 @@
     function calculateTrackerInfo(todos) {
         let daysInYear = isLeapYear ? new Array(366) : new Array(365);
         todos.forEach(todo => {
-            daysInYear[0];
+            daysInYear[daysIntoYear(date)];
         })
         return [];
     }
 
-    // function daysIntoYear(date){
-    //     return (
-    //         (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - 
-    //         Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
-    //     );
-    // }
+    function daysIntoYear(date){
+        return (
+            (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - 
+            Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
+        );
+    }
 
 	function addToList() {
 		todos = [...todos, {
