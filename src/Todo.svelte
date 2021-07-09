@@ -22,7 +22,7 @@
     function calculateTrackerInfo(todos) {
         let daysInYear = isLeapYear ? new Array(366) : new Array(365);
         todos.forEach(todo => {
-            daysInYear[daysIntoYear(date)];
+            daysInYear[daysIntoYear(date) - 1];
         })
         return [];
     }
