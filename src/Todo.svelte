@@ -14,6 +14,8 @@
     $: doneList = showMore ? 
         todos.filter(todo => todo.completed) :
         todos.filter(todo => todo.completed).slice(-3);
+
+    // FIXME 
     $: trackerInfo = calculateTrackerInfo(todos)
 	
     initializeTodos();
@@ -22,7 +24,8 @@
     function calculateTrackerInfo(todos) {
         let daysInYear = isLeapYear ? new Array(366) : new Array(365);
         todos.forEach(todo => {
-            daysInYear[daysIntoYear(date) - 1];
+            if (todo.complete_at instanceof Date)
+                daysInYear[daysIntoYear(todo.complete_at) - 1];
         })
         return [];
     }
@@ -113,13 +116,15 @@
             undo();
         }
     };
+
+    console.log(trackerInfo);
 </script>
 
 <svelte:window on:keydown={onKeyDown}/>
 
 <div class="tracker-grid">
-    {#each daysInYear as day, i}
-        <div class="square" data="{i}" data-day="{i}"></div>
+    {#each trackerInfo as day, i}
+        <div class="square" data="{i}" data-day="{day?day:'null'}"></div>
     {/each} 
 </div>
 
