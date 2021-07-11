@@ -16,18 +16,17 @@
         todos.filter(todo => todo.completed).slice(-3);
 
     // FIXME 
-    $: trackerInfo = calculateTrackerInfo(todos)
+    $: trackerInfo = calculateTrackerInfo(todos);
 	
     initializeTodos();
 
     // FIXME
     function calculateTrackerInfo(todos) {
         let daysInYear = isLeapYear ? new Array(366) : new Array(365);
-        todos.forEach(todo => {
+        return todos.map(todo => {
             if (todo.complete_at instanceof Date)
                 daysInYear[daysIntoYear(todo.complete_at) - 1];
         })
-        return [];
     }
 
     function daysIntoYear(date){
