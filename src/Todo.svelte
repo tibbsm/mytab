@@ -7,7 +7,6 @@
     let showMore = false;
     // FIXME: Leap calculation ain't this simple...
     let isLeapYear = new Date().getFullYear() % 4 == 0;
-    let daysInYear = isLeapYear ? new Array(366) : new Array(365);
 
     $: todoList = todos.filter(todo => !todo.completed);
     $: doneCount = todos.filter(todo => todo.completed).length;
@@ -23,17 +22,26 @@
     // FIXME
     function calculateTrackerInfo(todos) {
         let daysInYear = isLeapYear ? new Array(366) : new Array(365);
-        return todos.map(todo => {
-            if (todo.complete_at instanceof Date)
-                daysInYear[daysIntoYear(todo.complete_at) - 1];
-        })
+        let foo = todos.map(todo => {
+            console.log(daysIntoYear(todo.complete_at));
+            if (new Date(todo.complete_at) instanceof Date && daysIntoYear(todo.complete_at))
+                daysInYear[daysIntoYear(todo.complete_at) - 1] = true;
+        });
+        console.log(daysInYear);
+        return daysInYear;
     }
 
-    function daysIntoYear(date){
-        return (
-            (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - 
-            Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
-        );
+    function daysIntoYear(completedAt){
+        if (completedAt) {
+            let date = new Date(completedAt);
+
+            return (
+                (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - 
+                Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
+            );
+        } else {
+            return false;
+        }
     }
 
 	function addToList() {
