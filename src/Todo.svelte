@@ -22,19 +22,23 @@
     // FIXME
     function calculateTrackerInfo(todos) {
         let daysInYear = isLeapYear ? new Array(366) : new Array(365);
-        let foo = todos.map(todo => {
+        todos.map(todo => {
             console.log(daysIntoYear(todo.complete_at));
-            if (new Date(todo.complete_at) instanceof Date && daysIntoYear(todo.complete_at))
-                daysInYear[daysIntoYear(todo.complete_at) - 1] = true;
+
+            daysInYear[daysIntoYear(todo.complete_at) - 1] =
+                (new Date(todo.complete_at) instanceof Date && 
+                    daysIntoYear(todo.complete_at)).toString();
         });
         console.log(daysInYear);
+        console.log(todos);
+
         return daysInYear;
     }
 
+    // FIXME
     function daysIntoYear(completedAt){
         if (completedAt) {
             let date = new Date(completedAt);
-
             return (
                 (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - 
                 Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000
@@ -69,10 +73,12 @@
         if (action == 'status') {
             let index = todos.findIndex(todo => todo.id == lastTodo.id);
             todos[index].completed = !todos[index].completed; 
-            todos = todos;
+            todos[index].complete_at = todos[index].completed ? new Date().getTime() : null;
+            todos = [...todos];
         } else if (action == 'delete') {
             todos = [...todos, ...lastTodo];
         }
+        saveTodos();
     }
 
     function saveTodos() {
@@ -131,7 +137,7 @@
 
 <div class="tracker-grid">
     {#each trackerInfo as day, i}
-        <div class="square" data="{i}" data-day="{day?day:'null'}"></div>
+        <div class="square" data="{i}" data-day="{day}"></div>
     {/each} 
 </div>
 
@@ -186,7 +192,7 @@
 
 <br/><br/>
 
-<button on:click={() => clearDone()}>Clear Done</button>
+<button on:click={() => clearDone()} disabled>Clear Done</button>
 
 <br/><br/>
 
@@ -209,13 +215,16 @@
     }
 
     .square {
-        background-color: green;
         width: 1rem;
         height: 1rem;
         margin: 0.1rem;
         border-radius: 2px;
+        background-color: midnightblue;
     }
 
+    .square[data-day] {
+        background-color: green;
+    }
     .square:hover {
         opacity: 0.8;
     }
