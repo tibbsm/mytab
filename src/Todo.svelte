@@ -149,46 +149,52 @@
 >
 <button on:click={addToList}>Add</button>
 
-<h1>To Do ({todoList.length})</h1>
-{#each todoList as item}
-	<input 
-		on:change={() => changeStatus(item)}
-		bind:checked={item.completed} 
-		type="checkbox"
-	>
-	<textarea 
-        class:checked={item.completed} 
-        bind:value={item.text} 
-        on:keyup={debounce(() => saveTodos(), 250)}
-    ></textarea>
-	<span 
-        id='todo-delete-{item.id}'
-        on:click={() => removeFromList(item.id)} 
-        tabindex=0
-    >❌</span>
-	<br/>
-{/each} 
+<div class="flex">
+    <div class="todos">
+        <h2>To Do ({todoList.length})</h2>
+        {#each todoList as item}
+            <input 
+                on:change={() => changeStatus(item)}
+                bind:checked={item.completed} 
+                type="checkbox"
+            >
+            <textarea 
+                class:checked={item.completed} 
+                bind:value={item.text} 
+                on:keyup={debounce(() => saveTodos(), 250)}
+            ></textarea>
+            <span 
+                id='todo-delete-{item.id}'
+                on:click={() => removeFromList(item.id)} 
+                tabindex=0
+            >❌</span>
+            <br/>
+        {/each} 
+    </div>
 
-<h1>Done! ({doneCount})
-    <button on:click={() => showMore = !showMore}>
-    { showMore ? 'Show Less' : 'Show More' }
-    </button>
-</h1>
+    <div class="dones">
+        <h2>Done! ({doneCount})
+            <button on:click={() => showMore = !showMore}>
+            { showMore ? 'Show Less' : 'Show More' }
+            </button>
+        </h2>
 
-{#each doneList as item}
-	<input 
-        on:change={() => changeStatus(item)}
-		bind:checked={item.completed} 
-		type="checkbox"
-	>
-	<span class:checked={item.completed}>{item.text}</span>
-	<span 
-        id='todo-delete-{item.id}'
-        on:click={() => removeFromList(item.id)} 
-        tabindex=0
-    >❌</span>
-	<br/>
-{/each} 
+        {#each doneList as item}
+            <input 
+                on:change={() => changeStatus(item)}
+                bind:checked={item.completed} 
+                type="checkbox"
+            >
+            <span class:checked={item.completed}>{item.text}</span>
+            <span 
+                id='todo-delete-{item.id}'
+                on:click={() => removeFromList(item.id)} 
+                tabindex=0
+            >❌</span>
+            <br/>
+        {/each} 
+    </div>
+</div>
 
 <br/><br/>
 
@@ -204,6 +210,11 @@
     span {
 		color: var(--medium);
 	}
+
+    .flex {
+        display: flex;
+        justify-content: space-around;
+    }
 
     .tracker-grid {
         display: flex;

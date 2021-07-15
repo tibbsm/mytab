@@ -32,7 +32,7 @@
 	:global(body) {
 		background-color: var(--black);
 	}
-	:global(h1) {
+	:global(h1, h2) {
 		color: var(--light);
 	}
 </style> 
