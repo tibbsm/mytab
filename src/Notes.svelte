@@ -41,14 +41,9 @@
 
 <style> 
     [contenteditable] {
-        border: 1px solid #707070;
         min-height: 50px;
         width: 50%;
         border-radius: 3px;
         padding: 5px;
-    }
-
-    .notes {
-        background-color: var(--white);
     }
 </style> 

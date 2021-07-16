@@ -35,4 +35,9 @@
 	:global(h1, h2) {
 		color: var(--light);
 	}
+
+	:global(input, textarea, [contenteditable]) {
+		background-color: #1b1e23;
+		color: var(--light);
+	}
 </style> 

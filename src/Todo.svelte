@@ -23,15 +23,10 @@
     function calculateTrackerInfo(todos) {
         let daysInYear = isLeapYear ? new Array(366) : new Array(365);
         todos.map(todo => {
-            console.log(daysIntoYear(todo.complete_at));
-
             daysInYear[daysIntoYear(todo.complete_at) - 1] =
                 (new Date(todo.complete_at) instanceof Date && 
                     daysIntoYear(todo.complete_at)).toString();
         });
-        console.log(daysInYear);
-        console.log(todos);
-
         return daysInYear;
     }
 
@@ -129,8 +124,6 @@
             undo();
         }
     };
-
-    console.log(trackerInfo);
 </script>
 
 <svelte:window on:keydown={onKeyDown}/>
@@ -153,6 +146,7 @@
     <div class="todos">
         <h2>To Do ({todoList.length})</h2>
         {#each todoList as item}
+        <div class="todoItem">
             <input 
                 on:change={() => changeStatus(item)}
                 bind:checked={item.completed} 
@@ -168,7 +162,7 @@
                 on:click={() => removeFromList(item.id)} 
                 tabindex=0
             >❌</span>
-            <br/>
+        </div>
         {/each} 
     </div>
 
@@ -180,18 +174,20 @@
         </h2>
 
         {#each doneList as item}
-            <input 
-                on:change={() => changeStatus(item)}
-                bind:checked={item.completed} 
-                type="checkbox"
-            >
-            <span class:checked={item.completed}>{item.text}</span>
-            <span 
-                id='todo-delete-{item.id}'
-                on:click={() => removeFromList(item.id)} 
-                tabindex=0
-            >❌</span>
-            <br/>
+            <div class="doneItem">
+                <input 
+                    on:change={() => changeStatus(item)}
+                    bind:checked={item.completed} 
+                    type="checkbox"
+                >
+                <span class:checked={item.completed}>{item.text}</span>
+                <span 
+                    id='todo-delete-{item.id}'
+                    on:click={() => removeFromList(item.id)} 
+                    tabindex=0
+                >❌</span>
+                <br/>
+            </div>
         {/each} 
     </div>
 </div>
@@ -213,7 +209,12 @@
 
     .flex {
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .todos, .dones {
+        margin: 0 2.5em
     }
 
     .tracker-grid {

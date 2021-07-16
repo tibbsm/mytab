@@ -5,9 +5,12 @@ A simple, customizable tab template for new tabs in chrome.
 ## TODOs
 [] Github style tracker.
   * https://levelup.gitconnected.com/how-to-create-a-tracker-like-the-github-contribution-graph-with-node-js-and-google-sheets-5e915c668c1
-	[] Track todos (github style tracker) for the month
-	[] create separate component
-[] Linters (ES & Prettier)  
+	[x] Track todos (github style tracker) for the ~~month~~year
+	[] create separate component (pass todos to it?)
+[] dev console stuff?? running commands for me only or something?
+[] states => [todo/notes, other pages??]
+[] note pages
+[] **Linters / Formatters (ES & Prettier)**
 [] Sub Tasks
 [] meter styling (red when low on memory)
 [] Draggable  
