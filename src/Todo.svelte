@@ -13,10 +13,12 @@
     $: doneList = showMore ? 
         todos.filter(todo => todo.completed) :
         todos.filter(todo => todo.completed).slice(-3);
-
-    // FIXME 
     $: trackerInfo = calculateTrackerInfo(todos);
 	
+    // Tracker: component
+    // Tracker: weekday alignment
+
+
     initializeTodos();
 
     // FIXME
