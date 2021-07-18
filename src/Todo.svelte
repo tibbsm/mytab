@@ -17,6 +17,9 @@
 	
     // Tracker: component
     // Tracker: weekday alignment
+    // add doing column?
+    // limit new items after so many todos
+    // archive old ones (limited again)
 
 
     initializeTodos();

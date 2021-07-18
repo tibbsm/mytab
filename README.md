@@ -3,10 +3,8 @@
 A simple, customizable tab template for new tabs in chrome. 
 
 ## TODOs
-[] Github style tracker.
-  * https://levelup.gitconnected.com/how-to-create-a-tracker-like-the-github-contribution-graph-with-node-js-and-google-sheets-5e915c668c1
+[] create separate component for tracker (pass todos to it?)
 	[x] Track todos (github style tracker) for the ~~month~~year
-	[] create separate component (pass todos to it?)
 [] dev console stuff?? running commands for me only or something?
 [] states => [todo/notes, other pages??]
 [] note pages
@@ -29,6 +27,8 @@ A simple, customizable tab template for new tabs in chrome.
 [] dismissable/pinnable/customizable shortcuts notes  
   
 [x] fonts
+[x] Github style tracker.
+  * https://levelup.gitconnected.com/how-to-create-a-tracker-like-the-github-contribution-graph-with-node-js-and-google-sheets-5e915c668c1
 [x] update memory meter on new/delete todo
 [x] Clear done button
 [x] Save undo state
