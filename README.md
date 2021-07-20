@@ -25,7 +25,6 @@ A simple, customizable tab template for new tabs in chrome.
 * fix textarea style
   * onclick/onfocus switch to editable
 [] dismissable/pinnable/customizable shortcuts notes  
-
   
 [x] fonts
 [x] Github style tracker.
