@@ -39,6 +39,7 @@ A simple, customizable tab template for new tabs in chrome.
 [x] undo last delete/etc.   
 [x] tab friendly && shortcuts  
 [x] ~~Save to Drive (notes)~~  
+
 [x] Notes  
 	[x] Debounced saves ~~& save button~~  
 	[x] Separate file  
@@ -51,7 +52,8 @@ A simple, customizable tab template for new tabs in chrome.
 	[x] ~~Handle saving images to file???~~  
     [x] ~~Storable (DOCS)~~  
 	[x] ~~WYSIWYT Editor that saves~~  
-	[x] ~~Create seperate file for todos, wysiwyt editor, etc..~~  
+	[x] ~~Create seperate file for todos, wysiwyt editor, etc..~~ 
+
 [x] Storage size indicators  
 	[x] TOTAL Storage Size   
 		QUOTA_BYTES number 102400  
