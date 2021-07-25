@@ -5,7 +5,9 @@ A simple, customizable tab template for new tabs in chrome.
 ## TODOs
 [] create separate component for tracker (pass todos to it?)
 	[x] Track todos (github style tracker) for the ~~month~~year
+
 [] dev console stuff?? running commands for me only or something?
+	[] logs for me. it's not public yet so why not
 [] states => [todo/notes, other pages??]
 [] note pages
 [] **Linters / Formatters (ES & Prettier)**
