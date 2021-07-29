@@ -12,6 +12,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] states => [todo/notes, other pages??]
 [] note pages
 [] **Linters / Formatters (ES & Prettier)**
+	* Writeup
 [] Sub Tasks
 [] meter styling (red when low on memory)
 [] Draggable  
