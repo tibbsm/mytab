@@ -29,7 +29,8 @@ A simple, customizable tab template for new tabs in chrome.
 * fix textarea style
   * onclick/onfocus switch to editable
 
-
+* Umberto Eco Writing System
+  
 [] dismissable/pinnable/customizable shortcuts notes  
 [] tracker from today (-365)
 	* gotta switch up how we generate the tracker
