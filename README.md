@@ -19,13 +19,18 @@ A simple, customizable tab template for new tabs in chrome.
   * https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0  
   * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API 
   * Drag/drop keyboard shortcuts 
+  
 * Uptime (how long chrome is open / tab open, etc)  
   * https://developer.chrome.com/docs/extensions/reference/
   * (tabs)  
     * https://stackoverflow.com/questions/47431376/chrome-api-to-get-the-start-time-of-a-tab  
+
+
 * notes and drawings to improve the ext.
+
 * kanban  
   * https://codepen.io/nikkipantony/pen/qoKORX
+
 * fix textarea style
   * onclick/onfocus switch to editable
 
