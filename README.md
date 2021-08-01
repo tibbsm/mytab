@@ -25,7 +25,6 @@ A simple, customizable tab template for new tabs in chrome.
   * (tabs)  
     * https://stackoverflow.com/questions/47431376/chrome-api-to-get-the-start-time-of-a-tab  
 
-
 * notes and drawings to improve the ext.
 
 * kanban  
