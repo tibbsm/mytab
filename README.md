@@ -6,6 +6,8 @@ A simple, customizable tab template for new tabs in chrome.
 [] create separate component for tracker (pass todos to it?)
 	[x] Track todos (github style tracker) for the ~~month~~year
 
+[] fix flow. focus on done. dont let todo grow
+
 [] Start another project for variety
 [] dev console stuff?? running commands for me only or something?
 	[] logs for me. it's not public yet so why not
