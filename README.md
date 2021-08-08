@@ -10,7 +10,6 @@ A simple, customizable tab template for new tabs in chrome.
 [] make better
 [] actionable, small and not just notes...
 
-
 [] Start another project for variety
 [] dev console stuff?? running commands for me only or something?
 	[] logs for me. it's not public yet so why not
