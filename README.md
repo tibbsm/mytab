@@ -16,7 +16,6 @@ A simple, customizable tab template for new tabs in chrome.
 [] logs for me. it's not public yet so why not
 [] states => [todo/notes, other pages??]
 [] note pages
-[x] **Linters / Formatters (ES & Prettier)** \* Writeup
 [] Sub Tasks
 [] meter styling (red when low on memory)
 [] Draggable
@@ -48,6 +47,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 [x] fonts
 [x] Github style tracker.
+[x] **Linters / Formatters (ES & Prettier)** \* Writeup
 
 - https://levelup.gitconnected.com/how-to-create-a-tracker-like-the-github-contribution-graph-with-node-js-and-google-sheets-5e915c668c1
   [x] update memory meter on new/delete todo
