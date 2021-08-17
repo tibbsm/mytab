@@ -29,7 +29,6 @@ A simple, customizable tab template for new tabs in chrome.
     - https://stackoverflow.com/questions/47431376/chrome-api-to-get-the-start-time-of-a-tab
 
 - notes and drawings to improve the ext.
-
 - kanban
 
   - https://codepen.io/nikkipantony/pen/qoKORX
@@ -42,7 +41,6 @@ A simple, customizable tab template for new tabs in chrome.
 
 [] dismissable/pinnable/customizable shortcuts notes  
 [] tracker from today (-365) \* gotta switch up how we generate the tracker
-
 [x] fonts
 [x] Github style tracker.
 [x] **Linters / Formatters (ES & Prettier)** \* Writeup
