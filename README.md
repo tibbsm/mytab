@@ -5,11 +5,8 @@ A simple, customizable tab template for new tabs in chrome.
 ## TODOs
 
 [] create separate component for tracker (pass todos to it?)
-[x] Track todos (github style tracker) for the ~~month~~year
-
 [] fix flow. focus on done. dont let todo grow
 [] actionable, small and not just notes...\*\*\*\*
-
 [] dev console stuff?? running commands for me only or something?
 [] logs for me. it's not public yet so why not
 [] states => [todo/notes, other pages??]
@@ -17,6 +14,8 @@ A simple, customizable tab template for new tabs in chrome.
 [] Sub Tasks
 [] meter styling (red when low on memory)
 [] Draggable
+[] dismissable/pinnable/customizable shortcuts notes  
+[] tracker from today (-365) \* gotta switch up how we generate the tracker
 
 - https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0
 - https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
@@ -25,36 +24,27 @@ A simple, customizable tab template for new tabs in chrome.
 - Uptime (how long chrome is open / tab open, etc)
 
   - https://developer.chrome.com/docs/extensions/reference/
-  - (tabs)
-    - https://stackoverflow.com/questions/47431376/chrome-api-to-get-the-start-time-of-a-tab
+  - (tabs) https://stackoverflow.com/questions/47431376/chrome-api-to-get-the-start-time-of-a-tab
 
 - notes and drawings to improve the ext.
 - kanban
-
   - https://codepen.io/nikkipantony/pen/qoKORX
-
 - fix textarea style
-
-  - onclick/onfocus switch to editable
-
+- onclick/onfocus switch to editable
 - Umberto Eco Writing System
 
-[] dismissable/pinnable/customizable shortcuts notes  
-[] tracker from today (-365) \* gotta switch up how we generate the tracker
+[x] Track todos (github style tracker) for the ~~month~~year
 [x] fonts
 [x] Github style tracker.
-[x] **Linters / Formatters (ES & Prettier)** \* Writeup
-
-- https://levelup.gitconnected.com/how-to-create-a-tracker-like-the-github-contribution-graph-with-node-js-and-google-sheets-5e915c668c1
-  [x] update memory meter on new/delete todo
-  [x] Clear done button
-  [x] Save undo state
-  [x] time and date (clock)
-  [x] create notes dir for research  
-  [x] undo last delete/etc.  
-  [x] tab friendly && shortcuts  
-  [x] ~~Save to Drive (notes)~~
-
+[x] **Linters / Formatters (ES & Prettier)**
+[x] update memory meter on new/delete todo
+[x] Clear done button
+[x] Save undo state
+[x] time and date (clock)
+[x] create notes dir for research  
+[x] undo last delete/etc.  
+[x] tab friendly && shortcuts  
+[x] ~~Save to Drive (notes)~~
 [x] Notes  
  [x] Debounced saves ~~& save button~~  
  [x] Separate file  
@@ -68,7 +58,6 @@ A simple, customizable tab template for new tabs in chrome.
  [x] ~~Storable (DOCS)~~  
  [x] ~~WYSIWYT Editor that saves~~  
  [x] ~~Create seperate file for todos, wysiwyt editor, etc..~~
-
 [x] Storage size indicators  
  [x] TOTAL Storage Size  
  QUOTA\*BYTES number 102400  
