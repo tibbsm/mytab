@@ -59,28 +59,21 @@ A simple, customizable tab template for new tabs in chrome.
  [x] ~~WYSIWYT Editor that saves~~  
  [x] ~~Create seperate file for todos, wysiwyt editor, etc..~~
 [x] Storage size indicators  
- [x] TOTAL Storage Size  
- QUOTA\*BYTES number 102400  
- [x] Storage Size  
- QUOTA_BYTES_PER_ITEM number 8192
+[x] Update on updates to todos/note  
+[x] ~~Storage meter onhover show numbers~~  
+[x] Change color of storage text depending on status  
+[x] Limit Done list. Dont need to see all of them.  
+[x] DEBOUNCE!!!!  
+[x] Move todos to README or something  
+[x] Done list  
+[X] ID number for tasks (object???)  
+[X] Add on enter  
+[x] Timestamps  
+[x] Store completed task  
+[x] Save edit on change  
+[x] ~~Add way to dev on this easier?~~  
+[x] ~~Add storage listener~~  
+ \* chrome.storage.onChanged.addListener(function(changes, namespace)
 
-- Make these visable (green/yellow/red) and warn to backup  
-   [x] Update on updates to todos/note  
-   \_ Do I even need this?  
-  [x] ~~Storage meter onhover show numbers~~  
-  [x] Change color of storage text depending on status  
-  [x] Limit Done list. Dont need to see all of them.  
-  [x] DEBOUNCE!!!!  
-  [x] Move todos to README or something  
-  [x] Done list  
-  [X] ID number for tasks (object???)  
-  [X] Add on enter  
-  [x] Timestamps  
-  [x] Store completed task  
-  [x] Save edit on change  
-  [x] ~~Add way to dev on this easier?~~  
-  [x] ~~Add storage listener~~  
-   \* chrome.storage.onChanged.addListener(function(changes, namespace)
-
-* MDN Svelte Todo
+- MDN Svelte Todo
   - https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props
