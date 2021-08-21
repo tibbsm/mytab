@@ -2,21 +2,6 @@
 
 A simple, customizable tab template for new tabs in chrome.
 
-## TODOs
-
-[] create separate component for tracker (pass todos to it?)
-[] fix flow. focus on done. dont let todo grow
-[] actionable, small and not just notes...\*\*\*\*
-[] dev console stuff?? running commands for me only or something?
-[] logs for me. it's not public yet so why not
-[] states => [todo/notes, other pages??]
-[] note pages
-[] Sub Tasks
-[] meter styling (red when low on memory)
-[] Draggable
-[] dismissable/pinnable/customizable shortcuts notes  
-[] tracker from today (-365) \* gotta switch up how we generate the tracker
-
 - https://svelte.dev/repl/3bf15c868aa94743b5f1487369378cf3?version=3.21.0
 - https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
 - Drag/drop keyboard shortcuts
@@ -32,6 +17,20 @@ A simple, customizable tab template for new tabs in chrome.
 - onclick/onfocus switch to editable
 - Umberto Eco Writing System
 
+## TODOs
+
+[] create separate component for tracker (pass todos to it?)
+[] fix flow. focus on done. dont let todo grow
+[] actionable, small and not just notes...\*\*\*\*
+[] dev console stuff?? running commands for me only or something?
+[] logs for me. it's not public yet so why not
+[] states => [todo/notes, other pages??]
+[] note pages
+[] Sub Tasks
+[] meter styling (red when low on memory)
+[] Draggable
+[] dismissable/pinnable/customizable shortcuts notes  
+[] tracker from today (-365) \* gotta switch up how we generate the tracker
 [x] Track todos (github style tracker) for the ~~month~~year
 [x] fonts
 [x] Github style tracker.
