@@ -17,6 +17,11 @@ A simple, customizable tab template for new tabs in chrome.
 
 ## TODOs
 
+[] Tracker: component
+[] Tracker: weekday alignment
+[] add doing column?
+[] limit new items after so many todos
+[] archive old ones (limited again)
 [] create separate component for tracker (pass todos to it?)
 [] fix flow. focus on done. dont let todo grow
 [] actionable, small and not just notes...\*\*\*\*

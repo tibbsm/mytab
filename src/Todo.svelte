@@ -15,12 +15,6 @@
     : todos.filter((todo) => todo.completed).slice(-3);
   $: trackerInfo = calculateTrackerInfo(todos);
 
-  // Tracker: component
-  // Tracker: weekday alignment
-  // add doing column?
-  // limit new items after so many todos
-  // archive old ones (limited again)
-
   initializeTodos();
 
   // FIXME
