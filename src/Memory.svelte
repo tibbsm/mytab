@@ -5,16 +5,17 @@
 
   chrome.storage.sync.getBytesInUse(
     null,
-    (bytesInUse) => (memoryUsed = bytesInUse)
+    (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
   ); // get bytes
   chrome.storage.sync.getBytesInUse(
     "notes",
-    (bytesInUse) => (notesMemoryUsed = bytesInUse)
+    (bytesInUse) => (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
   ); // get bytes
   chrome.storage.sync.getBytesInUse(
     "todos",
-    (bytesInUse) => (todosMemoryUsed = bytesInUse)
+    (bytesInUse) => (todosMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
   ); // get bytes
+
   // chrome.storage.sync.get(null, (items) => console.log(items)); // get all
 
   chrome.storage.onChanged.addListener(function (changes, namespace) {
@@ -22,39 +23,74 @@
       if (key == "notes") {
         chrome.storage.sync.getBytesInUse(
           "notes",
-          (bytesInUse) => (notesMemoryUsed = bytesInUse)
+          (bytesInUse) =>
+            (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
         );
       } else if (key == "todos") {
         chrome.storage.sync.getBytesInUse(
           "todos",
-          (bytesInUse) => (todosMemoryUsed = bytesInUse)
+          (bytesInUse) =>
+            (todosMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
         );
       }
     }
     chrome.storage.sync.getBytesInUse(
       null,
-      (bytesInUse) => (memoryUsed = bytesInUse)
+      (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
     ); // get bytes
   });
+
+  const getColor = (percent) =>
+    percent > 90 ? "red" : percent > 70 ? "yellow" : "green";
 </script>
 
 <br />
 <br />
 
-<label for="total">Total Memory:</label>
-<meter id="total" min="0" max="102400" value={memoryUsed} />
-<br />
+<p>Total: ({memoryUsed}%)</p>
+<div class="meter">
+  <span
+    style={`width: ${memoryUsed}%; background-color: ${getColor(memoryUsed)}`}
+  />
+</div>
 
-<label for="notes">Notes Memory:</label>
-<meter id="notes" min="0" max="8192" value={notesMemoryUsed} />
-<br />
+<p>Notes: ({notesMemoryUsed}%)</p>
+<div class="meter">
+  <span
+    style={`width: ${notesMemoryUsed}%; background-color: ${getColor(
+      notesMemoryUsed
+    )}`}
+  />
+</div>
 
-<label for="todos">Todos Memory:</label>
-<meter id="todos" min="0" max="8192" value={todosMemoryUsed} />
-<br />
+<p>Todos: ({todosMemoryUsed}%)</p>
+<div class="meter">
+  <span
+    style={`width: ${todosMemoryUsed}%; background-color: ${getColor(
+      todosMemoryUsed
+    )}`}
+  />
+</div>
 
 <style>
-  label {
+  p {
     color: var(--light);
+  }
+  .meter {
+    height: 1em;
+    width: 25%;
+    background: #555;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  .meter > span {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 </style>

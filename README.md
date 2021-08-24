@@ -30,10 +30,10 @@ A simple, customizable tab template for new tabs in chrome.
 [] states => [todo/notes, other pages??]
 [] note pages
 [] Sub Tasks
-[] meter styling (red when low on memory)
 [] Draggable
 [] dismissable/pinnable/customizable shortcuts notes  
 [] tracker from today (-365) \* gotta switch up how we generate the tracker
+[x] meter styling (red when low on memory)
 [x] Track todos (github style tracker) for the ~~month~~year
 [x] fonts
 [x] Github style tracker.
