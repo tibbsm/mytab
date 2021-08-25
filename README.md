@@ -19,20 +19,23 @@ A simple, customizable tab template for new tabs in chrome.
 
 [] Tracker: component
 [] Tracker: weekday alignment
-[] add doing column?
-[] limit new items after so many todos
-[] archive old ones (limited again)
 [] create separate component for tracker (pass todos to it?)
+
+[] add doing column?
+
+[] archive old ones (limited again)
+
 [] fix flow. focus on done. dont let todo grow
 [] actionable, small and not just notes...\*\*\*\*
 [] dev console stuff?? running commands for me only or something?
 [] logs for me. it's not public yet so why not
-[] states => [todo/notes, other pages??]
 [] note pages
 [] Sub Tasks
 [] Draggable
-[] dismissable/pinnable/customizable shortcuts notes  
 [] tracker from today (-365) \* gotta switch up how we generate the tracker
+[] typescript
+
+[x] limit new items after so many undone todos
 [x] meter styling (red when low on memory)
 [x] Track todos (github style tracker) for the ~~month~~year
 [x] fonts
@@ -74,4 +77,4 @@ A simple, customizable tab template for new tabs in chrome.
 [x] Save edit on change  
 [x] ~~Add way to dev on this easier?~~  
 [x] ~~Add storage listener~~  
- \* chrome.storage.onChanged.addListener(function(changes, namespace)
+[] ~~dismissable/pinnable/customizable shortcuts notes~~

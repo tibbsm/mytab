@@ -47,6 +47,10 @@
   }
 
   function addToList() {
+    if (todoList.length >= 8) {
+      alert("Too many undone todos");
+      return;
+    }
     todos = [
       ...todos,
       {
