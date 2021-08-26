@@ -20,6 +20,8 @@ A simple, customizable tab template for new tabs in chrome.
 [] Tracker: component
 [] Tracker: weekday alignment
 [] create separate component for tracker (pass todos to it?)
+[] tracker to monthly?
+[] setup db?
 
 [] add doing column?
 
@@ -27,7 +29,6 @@ A simple, customizable tab template for new tabs in chrome.
 
 [] fix flow. focus on done. dont let todo grow
 [] actionable, small and not just notes...\*\*\*\*
-[] dev console stuff?? running commands for me only or something?
 [] logs for me. it's not public yet so why not
 [] note pages
 [] Sub Tasks
@@ -35,6 +36,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] tracker from today (-365) \* gotta switch up how we generate the tracker
 [] typescript
 
+[x] dev console stuff?? running commands for me only or something?
 [x] limit new items after so many undone todos
 [x] meter styling (red when low on memory)
 [x] Track todos (github style tracker) for the ~~month~~year

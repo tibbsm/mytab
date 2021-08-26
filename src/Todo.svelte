@@ -100,6 +100,7 @@
         todos = [];
       }
     });
+    console.log(todos);
   }
 
   function changeStatus(todo) {
