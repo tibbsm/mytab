@@ -28,7 +28,6 @@ A simple, customizable tab template for new tabs in chrome.
 [] archive old ones (limited again)
 
 [] fix flow. focus on done. dont let todo grow
-[] actionable, small and not just notes...\*\*\*\*
 [] logs for me. it's not public yet so why not
 [] note pages
 [] Sub Tasks
@@ -36,6 +35,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] tracker from today (-365) \* gotta switch up how we generate the tracker
 [] typescript
 
+[x] ~~actionable, small and not just notes...~~
 [x] dev console stuff?? running commands for me only or something?
 [x] limit new items after so many undone todos
 [x] meter styling (red when low on memory)
