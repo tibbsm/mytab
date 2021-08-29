@@ -18,6 +18,7 @@ A simple, customizable tab template for new tabs in chrome.
 ## TODOs
 
 [] count browser open time?? times opened??
+[] better docs.. for my own sake
 
 [] Tracker: component
 [] Tracker: weekday alignment
