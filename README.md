@@ -17,6 +17,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 ## TODOs
 
+[] icons & other fluff
 [] count browser open time?? times opened??
 [] better docs.. for my own sake
 

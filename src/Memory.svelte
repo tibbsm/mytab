@@ -3,6 +3,8 @@
   $: notesMemoryUsed = "";
   $: todosMemoryUsed = "";
 
+  let hideMemory = true;
+
   chrome.storage.sync.getBytesInUse(
     null,
     (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
@@ -44,37 +46,47 @@
     percent > 90 ? "red" : percent > 70 ? "yellow" : "green";
 </script>
 
-<br />
-<br />
+<button on:click={() => (hideMemory = !hideMemory)}>
+  {hideMemory ? "Show Memory" : "Hide Memory"}
+</button>
 
-<p>Total: ({memoryUsed}%)</p>
-<div class="meter">
-  <span
-    style={`width: ${memoryUsed}%; background-color: ${getColor(memoryUsed)}`}
-  />
-</div>
+<div class="memory-wrapper {hideMemory && 'hide'}">
+  <p>Total: ({memoryUsed}%)</p>
+  <div class="meter">
+    <span
+      style={`width: ${memoryUsed}%; background-color: ${getColor(memoryUsed)}`}
+    />
+  </div>
 
-<p>Notes: ({notesMemoryUsed}%)</p>
-<div class="meter">
-  <span
-    style={`width: ${notesMemoryUsed}%; background-color: ${getColor(
-      notesMemoryUsed
-    )}`}
-  />
-</div>
+  <p>Notes: ({notesMemoryUsed}%)</p>
+  <div class="meter">
+    <span
+      style={`width: ${notesMemoryUsed}%; background-color: ${getColor(
+        notesMemoryUsed
+      )}`}
+    />
+  </div>
 
-<p>Todos: ({todosMemoryUsed}%)</p>
-<div class="meter">
-  <span
-    style={`width: ${todosMemoryUsed}%; background-color: ${getColor(
-      todosMemoryUsed
-    )}`}
-  />
+  <p>Todos: ({todosMemoryUsed}%)</p>
+  <div class="meter">
+    <span
+      style={`width: ${todosMemoryUsed}%; background-color: ${getColor(
+        todosMemoryUsed
+      )}`}
+    />
+  </div>
 </div>
 
 <style>
   p {
     color: var(--light);
+  }
+  .hide {
+    display: none;
+  }
+
+  .memory-wrapper {
+    margin-top: 1em;
   }
   .meter {
     height: 1em;
