@@ -24,7 +24,6 @@
   }
 </script>
 
-<h1>Notes</h1>
 <div
   class="notes"
   bind:innerHTML={notes}
