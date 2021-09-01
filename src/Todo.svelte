@@ -149,6 +149,7 @@
 
 <input
   id="new-todo-input"
+  class="todo-input"
   bind:value={newItem}
   type="text"
   placeholder="new todo item.."
@@ -206,9 +207,8 @@
   </div>
 </div>
 
-<br /><br />
-
-<button on:click={() => clearDone()} disabled>Clear Done</button>
+<!-- <br /><br /> -->
+<!-- <button on:click={() => clearDone()} disabled>Clear Done</button> -->
 
 <br /><br />
 
@@ -258,5 +258,9 @@
   .square:before {
     content: attr(data-day);
     display: none;
+  }
+
+  .todo-input {
+    margin-left: 1.5em;
   }
 </style>
