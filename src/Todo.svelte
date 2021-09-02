@@ -17,6 +17,16 @@
 
   initializeTodos();
 
+  // todos = [
+  //   {
+  //     id: new Date().getTime(),
+  //     text: "cool",
+  //     completed: false,
+  //     created_at: new Date().getTime(),
+  //     complete_at: null,
+  //   },
+  // ];
+
   // FIXME
   function calculateTrackerInfo(todos) {
     let daysInYear = isLeapYear ? new Array(366) : new Array(365);

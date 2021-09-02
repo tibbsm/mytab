@@ -17,6 +17,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 ## TODOs
 
+[] better way to dev locally (if dev don't use chrome)
 [] memory on hover instead (indicate on red)
 [] icons & other fluff
 [] count browser open time?? times opened??
