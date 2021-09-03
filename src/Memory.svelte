@@ -8,38 +8,38 @@
   initializeMemory();
 
   function initializeMemory() {
-    chrome.storage.sync.getBytesInUse(
+    chrome.storage?.sync.getBytesInUse(
       null,
       (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
     ); // get bytes
-    chrome.storage.sync.getBytesInUse(
+    chrome.storage?.sync.getBytesInUse(
       "notes",
       (bytesInUse) => (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
     ); // get bytes
-    chrome.storage.sync.getBytesInUse(
+    chrome.storage?.sync.getBytesInUse(
       "todos",
       (bytesInUse) => (todosMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
     ); // get bytes
 
-    // chrome.storage.sync.get(null, (items) => console.log(items)); // get all
+    // chrome.storage?.sync.get(null, (items) => console.log(items)); // get all
 
-    chrome.storage.onChanged.addListener(function (changes, namespace) {
+    chrome.storage?.onChanged.addListener(function (changes, namespace) {
       for (const key in changes) {
         if (key == "notes") {
-          chrome.storage.sync.getBytesInUse(
+          chrome.storage?.sync.getBytesInUse(
             "notes",
             (bytesInUse) =>
               (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
           );
         } else if (key == "todos") {
-          chrome.storage.sync.getBytesInUse(
+          chrome.storage?.sync.getBytesInUse(
             "todos",
             (bytesInUse) =>
               (todosMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
           );
         }
       }
-      chrome.storage.sync.getBytesInUse(
+      chrome.storage?.sync.getBytesInUse(
         null,
         (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
       ); // get bytes

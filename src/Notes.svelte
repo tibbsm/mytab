@@ -6,11 +6,11 @@
   initializeNotes();
 
   function saveNotes() {
-    chrome.storage.sync.set({ notes: notes });
+    chrome.storage?.sync.set({ notes: notes });
   }
 
   function initializeNotes() {
-    chrome.storage.sync.get(["notes"], function (items) {
+    chrome.storage?.sync.get(["notes"], function (items) {
       notes = items["notes"] || "";
     });
   }

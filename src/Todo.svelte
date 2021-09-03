@@ -99,11 +99,11 @@
   }
 
   function saveTodos() {
-    chrome.storage.sync.set({ todos: JSON.stringify(todos) });
+    chrome.storage?.sync.set({ todos: JSON.stringify(todos) });
   }
 
   function initializeTodos() {
-    chrome.storage.sync.get(["todos"], function (items) {
+    chrome.storage?.sync.get(["todos"], function (items) {
       if (items["todos"] && Array.isArray(JSON.parse(items["todos"]))) {
         todos = JSON.parse(items["todos"]);
       } else {
@@ -121,7 +121,7 @@
   }
 
   function clear() {
-    chrome.storage.sync.clear(() => {
+    chrome.storage?.sync.clear(() => {
       console.log("cleared");
       initializeTodos();
     });
