@@ -15,17 +15,17 @@
     : todos.filter((todo) => todo.completed).slice(-3);
   $: trackerInfo = calculateTrackerInfo(todos);
 
-  initializeTodos();
+  todos = [
+    {
+      id: new Date().getTime(),
+      text: "test 1",
+      completed: false,
+      created_at: new Date().getTime(),
+      complete_at: null,
+    },
+  ];
 
-  // todos = [
-  //   {
-  //     id: new Date().getTime(),
-  //     text: "cool",
-  //     completed: false,
-  //     created_at: new Date().getTime(),
-  //     complete_at: null,
-  //   },
-  // ];
+  initializeTodos();
 
   // FIXME
   function calculateTrackerInfo(todos) {
