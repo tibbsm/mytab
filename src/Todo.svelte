@@ -1,5 +1,6 @@
 <script>
   import { debounce } from "lodash-es";
+  import dummyTodos from "./dummydata";
 
   let newItem = "";
   let todos = [];
@@ -15,15 +16,7 @@
     : todos.filter((todo) => todo.completed).slice(-3);
   $: trackerInfo = calculateTrackerInfo(todos);
 
-  todos = [
-    {
-      id: new Date().getTime(),
-      text: "test 1",
-      completed: false,
-      created_at: new Date().getTime(),
-      complete_at: null,
-    },
-  ];
+  todos = dummyTodos;
 
   initializeTodos();
 
