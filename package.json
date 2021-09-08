@@ -6,7 +6,8 @@
     "build": "cpx --C public/ public/ && rollup -c && cpx extension/**/*.* public",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "validate": "svelte-check"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.4",
@@ -20,7 +21,13 @@
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "svelte-check": "^1.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "@rollup/plugin-typescript": "^8.0.0",
+    "typescript": "^4.0.0",
+    "tslib": "^2.0.0",
+    "@tsconfig/svelte": "^1.0.0"
   },
   "dependencies": {
     "cpx": "^1.5.0",

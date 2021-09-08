@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Notes from "./Notes.svelte";
   import Todo from "./Todo.svelte";
   import Time from "./Time.svelte";
