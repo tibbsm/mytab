@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { debounce } from "lodash-es";
 
   let notes = "";
@@ -15,9 +15,9 @@
     });
   }
 
-  function download(content, fileName, contentType) {
-    let a = document.createElement("a");
-    let text = content.replace(/<\/?[^>]+(>|$)/g, "\n");
+  function download(content: string, fileName: string, contentType: string) {
+    const a: HTMLAnchorElement = document.createElement("a");
+    const text: string = content.replace(/<\/?[^>]+(>|$)/g, "\n");
     a.href = URL.createObjectURL(new Blob([text], { type: contentType }));
     a.download = fileName;
     a.click();

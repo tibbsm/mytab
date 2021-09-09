@@ -2,6 +2,14 @@
   import { debounce } from "lodash-es";
   import dummyTodos from "./dummydata";
 
+  interface Todo {
+    id: number;
+    text: string;
+    completed: boolean;
+    created_at: number;
+    complete_at: number | null;
+  }
+
   let newItem = "";
   let todos = [];
   let lastTodos = [];
@@ -21,21 +29,21 @@
   initializeTodos();
 
   // FIXME
-  function calculateTrackerInfo(todos) {
+  function calculateTrackerInfo(todos: Todo[]) {
     let daysInYear = isLeapYear ? new Array(366) : new Array(365);
-    todos.map((todo) => {
-      daysInYear[daysIntoYear(todo.complete_at) - 1] = (
-        new Date(todo.complete_at) instanceof Date &&
-        daysIntoYear(todo.complete_at)
+    todos.map(({ complete_at }) => {
+      daysInYear[Number(daysIntoYear(complete_at)) - 1] = (
+        (complete_at && daysIntoYear(complete_at)) ??
+        "false"
       ).toString();
     });
     return daysInYear;
   }
 
   // FIXME
-  function daysIntoYear(completedAt) {
-    if (completedAt) {
-      let date = new Date(completedAt);
+  function daysIntoYear(complete_at: number) {
+    if (complete_at) {
+      let date = new Date(complete_at);
       return (
         (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
           Date.UTC(date.getFullYear(), 0, 0)) /
@@ -68,7 +76,7 @@
     saveTodos();
   }
 
-  function removeFromList(id) {
+  function removeFromList(id: number) {
     lastTodos.push(["delete", todos.filter((todo) => todo.id == id)]);
     todos = todos.filter((todo) => todo.id !== id);
     saveTodos();
@@ -106,33 +114,37 @@
     console.log(todos);
   }
 
-  function changeStatus(todo) {
+  function changeStatus(todo: Todo) {
     lastTodos.push(["status", todo]);
     todo.completed = !todo.completed;
     todo.complete_at = todo.completed ? new Date().getTime() : null;
     saveTodos();
   }
 
-  function clear() {
-    chrome.storage?.sync.clear(() => {
-      console.log("cleared");
-      initializeTodos();
-    });
-  }
+  // function clear() {
+  //   chrome.storage?.sync.clear(() => {
+  //     console.log("cleared");
+  //     initializeTodos();
+  //   });
+  // }
 
-  function clearDone() {
-    let done = todos.filter((todo) => todo.completed);
-    todos = todos.filter((todo) => !todo.completed);
-    lastTodos.push(["delete", done]);
-  }
+  // function clearDone() {
+  //   let done = todos.filter((todo) => todo.completed);
+  //   todos = todos.filter((todo) => !todo.completed);
+  //   lastTodos.push(["delete", done]);
+  // }
 
-  const onKeyDown = (e) => {
+  const onKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Enter") {
-      const currentId = document.activeElement.id;
-      if (currentId == "new-todo-input" && newItem != "") {
+      const {
+        activeElement,
+        activeElement: { id },
+      } = document as Document;
+
+      if (id == "new-todo-input" && newItem != "") {
         addToList();
-      } else if (currentId.startsWith("todo-delete-")) {
-        document.activeElement.click();
+      } else if (id.startsWith("todo-delete-")) {
+        (activeElement as HTMLSpanElement).click();
       }
     }
 
@@ -142,11 +154,13 @@
   };
 </script>
 
+/// <reference types="node" />
+
 <svelte:window on:keydown={onKeyDown} />
 
 <div class="tracker-grid">
   {#each trackerInfo as day, i}
-    <div class="square" data={i} data-day={day} />
+    <div class="square" data={i.toString()} data-day={day} />
   {/each}
 </div>
 

@@ -1,7 +1,11 @@
-<script>
-  $: memoryUsed = "";
-  $: notesMemoryUsed = "";
-  $: todosMemoryUsed = "";
+<script lang="ts">
+  let memoryUsed: number;
+  let notesMemoryUsed: number;
+  let todosMemoryUsed: number;
+
+  $: memoryUsed = 0;
+  $: notesMemoryUsed = 0;
+  $: todosMemoryUsed = 0;
 
   let hideMemory = true;
 
@@ -23,7 +27,7 @@
 
     // chrome.storage?.sync.get(null, (items) => console.log(items)); // get all
 
-    chrome.storage?.onChanged.addListener(function (changes, namespace) {
+    chrome.storage?.onChanged.addListener(({ changes }) => {
       for (const key in changes) {
         if (key == "notes") {
           chrome.storage?.sync.getBytesInUse(
@@ -46,7 +50,7 @@
     });
   }
 
-  const getColor = (percent) =>
+  const getColor = (percent: number): string =>
     percent > 90 ? "red" : percent > 70 ? "yellow" : "green";
 </script>
 
