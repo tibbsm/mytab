@@ -18,11 +18,14 @@ A simple, customizable tab template for new tabs in chrome.
 
 ## TODOs
 
-[] better way to dev locally (if dev don't use chrome)
 [] memory on hover instead (indicate on red)
 [] icons & other fluff
 [] count browser open time?? times opened??
-[] better docs.. for my own sake
+
+[] Different states(?)
+[] teddit
+[] nba
+[] HN
 
 [] Tracker: component
 [] Tracker: weekday alignment
@@ -38,10 +41,16 @@ A simple, customizable tab template for new tabs in chrome.
 [] logs for me. it's not public yet so why not
 [] note pages
 [] Sub Tasks
+
 [] Draggable
+
+- [] drag to delete
+- [] button to edit
+
 [] tracker from today (-365) \* gotta switch up how we generate the tracker
 [] typescript
 
+[x] better way to dev locally (if dev don't use chrome)
 [x] ~~actionable, small and not just notes...~~
 [x] dev console stuff?? running commands for me only or something?
 [x] limit new items after so many undone todos

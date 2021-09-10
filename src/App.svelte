@@ -23,7 +23,7 @@
 
 <style>
   :global(:root) {
-    --black: #000000;
+    --black: #121212;
     --dark: #52057b;
     --medium: #892cdc;
     --light: #bc6ff1;
@@ -39,7 +39,7 @@
     color: var(--light);
   }
 
-  :global(input, textarea, [contenteditable]) {
+  :global(input, textarea) {
     background-color: #1b1e23;
     color: var(--light);
   }

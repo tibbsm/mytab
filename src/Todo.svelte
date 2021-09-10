@@ -1,14 +1,17 @@
-<script lang="ts">
-  import { debounce } from "lodash-es";
-  import dummyTodos from "./dummydata";
-
-  interface Todo {
+<script lang="ts" context="module">
+  export interface Todo {
     id: number;
     text: string;
     completed: boolean;
     created_at: number;
     complete_at: number | null;
   }
+</script>
+
+<script lang="ts">
+  import { debounce } from "lodash-es";
+  import dummyTodos from "./dummydata";
+  import TodoCard from "./TodoCard.svelte";
 
   let newItem = "";
   let todos = [];
@@ -176,6 +179,7 @@
 <div class="flex">
   <div class="todos">
     <h2>To Do ({todoList.length})</h2>
+    <TodoCard todo={todoList[0]} />
     {#each todoList as item}
       <div class="todoItem">
         <input
