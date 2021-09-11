@@ -172,7 +172,7 @@
   class="todo-input"
   bind:value={newItem}
   type="text"
-  placeholder="new todo item.."
+  placeholder="Todo..."
 />
 <button on:click={addToList}>Add</button>
 
@@ -283,5 +283,10 @@
 
   .todo-input {
     margin-left: 1.5em;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid var(--light);
+    background-color: var(--black);
+    outline: none;
   }
 </style>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { debounce } from "lodash-es";
 
-  let notes = "";
+  let notes = "Notes...";
 
   initializeNotes();
 
@@ -39,9 +39,15 @@
 
 <style>
   [contenteditable] {
-    min-height: 50px;
+    /* min-height: 50px; */
     width: 50%;
     border-radius: 3px;
     padding: 5px;
+
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid var(--light);
+    background-color: var(--black);
+    outline: none;
   }
 </style>
