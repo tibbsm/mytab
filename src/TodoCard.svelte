@@ -4,11 +4,10 @@
 </script>
 
 <div class="m-todo-card" draggable="true">
-  <!-- <p>{todo.id}</p> -->
-  <p class="m-todo-card-text" contenteditable>{todo.text}</p>
-  <!-- <p>{todo.completed}</p> -->
-  <!-- <p>{todo.created_at}</p> -->
-  <!-- <p>{todo.complete_at}</p> -->
+  <p class="m-todo-card-text">{todo.text}</p>
+  <div>
+    <button class="m-todo-card-button">✏️</button>
+  </div>
 </div>
 
 <style>
@@ -17,10 +16,28 @@
     border-radius: 5px;
     cursor: pointer;
     transition: 0.4s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .m-todo-card:hover {
     transform: scale(0.9, 0.9);
+  }
+  .m-todo-card-button {
+    border: none;
+    background: none;
+    transform: scaleX(-1);
+    transition: 0.4s;
+  }
+
+  .m-todo-card-button:hover {
+    cursor: pointer;
+    transform: scale(-1.5, 1.5);
+  }
+
+  .m-todo-card-button:active {
+    transform: scale(-1, 1) translateY(0.25em);
   }
 
   .m-todo-card-text {
