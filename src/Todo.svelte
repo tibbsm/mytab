@@ -157,8 +157,6 @@
   };
 </script>
 
-/// <reference types="node" />
-
 <svelte:window on:keydown={onKeyDown} />
 
 <div class="tracker-grid">

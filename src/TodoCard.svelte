@@ -3,7 +3,14 @@
   export let todo: Todo;
 </script>
 
+<!-- TODO's -->
+<!-- 
+  [] Draggable
+  [] TODO, DOING, DONE
+ -->
+
 <div class="m-todo-card" draggable="true">
+  <input type="checkbox" bind:checked={todo.completed} />
   <p class="m-todo-card-text">{todo.text}</p>
   <div>
     <button class="m-todo-card-button">✏️</button>
@@ -45,7 +52,7 @@
     border-radius: 0px 0px 40px 40px;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 30px;
-    height: 40px;
+    font-size: 0.75em;
+    /* height: 40px; */
   }
 </style>
