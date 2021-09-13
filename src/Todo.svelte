@@ -177,9 +177,9 @@
 <div class="flex">
   <div class="todos">
     <h2>To Do ({todoList.length})</h2>
-    <TodoCard todo={todoList[0]} />
     {#each todoList as item}
-      <div class="todoItem">
+      <TodoCard todo={item} {changeStatus} />
+      <!-- <div class="todoItem">
         <input
           on:change={() => changeStatus(item)}
           bind:checked={item.completed}
@@ -195,7 +195,7 @@
           on:click={() => removeFromList(item.id)}
           tabindex="0">❌</span
         >
-      </div>
+      </div> -->
     {/each}
   </div>
 
