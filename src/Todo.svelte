@@ -176,8 +176,8 @@
 <div class="flex">
   <div class="todos">
     <h2>To Do ({todoList.length})</h2>
-    {#each todoList as item}
-      <TodoCard bind:todos bind:lastTodos todo={item} />
+    {#each todoList as todo}
+      <TodoCard bind:todo />
     {/each}
   </div>
 

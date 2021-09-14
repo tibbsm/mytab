@@ -2,22 +2,6 @@
   import type { Todo } from "./Todo.svelte";
 
   export let todo: Todo;
-  export let todos: Todo[];
-  export let lastTodos: [string, Todo][];
-  // export let changeStatus: (todo: Todo) => void;
-
-  function changeStatus() {
-    console.log(todo);
-
-    lastTodos.push(["status", todo]);
-    todo.completed = !todo.completed;
-    todo.complete_at = todo.completed ? new Date().getTime() : null;
-    saveTodos();
-  }
-
-  function saveTodos() {
-    chrome.storage?.sync.set({ todos: JSON.stringify(todos) });
-  }
 </script>
 
 <!-- TODO's -->
@@ -27,7 +11,7 @@
  -->
 
 <!-- FIXME changeStatus / bind:checked -->
-<div class="m-todo-card" draggable="true" on:change={() => changeStatus()}>
+<div class="m-todo-card" draggable="true">
   <input type="checkbox" bind:checked={todo.completed} />
   <p class="m-todo-card-text">{todo.text}</p>
   <div>
