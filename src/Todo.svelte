@@ -9,7 +9,6 @@
 </script>
 
 <script lang="ts">
-  import { debounce } from "lodash-es";
   import dummyTodos from "./dummydata";
   import TodoCard from "./TodoCard.svelte";
 
@@ -178,24 +177,7 @@
   <div class="todos">
     <h2>To Do ({todoList.length})</h2>
     {#each todoList as item}
-      <TodoCard todo={item} {changeStatus} />
-      <!-- <div class="todoItem">
-        <input
-          on:change={() => changeStatus(item)}
-          bind:checked={item.completed}
-          type="checkbox"
-        />
-        <textarea
-          class:checked={item.completed}
-          bind:value={item.text}
-          on:keyup={debounce(() => saveTodos(), 250)}
-        />
-        <span
-          id="todo-delete-{item.id}"
-          on:click={() => removeFromList(item.id)}
-          tabindex="0">❌</span
-        >
-      </div> -->
+      <TodoCard bind:todos bind:lastTodos todo={item} />
     {/each}
   </div>
 
