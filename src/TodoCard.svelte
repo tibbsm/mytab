@@ -1,7 +1,14 @@
 <script lang="ts">
   import type { Todo } from "./Todo.svelte";
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
 
   export let todo: Todo;
+
+  function changeStatus() {
+    dispatch("changeStatus");
+  }
 </script>
 
 <!-- TODO's -->
@@ -10,9 +17,12 @@
   [] TODO, DOING, DONE
  -->
 
-<!-- FIXME changeStatus / bind:checked -->
 <div class="m-todo-card" draggable="true">
-  <input type="checkbox" bind:checked={todo.completed} />
+  <input
+    type="checkbox"
+    bind:checked={todo.completed}
+    on:change={changeStatus}
+  />
   <p class="m-todo-card-text">{todo.text}</p>
   <div>
     <button class="m-todo-card-button">✏️</button>

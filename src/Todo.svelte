@@ -177,7 +177,7 @@
   <div class="todos">
     <h2>To Do ({todoList.length})</h2>
     {#each todoList as todo}
-      <TodoCard bind:todo />
+      <TodoCard bind:todo on:changeStatus={() => changeStatus(todo)} />
     {/each}
   </div>
 
