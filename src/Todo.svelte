@@ -189,20 +189,9 @@
       </button>
     </h2>
 
-    {#each doneList as item}
+    {#each doneList as todo}
       <div class="doneItem">
-        <input
-          on:change={() => changeStatus(item)}
-          bind:checked={item.completed}
-          type="checkbox"
-        />
-        <span class:checked={item.completed}>{item.text}</span>
-        <span
-          id="todo-delete-{item.id}"
-          on:click={() => removeFromList(item.id)}
-          tabindex="0">❌</span
-        >
-        <br />
+        <TodoCard bind:todo on:changeStatus={() => changeStatus(todo)} />
       </div>
     {/each}
   </div>

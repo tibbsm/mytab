@@ -24,9 +24,12 @@
     on:change={changeStatus}
   />
   <p class="m-todo-card-text">{todo.text}</p>
-  <div>
-    <button class="m-todo-card-button">✏️</button>
-  </div>
+
+  {#if !todo.completed}
+    <div>
+      <button class="m-todo-card-button">✏️</button>
+    </div>
+  {/if}
 </div>
 
 <style>
