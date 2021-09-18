@@ -18,11 +18,6 @@
  -->
 
 <div class="m-todo-card" draggable="true">
-  <!-- <input
-    type="checkbox"
-    bind:checked={todo.completed}
-    on:change={changeStatus}
-  /> -->
   <p class="m-todo-card-text">{todo.text}</p>
 
   {#if !todo.completed}
