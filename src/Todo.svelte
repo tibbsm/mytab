@@ -176,6 +176,7 @@
 <div class="flex">
   <div class="todos">
     <h2>To Do ({todoList.length})</h2>
+
     {#each todoList as todo}
       <TodoCard bind:todo on:changeStatus={() => changeStatus(todo)} />
     {/each}
@@ -190,9 +191,7 @@
     </h2>
 
     {#each doneList as todo}
-      <div class="doneItem">
-        <TodoCard bind:todo on:changeStatus={() => changeStatus(todo)} />
-      </div>
+      <TodoCard bind:todo on:changeStatus={() => changeStatus(todo)} />
     {/each}
   </div>
 </div>
