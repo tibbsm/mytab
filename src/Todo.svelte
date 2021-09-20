@@ -202,13 +202,6 @@
 <br /><br />
 
 <style>
-  .checked {
-    text-decoration: line-through;
-  }
-  span {
-    color: var(--medium);
-  }
-
   .flex {
     display: flex;
     justify-content: flex-start;
