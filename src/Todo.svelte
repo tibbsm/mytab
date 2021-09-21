@@ -196,7 +196,7 @@
   </div>
 </div>
 
-<!-- <br /><br /> -->
+<!-- TODO Hide in settings/modal/etc. -->
 <!-- <button on:click={() => clearDone()} disabled>Clear Done</button> -->
 
 <br /><br />
