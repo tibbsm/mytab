@@ -1,7 +1,7 @@
 <script lang="ts">
   import { debounce } from "lodash-es";
 
-  let notes = "Notes...";
+  let notes;
 
   initializeNotes();
 
@@ -14,14 +14,6 @@
       notes = items["notes"] || "";
     });
   }
-
-  function download(content: string, fileName: string, contentType: string) {
-    const a: HTMLAnchorElement = document.createElement("a");
-    const text: string = content.replace(/<\/?[^>]+(>|$)/g, "\n");
-    a.href = URL.createObjectURL(new Blob([text], { type: contentType }));
-    a.download = fileName;
-    a.click();
-  }
 </script>
 
 <div
@@ -31,18 +23,13 @@
   contenteditable
 />
 
-<br />
-
-<button on:click={() => download(notes, "MyTabNotes.txt", "text/plain")}
-  >Save notes</button
->
-
 <style>
   [contenteditable] {
     /* min-height: 50px; */
     width: 50%;
-    border-radius: 3px;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-bottom: 1em;
 
     color: #fff;
     border: none;
