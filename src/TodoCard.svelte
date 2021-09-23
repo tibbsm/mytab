@@ -6,9 +6,22 @@
 
   export let todo: Todo;
 
-  function changeStatus() {
-    dispatch("changeStatus");
+  const changeStatus = () => dispatch("changeStatus");
+
+  function dragstart(event) {
+    console.log(event);
   }
+
+  function dragover(event) {
+    event.preventDefault();
+    console.log("dragover", event);
+  }
+
+  function drop(event) {
+    console.log(event);
+  }
+
+  const log = (msg, event) => console.log(msg, event);
 </script>
 
 <!-- TODO's -->
@@ -17,7 +30,13 @@
   [] TODO, DOING, DONE
  -->
 
-<div class="m-todo-card" draggable="true">
+<div
+  class="m-todo-card"
+  draggable={true}
+  on:dragstart={(event) => log("start", event)}
+  on:drop={(event) => log("drop", event)}
+  on:dragover={dragover}
+>
   <p class="m-todo-card-text">{todo.text}</p>
 
   {#if !todo.completed}
