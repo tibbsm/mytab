@@ -5,6 +5,7 @@
     completed: boolean;
     created_at: number;
     complete_at: number | null;
+    group: "todo" | "doing" | "done" | null;
   }
 </script>
 
