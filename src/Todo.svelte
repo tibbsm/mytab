@@ -5,7 +5,7 @@
     completed: boolean;
     created_at: number;
     complete_at: number | null;
-    group: "todo" | "doing" | "done" | null;
+    status: "todo" | "doing" | "done" | null;
   }
 </script>
 
@@ -20,11 +20,11 @@
   // FIXME: Leap calculation ain't this simple...
   let isLeapYear = new Date().getFullYear() % 4 == 0;
 
-  $: todoList = todos.filter((todo) => !todo.completed);
-  $: doneCount = todos.filter((todo) => todo.completed).length;
+  $: todoList = todos.filter(({ status }) => status === "todo");
+  $: doneCount = todos.filter(({ status }) => status === "done").length;
   $: doneList = showMore
-    ? todos.filter((todo) => todo.completed)
-    : todos.filter((todo) => todo.completed).slice(-3);
+    ? todos.filter(({ status }) => status === "done")
+    : todos.filter(({ status }) => status === "done").slice(-3);
   $: trackerInfo = calculateTrackerInfo(todos);
 
   todos = dummyTodos;
@@ -155,6 +155,13 @@
       undo();
     }
   };
+
+  const handleDrop = (event, group) => {
+    const currId = event.dataTransfer.getData("item");
+    if (currId) todos.find(({ id }) => id === Number(currId)).status = group;
+    console.log(todos.find(({ id }) => id === Number(currId)));
+    todos = todos;
+  };
 </script>
 
 <svelte:window on:keydown={onKeyDown} />
@@ -175,7 +182,7 @@
 <button on:click={addToList}>Add</button>
 
 <div class="flex">
-  <div class="todos">
+  <div class="todos" on:drop={(event) => handleDrop(event, "todo")}>
     <h2>To Do ({todoList.length})</h2>
 
     {#each todoList as todo}
@@ -183,7 +190,7 @@
     {/each}
   </div>
 
-  <div class="dones">
+  <div class="dones" on:drop={(event) => handleDrop(event, "done")}>
     <h2>
       Done! ({doneCount})
       <button on:click={() => (showMore = !showMore)}>

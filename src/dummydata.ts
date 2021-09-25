@@ -8,6 +8,7 @@ const dummyTodos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((id) => {
     created_at: date,
     completed,
     complete_at,
+    status: completed ? "done" : "todo"
   };
 });
 

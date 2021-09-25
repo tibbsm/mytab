@@ -9,19 +9,13 @@
   const changeStatus = () => dispatch("changeStatus");
 
   function dragstart(event) {
-    console.log(event);
+    event.dataTransfer.setData("item", todo.id);
   }
 
   function dragover(event) {
     event.preventDefault();
-    console.log("dragover", event);
+    event.dataTransfer.dropEffect = "move";
   }
-
-  function drop(event) {
-    console.log(event);
-  }
-
-  const log = (msg, event) => console.log(msg, event);
 </script>
 
 <!-- TODO's -->
@@ -33,13 +27,12 @@
 <div
   class="m-todo-card"
   draggable={true}
-  on:dragstart={(event) => log("start", event)}
-  on:drop={(event) => log("drop", event)}
+  on:dragstart={dragstart}
   on:dragover={dragover}
 >
   <p class="m-todo-card-text">{todo.text}</p>
 
-  {#if !todo.completed}
+  {#if todo.status === "todo"}
     <div>
       <button class="m-todo-card-button">✏️</button>
     </div>
