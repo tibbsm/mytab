@@ -6,8 +6,6 @@
 
   export let todo: Todo;
 
-  const changeStatus = () => dispatch("changeStatus");
-
   function dragstart(event) {
     event.dataTransfer.setData("item", todo.id);
   }
