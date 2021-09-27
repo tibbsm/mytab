@@ -21,6 +21,7 @@
   let isLeapYear = new Date().getFullYear() % 4 == 0;
 
   $: todoList = todos.filter(({ status }) => status === "todo");
+  $: doingList = todos.filter(({ status }) => status === "doing");
   $: doneCount = todos.filter(({ status }) => status === "done").length;
   $: doneList = showMore
     ? todos.filter(({ status }) => status === "done")
@@ -162,6 +163,11 @@
     console.log(todos.find(({ id }) => id === Number(currId)));
     todos = todos;
   };
+
+  function dragover(event) {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = "move";
+  }
 </script>
 
 <svelte:window on:keydown={onKeyDown} />
@@ -182,25 +188,48 @@
 <button on:click={addToList}>Add</button>
 
 <div class="flex">
-  <div class="todos" on:drop={(event) => handleDrop(event, "todo")}>
+  <div class="todos">
     <h2>To Do ({todoList.length})</h2>
-
-    {#each todoList as todo}
-      <TodoCard bind:todo />
-    {/each}
+    <div
+      class="card-wrapper"
+      on:drop={(event) => handleDrop(event, "todo")}
+      on:dragover={dragover}
+    >
+      {#each todoList as todo}
+        <TodoCard bind:todo />
+      {/each}
+    </div>
   </div>
 
-  <div class="dones" on:drop={(event) => handleDrop(event, "done")}>
+  <div class="doing">
+    <h2>Doing ({doingList.length})</h2>
+    <div
+      class="card-wrapper"
+      on:drop={(event) => handleDrop(event, "doing")}
+      on:dragover={dragover}
+    >
+      {#each doingList as todo}
+        <TodoCard bind:todo />
+      {/each}
+    </div>
+  </div>
+
+  <div class="dones">
     <h2>
       Done! ({doneCount})
       <button on:click={() => (showMore = !showMore)}>
         {showMore ? "Show Less" : "Show More"}
       </button>
     </h2>
-
-    {#each doneList as todo}
-      <TodoCard bind:todo />
-    {/each}
+    <div
+      class="card-wrapper"
+      on:drop={(event) => handleDrop(event, "done")}
+      on:dragover={dragover}
+    >
+      {#each doneList as todo}
+        <TodoCard bind:todo />
+      {/each}
+    </div>
   </div>
 </div>
 
@@ -217,8 +246,16 @@
   }
 
   .todos,
+  .doing,
   .dones {
     margin: 0 2.5em;
+  }
+
+  .card-wrapper {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.25em;
+    min-height: 3em;
   }
 
   .tracker-grid {
