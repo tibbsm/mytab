@@ -74,6 +74,7 @@
         completed: false,
         created_at: new Date().getTime(),
         complete_at: null,
+        status: "todo",
       },
     ];
     newItem = "";
