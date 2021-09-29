@@ -34,19 +34,17 @@ A simple, customizable tab template for new tabs in chrome.
 [] tracker to monthly?
 [] setup db?
 
-[] add doing column?
-
-[] archive old ones (limited again)
+[x] add doing column?
 
 [] fix flow. focus on done. dont let todo grow
 [] logs for me. it's not public yet so why not
 [] note pages
 [] Sub Tasks
 
-[] Draggable
+[x] Draggable
 
-- [] drag to delete
-- [] button to edit
+[] drag to delete
+[] button to edit
 
 [] tracker from today (-365) \* gotta switch up how we generate the tracker
 [] typescript
