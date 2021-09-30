@@ -31,24 +31,19 @@ A simple, customizable tab template for new tabs in chrome.
 [] Tracker: component
 [] Tracker: weekday alignment
 [] create separate component for tracker (pass todos to it?)
-[] tracker to monthly?
-[] setup db?
-
-[x] add doing column?
 
 [] fix flow. focus on done. dont let todo grow
-[] logs for me. it's not public yet so why not
 [] note pages
 [] Sub Tasks
-
-[x] Draggable
-
 [] drag to delete
 [] button to edit
-
 [] tracker from today (-365) \* gotta switch up how we generate the tracker
-[] typescript
+[] setup db?
+[] better console.logs for me. it's not public yet so why not
 
+[x] Draggable
+[x] typescript
+[x] add doing column?
 [x] better way to dev locally (if dev don't use chrome)
 [x] ~~actionable, small and not just notes...~~
 [x] dev console stuff?? running commands for me only or something?
