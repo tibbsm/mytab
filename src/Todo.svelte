@@ -250,6 +250,7 @@
   .doing,
   .dones {
     margin: 0 2.5em;
+    width: 20vw;
   }
 
   .card-wrapper {
