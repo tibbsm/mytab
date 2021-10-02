@@ -236,6 +236,7 @@
 
 <!-- TODO Hide in settings/modal/etc. -->
 <!-- <button on:click={() => clearDone()} disabled>Clear Done</button> -->
+<!-- <button on:click={() => clear()}>Clear All</button> -->
 
 <br /><br />
 
