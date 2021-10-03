@@ -33,7 +33,6 @@ A simple, customizable tab template for new tabs in chrome.
 [] create separate component for tracker (pass todos to it?)
 
 [] fix flow. focus on done. dont let todo grow
-[] note pages
 [] Sub Tasks
 [] drag to delete
 [] button to edit
@@ -41,6 +40,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] setup db?
 [] better console.logs for me. it's not public yet so why not
 
+[x] ~~note pages~~
 [x] Draggable
 [x] typescript
 [x] add doing column?
