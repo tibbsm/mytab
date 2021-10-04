@@ -160,8 +160,13 @@
 
   const handleDrop = (event, group) => {
     const currId = event.dataTransfer.getData("item");
-    if (currId) todos.find(({ id }) => id === Number(currId)).status = group;
-    console.log(todos.find(({ id }) => id === Number(currId)));
+    if (currId) {
+      if (group === "delete") {
+        removeFromList(Number(currId));
+      } else {
+        todos.find(({ id }) => id === Number(currId)).status = group;
+      }
+    }
     todos = todos;
   };
 
@@ -232,6 +237,15 @@
       {/each}
     </div>
   </div>
+</div>
+<br />
+<div
+  class="delete"
+  on:drop={(event) => handleDrop(event, "delete")}
+  on:dragover={dragover}
+  style="width: 3em; height: 3em; background-color: beige"
+>
+  DELETE
 </div>
 
 <!-- TODO Hide in settings/modal/etc. -->

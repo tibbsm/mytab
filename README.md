@@ -34,12 +34,12 @@ A simple, customizable tab template for new tabs in chrome.
 
 [] fix flow. focus on done. dont let todo grow
 [] Sub Tasks
-[] drag to delete
 [] button to edit
 [] tracker from today (-365) \* gotta switch up how we generate the tracker
 [] setup db?
 [] better console.logs for me. it's not public yet so why not
 
+[x] drag to delete
 [x] ~~note pages~~
 [x] Draggable
 [x] typescript
