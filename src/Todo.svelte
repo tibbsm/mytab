@@ -12,13 +12,12 @@
 <script lang="ts">
   import dummyTodos from "./dummydata";
   import TodoCard from "./TodoCard.svelte";
+  import Tracker from "./Tracker.svelte";
 
   let newItem = "";
   let todos = [];
   let lastTodos = [];
   let showMore = false;
-  // FIXME: Leap calculation ain't this simple...
-  let isLeapYear = new Date().getFullYear() % 4 == 0;
 
   $: todoList = todos.filter(({ status }) => status === "todo");
   $: doingList = todos.filter(({ status }) => status === "doing");
@@ -26,40 +25,10 @@
   $: doneList = showMore
     ? todos.filter(({ status }) => status === "done")
     : todos.filter(({ status }) => status === "done").slice(-3);
-  $: trackerInfo = calculateTrackerInfo(todos);
 
   todos = dummyTodos;
 
   initializeTodos();
-
-  // FIXME
-  function calculateTrackerInfo(todos: Todo[]) {
-    let daysInYear = isLeapYear ? new Array(366) : new Array(365);
-    todos.map(({ complete_at }) => {
-      daysInYear[Number(daysIntoYear(complete_at)) - 1] = (
-        (complete_at && daysIntoYear(complete_at)) ??
-        "false"
-      ).toString();
-    });
-    return daysInYear;
-  }
-
-  // FIXME
-  function daysIntoYear(complete_at: number) {
-    if (complete_at) {
-      let date = new Date(complete_at);
-      return (
-        (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
-          Date.UTC(date.getFullYear(), 0, 0)) /
-        24 /
-        60 /
-        60 /
-        1000
-      );
-    } else {
-      return false;
-    }
-  }
 
   function addToList() {
     if (todoList.length >= 8) {
@@ -178,11 +147,7 @@
 
 <svelte:window on:keydown={onKeyDown} />
 
-<div class="tracker-grid">
-  {#each trackerInfo as day, i}
-    <div class="square" data={i.toString()} data-day={day} />
-  {/each}
-</div>
+<Tracker {todos} />
 
 <input
   id="new-todo-input"
@@ -274,36 +239,6 @@
     padding: 0.25em;
     min-height: 3em;
   }
-
-  .tracker-grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 60rem;
-    height: 10rem;
-    padding: 2rem 1rem;
-  }
-
-  .square {
-    width: 1rem;
-    height: 1rem;
-    margin: 0.1rem;
-    border-radius: 2px;
-    background-color: midnightblue;
-  }
-
-  .square[data-day] {
-    background-color: green;
-  }
-  .square:hover {
-    opacity: 0.8;
-  }
-
-  .square:before {
-    content: attr(data-day);
-    display: none;
-  }
-
   .todo-input {
     margin-left: 1.5em;
     color: #fff;

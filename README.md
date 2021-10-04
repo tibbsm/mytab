@@ -28,9 +28,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] nba
 [] HN
 
-[] Tracker: component
 [] Tracker: weekday alignment
-[] create separate component for tracker (pass todos to it?)
 
 [] fix flow. focus on done. dont let todo grow
 [] Sub Tasks
@@ -39,6 +37,8 @@ A simple, customizable tab template for new tabs in chrome.
 [] setup db?
 [] better console.logs for me. it's not public yet so why not
 
+[x] create separate component for tracker (pass todos to it?)
+[x] Tracker: component
 [x] drag to delete
 [x] ~~note pages~~
 [x] Draggable
