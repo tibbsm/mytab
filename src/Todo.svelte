@@ -18,6 +18,7 @@
   let todos = [];
   let lastTodos = [];
   let showMore = false;
+  let showDone = false;
 
   $: todoList = todos.filter(({ status }) => status === "todo");
   $: doingList = todos.filter(({ status }) => status === "doing");
@@ -185,23 +186,28 @@
     </div>
   </div>
 
-  <div class="dones">
-    <h2>
-      Done! ({doneCount})
-      <button on:click={() => (showMore = !showMore)}>
-        {showMore ? "Show Less" : "Show More"}
-      </button>
-    </h2>
-    <div
-      class="card-wrapper"
-      on:drop={(event) => handleDrop(event, "done")}
-      on:dragover={dragover}
-    >
-      {#each doneList as todo}
-        <TodoCard bind:todo />
-      {/each}
+  {#if showDone}
+    <div class="dones">
+      <h2>
+        Done! ({doneCount})
+        <button on:click={() => (showMore = !showMore)}>
+          {showMore ? "Show Less" : "Show More"}
+        </button>
+        <button on:click={() => (showDone = !showDone)}>Hide Done</button>
+      </h2>
+      <div
+        class="card-wrapper"
+        on:drop={(event) => handleDrop(event, "done")}
+        on:dragover={dragover}
+      >
+        {#each doneList as todo}
+          <TodoCard bind:todo />
+        {/each}
+      </div>
     </div>
-  </div>
+  {:else}
+    <button on:click={() => (showDone = !showDone)}>Show done</button>
+  {/if}
 </div>
 <br />
 <div
