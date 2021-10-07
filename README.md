@@ -29,7 +29,6 @@ A simple, customizable tab template for new tabs in chrome.
 [] HN
 
 [] Tracker: weekday alignment
-[] tracker from today (-365) \* gotta switch up how we generate the tracker
 
 [] fix flow. focus on done. dont let todo grow
 [] Sub Tasks
@@ -38,6 +37,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] setup db?
 [] better console.logs for me. it's not public yet so why not
 
+[x] tracker from today (-365) \* gotta switch up how we generate the tracker
 [x] Hide all dones. click to reveal
 [x] create separate component for tracker (pass todos to it?)
 [x] Tracker: component
