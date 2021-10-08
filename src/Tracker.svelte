@@ -3,8 +3,15 @@
   export let todos;
   $: trackerInfo = calculateTrackerInfo(todos);
 
-  // FIXME: Leap calculation ain't this simple...
-  let isLeapYear = new Date().getFullYear() % 4 == 0;
+  let thisYear = new Date().getFullYear();
+  let isLeapYear =
+    thisYear % 400 == 0
+      ? true
+      : thisYear % 100 == 0
+      ? false
+      : thisYear % 4 == 0
+      ? true
+      : false;
 
   // FIXME
   function calculateTrackerInfo(todos: Todo[]) {
