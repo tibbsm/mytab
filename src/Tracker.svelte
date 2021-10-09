@@ -5,13 +5,7 @@
 
   let thisYear = new Date().getFullYear();
   let isLeapYear =
-    thisYear % 400 == 0
-      ? true
-      : thisYear % 100 == 0
-      ? false
-      : thisYear % 4 == 0
-      ? true
-      : false;
+    (thisYear % 4 == 0 && thisYear % 100 != 0) || thisYear % 400 == 0;
 
   // FIXME
   function calculateTrackerInfo(todos: Todo[]) {
