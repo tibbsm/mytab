@@ -19,23 +19,17 @@
     return daysInYear;
   }
 
-  // FIXME
+  function toUtc(date: Date) {
+    return Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+  }
+
   function daysIntoYear(complete_at: number) {
     if (complete_at) {
       let date = new Date(complete_at);
       let today = new Date(new Date().setHours(0, 0, 0, 0));
-      return (
-        (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) -
-          Date.UTC(today.getFullYear(), today.getMonth(), today.getDate())) /
-          24 /
-          60 /
-          60 /
-          1000 +
-        1
-      );
-    } else {
-      return false;
+      return (toUtc(date) - toUtc(today)) / 24 / 60 / 60 / 1000 + 1;
     }
+    return false;
   }
 </script>
 
