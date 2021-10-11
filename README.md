@@ -33,7 +33,6 @@ A simple, customizable tab template for new tabs in chrome.
 [] fix flow. focus on done. dont let todo grow
 [] Sub Tasks
 [] button to edit
-
 [] setup db?
 [] better console.logs for me. it's not public yet so why not
 
