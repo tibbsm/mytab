@@ -3,13 +3,12 @@
   export let todos;
   $: trackerInfo = calculateTrackerInfo(todos);
 
-  let thisYear = new Date().getFullYear();
-  let isLeapYear =
+  const thisYear = new Date().getFullYear();
+  const isLeapYear =
     (thisYear % 4 == 0 && thisYear % 100 != 0) || thisYear % 400 == 0;
 
-  // FIXME
   function calculateTrackerInfo(todos: Todo[]) {
-    let daysInYear = isLeapYear ? new Array(366) : new Array(365);
+    const daysInYear = isLeapYear ? new Array(366) : new Array(365);
     todos.map(({ complete_at }) => {
       daysInYear[Number(daysIntoYear(complete_at)) - 1] = (
         (complete_at && daysIntoYear(complete_at)) ??
@@ -23,10 +22,11 @@
     return Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
   }
 
+  // FIXME return boolean && number?
   function daysIntoYear(complete_at: number) {
     if (complete_at) {
-      let date = new Date(complete_at);
-      let today = new Date(new Date().setHours(0, 0, 0, 0));
+      const date = new Date(complete_at);
+      const today = new Date(new Date().setHours(0, 0, 0, 0));
       return (toUtc(date) - toUtc(today)) / 24 / 60 / 60 / 1000 + 1;
     }
     return false;
