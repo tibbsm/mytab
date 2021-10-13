@@ -59,10 +59,10 @@
 
   function undo() {
     if (lastTodos.length < 1) return;
-    let [action, lastTodo] = lastTodos.pop();
+    const [action, lastTodo] = lastTodos.pop();
 
     if (action == "status") {
-      let index = todos.findIndex((todo) => todo.id == lastTodo.id);
+      const index = todos.findIndex((todo) => todo.id == lastTodo.id);
       todos[index].completed = !todos[index].completed;
       todos[index].complete_at = todos[index].completed
         ? new Date().getTime()

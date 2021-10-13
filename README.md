@@ -35,6 +35,7 @@ A simple, customizable tab template for new tabs in chrome.
 [] button to edit
 [] setup db?
 [] better console.logs for me. it's not public yet so why not
+[] airbnb rules?
 
 [x] tracker from today (-365) \* gotta switch up how we generate the tracker
 [x] Hide all dones. click to reveal
