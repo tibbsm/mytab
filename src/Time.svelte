@@ -3,9 +3,9 @@
 
   // fmt(time)
   let time = new Date();
-  $: seconds = time.getSeconds();
-  $: minutes = time.getMinutes();
-  $: hours = time.getHours();
+  $: seconds = ("00" + time.getSeconds()).slice(-2);
+  $: minutes = ("00" + time.getMinutes()).slice(-2);
+  $: hours = ("00" + time.getHours()).slice(-2);
   $: date = time.toLocaleDateString();
 
   onMount(() => {
@@ -18,9 +18,7 @@
 
 <div class="date-time-wrapper">
   {date}<br />
-  {("00" + hours).slice(-2)}:{("00" + minutes).slice(-2)}:{(
-    "00" + seconds
-  ).slice(-2)}
+  {hours}:{minutes}:{seconds}
 </div>
 
 <style>
