@@ -25,7 +25,6 @@
 
 <style>
   [contenteditable] {
-    /* min-height: 50px; */
     width: 50%;
     border-radius: 5px;
     padding: 0.5em;
