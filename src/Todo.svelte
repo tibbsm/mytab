@@ -138,6 +138,7 @@
       }
     }
     todos = todos;
+    saveTodos();
   };
 
   function dragover(event) {
