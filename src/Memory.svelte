@@ -11,6 +11,7 @@
 
   initializeMemory();
 
+  // FIXME? Do I have to call it 3 times here. More efficient way?
   function initializeMemory() {
     chrome.storage?.sync.getBytesInUse(
       null,
