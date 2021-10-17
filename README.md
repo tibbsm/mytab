@@ -22,7 +22,11 @@ A simple, customizable tab template for new tabs in chrome.
 - [] memory on hover instead (indicate on red)
 - [] icons & other fluff
 - [] Fix done hide/show button
+- [] Fix drag over done button
 - [] Fix delete area
+- [] Fix tracker: today's done are not showing?
+
+  - [] On hover show date
 
 - [] button to edit
 - [] airbnb rules?
