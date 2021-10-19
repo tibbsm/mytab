@@ -34,7 +34,6 @@ A simple, customizable tab template for new tabs in chrome.
   - [] weekday alignment
 
 - [] better console.logs for me. it's not public, so why not
-
 - [] Sub Tasks
 - [] count browser open time?? times opened??
 
