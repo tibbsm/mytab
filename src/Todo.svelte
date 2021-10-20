@@ -187,8 +187,8 @@
     </div>
   </div>
 
-  {#if showDone}
-    <div class="dones">
+  <div class="dones">
+    {#if showDone}
       <h2>
         Done! ({doneCount})
         <button on:click={() => (showMore = !showMore)}>
@@ -205,10 +205,10 @@
           <TodoCard bind:todo />
         {/each}
       </div>
-    </div>
-  {:else}
-    <button on:click={() => (showDone = !showDone)}>Show done</button>
-  {/if}
+    {:else}
+      <button on:click={() => (showDone = !showDone)}>Show done</button>
+    {/if}
+  </div>
 </div>
 <br />
 <div
