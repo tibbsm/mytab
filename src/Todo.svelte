@@ -188,26 +188,26 @@
   </div>
 
   <div class="dones">
-    {#if showDone}
-      <h2>
-        Done! ({doneCount})
-        <button on:click={() => (showMore = !showMore)}>
-          {showMore ? "Show Less" : "Show More"}
-        </button>
-        <button on:click={() => (showDone = !showDone)}>Hide Done</button>
-      </h2>
-      <div
-        class="card-wrapper"
-        on:drop={(event) => handleDrop(event, "done")}
-        on:dragover={dragover}
+    <h2>
+      Done! ({doneCount})
+      <button on:click={() => (showMore = !showMore)}>
+        {showMore ? "Show Less" : "Show More"}
+      </button>
+      <button on:click={() => (showDone = !showDone)}
+        >{showDone ? "Hide" : "Show"} Done</button
       >
+    </h2>
+    <div
+      class="card-wrapper"
+      on:drop={(event) => handleDrop(event, "done")}
+      on:dragover={dragover}
+    >
+      <div style={showDone ? "" : "display: none"}>
         {#each doneList as todo}
           <TodoCard bind:todo />
         {/each}
       </div>
-    {:else}
-      <button on:click={() => (showDone = !showDone)}>Show done</button>
-    {/if}
+    </div>
   </div>
 </div>
 <br />
