@@ -190,12 +190,14 @@
   <div class="dones">
     <h2>
       Done! ({doneCount})
-      <button on:click={() => (showMore = !showMore)}>
-        {showMore ? "Show Less" : "Show More"}
-      </button>
       <button on:click={() => (showDone = !showDone)}
         >{showDone ? "Hide" : "Show"} Done</button
       >
+      {#if showDone}
+        <button on:click={() => (showMore = !showMore)}>
+          {showMore ? "Show Less" : "Show More"}
+        </button>
+      {/if}
     </h2>
     <div
       class="card-wrapper"
