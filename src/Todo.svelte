@@ -191,7 +191,7 @@
     <h2>
       Done! ({doneCount})
       <button on:click={() => (showDone = !showDone)}
-        >{showDone ? "Hide" : "Show"} Done</button
+        >{showDone ? "Hide" : "Show"}Done</button
       >
       {#if showDone}
         <button on:click={() => (showMore = !showMore)}>
