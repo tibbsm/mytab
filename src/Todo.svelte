@@ -217,7 +217,6 @@
   class="delete"
   on:drop={(event) => handleDrop(event, "delete")}
   on:dragover={dragover}
-  style="width: 3em; height: 3em; background-color: beige"
 >
   DELETE
 </div>
@@ -255,5 +254,13 @@
     border-bottom: 1px solid var(--light);
     background-color: var(--black);
     outline: none;
+  }
+
+  .delete {
+    border-radius: 5px;
+    border: 1px dashed var(--light);
+    color: var(--light);
+    display: inline-block;
+    padding: 1em;
   }
 </style>

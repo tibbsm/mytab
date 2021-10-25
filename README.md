@@ -12,9 +12,6 @@ A simple, customizable tab template for new tabs in chrome.
 
 - [] memory on hover instead (indicate on red)
 - [] icons & other fluff
-- [] Fix done hide/show button
-- [] Fix drag over done button
-- [] Fix delete area
 - [] Fix tracker: today's done are not showing?
 
   - [] On hover show date
@@ -36,6 +33,9 @@ A simple, customizable tab template for new tabs in chrome.
 - [] Sub Tasks
 - [] count browser open time?? times opened??
 
+[x] Fix delete area
+[x] Fix done hide/show button
+[x] Fix drag over done button
 [x] Fix todo status change
 [x] ~~setup db?~~
 [x] ~~fix flow. focus on done. dont let todo grow~~
