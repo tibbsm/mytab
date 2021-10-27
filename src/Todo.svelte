@@ -61,7 +61,7 @@
     if (lastTodos.length < 1) return;
     const [action, lastTodo] = lastTodos.pop();
 
-    if (action == "status") {
+    if (action == "done") {
       const index = todos.findIndex((todo) => todo.id == lastTodo.id);
       todos[index].completed = !todos[index].completed;
       todos[index].complete_at = todos[index].completed
@@ -85,13 +85,13 @@
       } else {
         todos = [];
       }
+      console.log(todos);
     });
-    console.log(todos);
   }
 
-  function changeStatus(todo: Todo) {
-    lastTodos.push(["status", todo]);
-    todo.completed = !todo.completed;
+  function markDone(todo: Todo) {
+    lastTodos.push(["done", todo]);
+    todo.completed = true;
     todo.complete_at = todo.completed ? new Date().getTime() : null;
     saveTodos();
   }
@@ -134,7 +134,10 @@
       if (group === "delete") {
         removeFromList(Number(currId));
       } else {
-        todos.find(({ id }) => id === Number(currId)).status = group;
+        let todo = todos.find(({ id }) => id === Number(currId));
+        todo.status = group;
+
+        if (group === "done") markDone(todo);
       }
     }
     todos = todos;
