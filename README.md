@@ -29,10 +29,10 @@ A simple, customizable tab template for new tabs in chrome.
 
   - [] weekday alignment
 
-- [] better console.logs for me. it's not public, so why not
 - [] Sub Tasks
 - [] count browser open time?? times opened??
 
+[x] better console.logs for me. it's not public, so why not
 [x] Fix delete area
 [x] Fix done hide/show button
 [x] Fix drag over done button
