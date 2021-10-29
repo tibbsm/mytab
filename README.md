@@ -10,6 +10,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 ## TODOs
 
+- [] still have issue with saving done-ness??
 - [] memory on hover instead (indicate on red)
 - [] icons & other fluff
 - [] Fix tracker: today's done are not showing?
