@@ -24,10 +24,10 @@
 
   // FIXME return boolean && number?
   function daysIntoYear(complete_at: number) {
-    if (complete_at) {
+    if (complete_at != null) {
       const date = new Date(complete_at);
       const today = new Date(new Date().setHours(0, 0, 0, 0));
-      return (toUtc(date) - toUtc(today)) / 24 / 60 / 60 / 1000 + 1;
+      return (toUtc(today) - toUtc(date)) / 24 / 60 / 60 / 1000 + 1;
     }
     return false;
   }
