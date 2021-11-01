@@ -10,7 +10,7 @@
   function calculateTrackerInfo(todos: Todo[]) {
     const daysInYear = isLeapYear ? new Array(366) : new Array(365);
     todos.map(({ complete_at }) => {
-      daysInYear[Number(daysIntoYear(complete_at)) - 1] = (
+      daysInYear[Number(daysIntoYear(complete_at))] = (
         (complete_at && daysIntoYear(complete_at)) ??
         "false"
       ).toString();
@@ -27,7 +27,7 @@
     if (complete_at != null) {
       const date = new Date(complete_at);
       const today = new Date(new Date().setHours(0, 0, 0, 0));
-      return (toUtc(today) - toUtc(date)) / 24 / 60 / 60 / 1000 + 1;
+      return (toUtc(today) - toUtc(date)) / 24 / 60 / 60 / 1000;
     }
     return false;
   }
