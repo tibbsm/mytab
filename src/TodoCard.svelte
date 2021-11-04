@@ -29,12 +29,6 @@
   on:dragover={dragover}
 >
   <p class="m-todo-card-text">{todo.text}</p>
-
-  {#if todo.status === "todo" || todo.status === "doing"}
-    <div>
-      <button class="m-todo-card-button">✏️</button>
-    </div>
-  {/if}
 </div>
 
 <style>

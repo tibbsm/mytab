@@ -10,7 +10,6 @@ A simple, customizable tab template for new tabs in chrome.
 
 ## TODOs
 
-- [x] still have issue with saving done-ness??
 - [] memory on hover instead (indicate on red)
 - [] icons & other fluff
 - [] Fix tracker: today's done are not showing?
@@ -34,6 +33,7 @@ A simple, customizable tab template for new tabs in chrome.
   - [] Click and open modal
 - [] count browser open time?? times opened??
 
+[x] still have issue with saving done-ness??
 [x] better console.logs for me. it's not public, so why not
 [x] Fix delete area
 [x] Fix done hide/show button
