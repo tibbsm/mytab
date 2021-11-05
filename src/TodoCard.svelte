@@ -16,17 +16,12 @@
   }
 </script>
 
-<!-- TODO's -->
-<!-- 
-  [] Draggable
-  [] TODO, DOING, DONE
- -->
-
 <div
   class="m-todo-card"
   draggable={true}
   on:dragstart={dragstart}
   on:dragover={dragover}
+  on:click={() => dispatch("active-todo", todo)}
 >
   <p class="m-todo-card-text">{todo.text}</p>
 </div>
@@ -44,21 +39,6 @@
 
   .m-todo-card:hover {
     transform: scale(0.9, 0.9);
-  }
-  .m-todo-card-button {
-    border: none;
-    background: none;
-    transform: scaleX(-1);
-    transition: 0.4s;
-  }
-
-  .m-todo-card-button:hover {
-    cursor: pointer;
-    transform: scale(-1.5, 1.5);
-  }
-
-  .m-todo-card-button:active {
-    transform: scale(-1, 1) translateY(0.25em);
   }
 
   .m-todo-card-text {

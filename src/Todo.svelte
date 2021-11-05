@@ -1,4 +1,8 @@
 <script lang="ts" context="module">
+  export interface SubTask {
+    text: string;
+    done: boolean;
+  }
   export interface Todo {
     id: number;
     text: string;
@@ -6,6 +10,7 @@
     created_at: number;
     complete_at: number | null;
     status: "todo" | "doing" | "done" | null;
+    subtasks: SubTask[];
   }
 </script>
 
@@ -15,11 +20,13 @@
   import Tracker from "./Tracker.svelte";
 
   let newItem = "";
+  let newSubTask = "";
   let todos = [];
   let lastTodos = [];
   let showMore = false;
   let showDone = false;
 
+  $: activeTodo = null;
   $: todoList = todos.filter(({ status }) => status === "todo");
   $: doingList = todos.filter(({ status }) => status === "doing");
   $: doneCount = todos.filter(({ status }) => status === "done").length;
@@ -49,6 +56,14 @@
     ];
     newItem = "";
     saveTodos();
+  }
+
+  function addSubtask(todo: Todo) {
+    const newSub = { text: newSubTask, done: false } as SubTask;
+    todo.subtasks = [...(todo.subtasks ? todo.subtasks : []), newSub];
+    todos = [...todos.filter(({ id }) => id !== todo.id), todo];
+    newSubTask = "";
+    activeTodo = todo;
   }
 
   function removeFromList(id: number) {
@@ -148,6 +163,11 @@
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
   }
+
+  const activateTodo = (todo: Todo) => {
+    newSubTask = "";
+    activeTodo = todo;
+  };
 </script>
 
 <svelte:window on:keydown={onKeyDown} />
@@ -172,7 +192,7 @@
       on:dragover={dragover}
     >
       {#each todoList as todo}
-        <TodoCard bind:todo />
+        <TodoCard bind:todo on:active-todo={() => activateTodo(todo)} />
       {/each}
     </div>
   </div>
@@ -223,6 +243,28 @@
 >
   DELETE
 </div>
+
+{#if activeTodo}
+  <br />
+  <br />
+  <div>
+    <input
+      id="new-todo-input"
+      class="todo-input"
+      bind:value={newSubTask}
+      type="text"
+      placeholder="Subtask..."
+    />
+    <button on:click={() => addSubtask(activeTodo)}>Add</button>
+    <div style="color: white">text) {activeTodo.text}</div>
+    {#each activeTodo.subtasks ?? [] as { text, done }, i}
+      <div style="color: white">
+        <input type="checkbox" checked={done} />
+        {text}
+      </div>
+    {/each}
+  </div>
+{/if}
 
 <!-- TODO Hide in settings/modal/etc. -->
 <!-- <button on:click={() => clearDone()} disabled>Clear Done</button> -->
