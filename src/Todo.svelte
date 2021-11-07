@@ -64,6 +64,7 @@
     todos = [...todos.filter(({ id }) => id !== todo.id), todo];
     newSubTask = "";
     activeTodo = todo;
+    saveTodos();
   }
 
   function removeFromList(id: number) {
@@ -205,7 +206,7 @@
       on:dragover={dragover}
     >
       {#each doingList as todo}
-        <TodoCard bind:todo />
+        <TodoCard bind:todo on:active-todo={() => activateTodo(todo)} />
       {/each}
     </div>
   </div>
@@ -229,7 +230,7 @@
     >
       <div style={showDone ? "" : "display: none"}>
         {#each doneList as todo}
-          <TodoCard bind:todo />
+          <TodoCard bind:todo on:active-todo={() => activateTodo(todo)} />
         {/each}
       </div>
     </div>
