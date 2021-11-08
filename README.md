@@ -20,6 +20,7 @@ A simple, customizable tab template for new tabs in chrome.
 - [] button to edit
 - [] airbnb rules?
 
+- [] Subtask drawer? or somthing...
 - [] Different states(?)
 
   - [] teddit
@@ -30,10 +31,9 @@ A simple, customizable tab template for new tabs in chrome.
 
   - [] weekday alignment
 
-- [] Sub Tasks
-  - [] Click and open modal
 - [] count browser open time?? times opened??
 
+[x] Sub Tasks
 [x] still have issue with saving done-ness??
 [x] better console.logs for me. it's not public, so why not
 [x] Fix delete area
