@@ -260,7 +260,7 @@
     <div style="color: white">text) {activeTodo.text}</div>
     {#each activeTodo.subtasks ?? [] as { text, done }, i}
       <div style="color: white">
-        <input type="checkbox" checked={done} />
+        <input type="checkbox" bind:checked={done} />
         {text}
       </div>
     {/each}
