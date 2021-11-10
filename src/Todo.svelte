@@ -258,7 +258,7 @@
     />
     <button on:click={() => addSubtask(activeTodo)}>Add</button>
     <div style="color: white">text) {activeTodo.text}</div>
-    {#each activeTodo.subtasks ?? [] as { text, done }, i}
+    {#each activeTodo.subtasks ?? [] as { text, done }}
       <div style="color: white">
         <input type="checkbox" bind:checked={done} />
         {text}
