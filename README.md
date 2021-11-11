@@ -21,6 +21,7 @@ A simple, customizable tab template for new tabs in chrome.
 - [] airbnb rules?
 
 - [] Subtask drawer? or somthing...
+- [] ENV
 - [] Different states(?)
 
   - [] teddit
