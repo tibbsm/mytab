@@ -6,6 +6,7 @@ import { terser } from "rollup-plugin-terser";
 import css from "rollup-plugin-css-only";
 import sveltePreprocess from "svelte-preprocess";
 import typescript from "@rollup/plugin-typescript";
+import replace from "@rollup/plugin-replace";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -50,6 +51,14 @@ export default {
         dev: !production,
       },
     }),
+
+    replace({
+      preventAssignment: true,
+      globalThis: JSON.stringify({
+        isProduction: production,
+      }),
+    }),
+
     // we'll extract any component CSS out into
     // a separate file - better for performance
     css({ output: "bundle.css" }),

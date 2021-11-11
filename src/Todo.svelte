@@ -19,6 +19,8 @@
   import TodoCard from "./TodoCard.svelte";
   import Tracker from "./Tracker.svelte";
 
+  const isProduction = globalThis.isProduction;
+
   let newItem = "";
   let newSubTask = "";
   let todos = [];
@@ -34,7 +36,7 @@
     ? todos.filter(({ status }) => status === "done")
     : todos.filter(({ status }) => status === "done").slice(-3);
 
-  todos = dummyTodos;
+  if (!isProduction) todos = dummyTodos;
 
   initializeTodos();
 

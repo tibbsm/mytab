@@ -21,7 +21,6 @@ A simple, customizable tab template for new tabs in chrome.
 - [] airbnb rules?
 
 - [] Subtask drawer? or somthing...
-- [] ENV
 - [] Different states(?)
 
   - [] teddit
@@ -34,6 +33,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 - [] count browser open time?? times opened??
 
+[x] ENV (for dummy data)
 [x] Sub Tasks
 [x] still have issue with saving done-ness??
 [x] better console.logs for me. it's not public, so why not
