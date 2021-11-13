@@ -13,6 +13,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 - [] memory on hover instead (indicate on red)
 - [] icons & other fluff
+- [] redesign
 - [] Fix tracker: today's done are not showing?
 
   - [] On hover show date
