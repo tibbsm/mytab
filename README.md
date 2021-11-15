@@ -14,7 +14,6 @@ A simple, customizable tab template for new tabs in chrome.
 - [] memory on hover instead (indicate on red)
 - [] icons & other fluff
 - [] redesign, make it actually look good
-- [] Fix tracker: today's done are not showing?
 
   - [] On hover show date
 
@@ -35,6 +34,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 - [] count browser open time?? times opened??
 
+[x] Fix tracker: today's done are not showing?
 [x] ENV (for dummy data)
 [x] Sub Tasks
 [x] still have issue with saving done-ness??
