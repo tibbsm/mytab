@@ -62,7 +62,7 @@ A simple, customizable tab template for new tabs in chrome.
 [x] Track todos (github style tracker) for the ~~month~~year
 [x] fonts
 [x] Github style tracker.
-[x] **Linters / Formatters (ES & Prettier)**
+[x] Linters / Formatters (ES & Prettier)
 [x] update memory meter on new/delete todo
 [x] Clear done button
 [x] Save undo state
