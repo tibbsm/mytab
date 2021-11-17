@@ -11,6 +11,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 ## TODOs
 
+- [] Add comments
 - [] memory on hover instead (indicate on red)
 - [] icons & other fluff
 - [] redesign, make it actually look good
