@@ -15,10 +15,11 @@ A simple, customizable tab template for new tabs in chrome.
 - [] memory on hover instead (indicate on red)
 - [] icons & other fluff
 - [] clear & clear done buttons
-- [] redesign, make it actually look good
+- [] Design docs
 
-  - [] On hover show date
+  - [] redesign, make it actually look good
 
+- [] On hover show date
 - [] button to edit
 - [] airbnb rules?
 
