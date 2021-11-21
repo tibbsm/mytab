@@ -250,6 +250,7 @@
 {#if activeTodo}
   <br />
   <br />
+  <br />
   <div>
     <input
       id="new-todo-input"
