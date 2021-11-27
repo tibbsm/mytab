@@ -16,6 +16,7 @@ A simple, customizable tab template for new tabs in chrome.
   - [] clear & clear done buttons
 - [] Design docs
 
+  - [] UI/UX best practices
   - [] redesign, make it actually look good
 
 - [] On hover show date
