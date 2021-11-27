@@ -14,6 +14,7 @@ A simple, customizable tab template for new tabs in chrome.
 - [] memory on hover instead (indicate on red)
 - [] menu
   - [] clear & clear done buttons
+- [] Other ways to contribute?
 - [] Design docs
 
   - [] UI/UX best practices
