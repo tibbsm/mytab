@@ -11,6 +11,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 ## TODOs
 
+- [] "you havnet done anything in x days" msg
 - [] different states ans links/bookmarks
 - [] memory on hover instead (indicate on red)
 - [] menu
