@@ -42,43 +42,43 @@ A simple, customizable tab template for new tabs in chrome.
 
 - [] count browser open time?? times opened??
 
-[x] Fix tracker: today's done are not showing?
-[x] ENV (for dummy data)
-[x] Sub Tasks
-[x] still have issue with saving done-ness??
-[x] better console.logs for me. it's not public, so why not
-[x] Fix delete area
-[x] Fix done hide/show button
-[x] Fix drag over done button
-[x] Fix todo status change
-[x] ~~setup db?~~
-[x] ~~fix flow. focus on done. dont let todo grow~~
-[x] tracker from today (-365) \* gotta switch up how we generate the tracker
-[x] Hide all dones. click to reveal
-[x] create separate component for tracker (pass todos to it?)
-[x] Tracker: component
-[x] drag to delete
-[x] ~~note pages~~
-[x] Draggable
-[x] typescript
-[x] add doing column?
-[x] better way to dev locally (if dev don't use chrome)
-[x] ~~actionable, small and not just notes...~~
-[x] dev console stuff?? running commands for me only or something?
-[x] limit new items after so many undone todos
-[x] meter styling (red when low on memory)
-[x] Track todos (github style tracker) for the ~~month~~year
-[x] fonts
-[x] Github style tracker.
-[x] Linters / Formatters (ES & Prettier)
-[x] update memory meter on new/delete todo
-[x] Clear done button
-[x] Save undo state
-[x] time and date (clock)
+[x] Fix tracker: today's done are not showing?  
+[x] ENV (for dummy data)  
+[x] Sub Tasks  
+[x] still have issue with saving done-ness??  
+[x] better console.logs for me. it's not public, so why not  
+[x] Fix delete area  
+[x] Fix done hide/show button  
+[x] Fix drag over done button  
+[x] Fix todo status change  
+[x] ~~setup db?~~  
+[x] ~~fix flow. focus on done. dont let todo grow~~  
+[x] tracker from today (-365) \* gotta switch up how we generate the tracker  
+[x] Hide all dones. click to reveal  
+[x] create separate component for tracker (pass todos to it?)  
+[x] Tracker: component  
+[x] drag to delete  
+[x] ~~note pages~~  
+[x] Draggable  
+[x] typescript  
+[x] add doing column?  
+[x] better way to dev locally (if dev don't use chrome)  
+[x] ~~actionable, small and not just notes...~~  
+[x] dev console stuff?? running commands for me only or something?  
+[x] limit new items after so many undone todos  
+[x] meter styling (red when low on memory)  
+[x] Track todos (github style tracker) for the ~~month~~year  
+[x] fonts  
+[x] Github style tracker.  
+[x] Linters / Formatters (ES & Prettier)  
+[x] update memory meter on new/delete todo  
+[x] Clear done button  
+[x] Save undo state  
+[x] time and date (clock)  
 [x] create notes dir for research  
 [x] undo last delete/etc.  
 [x] tab friendly && shortcuts  
-[x] ~~Save to Drive (notes)~~
+[x] ~~Save to Drive (notes)~~  
 [x] Notes  
  [x] Debounced saves ~~& save button~~  
  [x] Separate file  
@@ -91,7 +91,7 @@ A simple, customizable tab template for new tabs in chrome.
  [x] ~~Handle saving images to file???~~  
  [x] ~~Storable (DOCS)~~  
  [x] ~~WYSIWYT Editor that saves~~  
- [x] ~~Create seperate file for todos, wysiwyt editor, etc..~~
+ [x] ~~Create seperate file for todos, wysiwyt editor, etc..~~  
 [x] Storage size indicators  
 [x] Update on updates to todos/note  
 [x] ~~Storage meter onhover show numbers~~  
