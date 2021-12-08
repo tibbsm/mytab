@@ -11,7 +11,7 @@ A simple, customizable tab template for new tabs in chrome.
 
 ## TODOs
 
-[] Reddit startpages  
+[] Reddit r/startpages  
 [] fix read me formatting[] "you haven't done anything in x days" msg  
  [] different states ans links/bookmarks  
  [] memory on hover instead (indicate on red)  
