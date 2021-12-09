@@ -12,7 +12,7 @@ A simple, customizable tab template for new tabs in chrome.
 ## TODOs
 
 [] Reddit r/startpages  
-[] fix read me formatting[] "you haven't done anything in x days" msg  
+[] "you haven't done anything in x days" msg  
  [] different states ans links/bookmarks  
  [] memory on hover instead (indicate on red)  
  [] menu  
@@ -29,11 +29,12 @@ A simple, customizable tab template for new tabs in chrome.
 [] Different states(?)
 [] teddit  
  [] nba  
- [] HN
-[] Tracker
-[] weekday alignment
+ [] HN  
+[] Tracker  
+[] weekday alignment  
 [] count browser open time?? times opened??
 
+[x] fix read me formatting
 [x] Fix tracker: today's done are not showing?  
 [x] ENV (for dummy data)  
 [x] Sub Tasks  
