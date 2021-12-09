@@ -13,14 +13,14 @@ A simple, customizable tab template for new tabs in chrome.
 
 [] Reddit r/startpages  
 [] "you haven't done anything in x days" msg  
- [] different states ans links/bookmarks  
- [] memory on hover instead (indicate on red)  
- [] menu  
- [] clear & clear done buttons  
- [] Other ways to contribute?  
- [] Design docs
+[] different states ans links/bookmarks  
+[] memory on hover instead (indicate on red)  
+[] menu  
+[] clear & clear done buttons  
+[] Other ways to contribute?  
+[] Design docs
 [] UI/UX best practices  
- [] redesign, make it actually look good
+[] redesign, make it actually look good
 [] On hover show date  
 [] button to edit  
 [] airbnb rules?
