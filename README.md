@@ -31,7 +31,7 @@ A simple, customizable tab template for new tabs in chrome.
  [] nba  
  [] HN  
 [] Tracker  
-[] weekday alignment  
+ [] weekday alignment  
 [] count browser open time?? times opened??
 
 [x] fix read me formatting
