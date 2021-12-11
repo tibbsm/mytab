@@ -34,6 +34,8 @@ A simple, customizable tab template for new tabs in chrome.
  [] weekday alignment  
 [] count browser open time?? times opened??
 
+## DONE
+
 [x] fix read me formatting
 [x] Fix tracker: today's done are not showing?  
 [x] ENV (for dummy data)  
