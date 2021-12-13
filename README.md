@@ -8,6 +8,7 @@ A simple, customizable tab template for new tabs in chrome.
 - Umberto Eco Writing System
 - learn about event (dispatch) and stores
 - Different project: web clipper to save articles, bibliography
+-
 
 ## TODOs
 
