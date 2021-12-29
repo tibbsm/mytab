@@ -15,6 +15,7 @@ A simple, customizable tab template for new tabs in chrome.
  [] inspiration finds  
  [] card designs
 
+- weather, cal, ...
 - start page with todo state
 
 [] "you haven't done anything in x days" msg  
