@@ -33,7 +33,7 @@ A simple, customizable tab template for new tabs in chrome.
  [] improve design  
 [] Different states(?)
 [] teddit  
- [] nba  
+ [] nba...  
  [] HN  
 [] Tracker  
  [] weekday alignment  
