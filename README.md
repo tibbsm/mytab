@@ -11,6 +11,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 ## TODOs
 
+[] font that doesnt need file
 [] Reddit r/startpages  
  [] inspiration finds  
  [] card designs
