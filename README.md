@@ -16,7 +16,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
  [] inspiration finds  
  [] card designs
 
-- weather, cal, ...
+- weather, calendar, ...
 - start page with todo state
 
 [] "you haven't done anything in x days" msg  
