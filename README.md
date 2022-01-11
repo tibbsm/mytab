@@ -13,6 +13,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 [] read code from other extensions
 [] grid setup
+
 [] dont break the chain (everday app)
 [] font that doesnt need file
 [] Reddit r/startpages  
