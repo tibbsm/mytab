@@ -14,6 +14,8 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] new branch and start over
 [] learn design or just design something
 
+- use design system?
+
 [] read code from other extensions
 [] grid setup
 
