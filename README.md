@@ -6,6 +6,9 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
   - https://developer.chrome.com/docs/extensions/reference/
   - (tabs) https://stackoverflow.com/questions/47431376/chrome-api-to-get-the-start-time-of-a
 - Umberto Eco Writing System
+
+## Svelte stuff
+
 - learn about event (dispatch) and stores
 - Different project: web clipper to save articles, bibliography
 
