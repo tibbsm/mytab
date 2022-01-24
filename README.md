@@ -23,6 +23,8 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 [] new branch and start over
 
+### TODO
+
 [] read code from other extensions
 [] grid setup
 
