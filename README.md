@@ -58,8 +58,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
  [] weekday alignment  
 [] count browser open time?? times opened??
 
-### Code
-
 ## DONE
 
 [x] fix read me formatting
