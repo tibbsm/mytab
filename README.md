@@ -3,8 +3,10 @@
 A simple, customizable tab template for new tabs in chrome using Svelte.
 
 - Uptime (how long chrome is open / tab open, etc)
+
   - https://developer.chrome.com/docs/extensions/reference/
   - (tabs) https://stackoverflow.com/questions/47431376/chrome-api-to-get-the-start-time-of-a
+
 - Umberto Eco Writing System
 
 ## Svelte
