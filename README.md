@@ -50,7 +50,10 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] UI/UX best practices  
 [] redesign, make it actually look good
 [] On hover show date  
-[] button to edit  
+[] button to edit
+
+### Code style
+
 [] airbnb rules?
 [] Subtask drawer? or somthing...  
  [] improve design  
