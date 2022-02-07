@@ -106,19 +106,18 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] undo last delete/etc.  
 [x] tab friendly && shortcuts  
 [x] ~~Save to Drive (notes)~~  
-[x] Notes  
- [x] Debounced saves ~~& save button~~  
- [x] Separate file  
- [x] Clean up download file fn (copy pasta)  
- [x] ParseHTML to readable text  
- [x] Use contenteditable  
- [x] Download file  
- [x] test images  
- [x] Handle saving images to local storage???  
- [x] ~~Handle saving images to file???~~  
- [x] ~~Storable (DOCS)~~  
- [x] ~~WYSIWYT Editor that saves~~  
- [x] ~~Create seperate file for todos, wysiwyt editor, etc..~~  
+[x] Debounced saves ~~& save button~~  
+[x] Separate file  
+[x] Clean up download file fn (copy pasta)  
+[x] ParseHTML to readable text  
+[x] Use contenteditable  
+[x] Download file  
+[x] test images  
+[x] Handle saving images to local storage???  
+[x] ~~Handle saving images to file???~~  
+[x] ~~Storable (DOCS)~~  
+[x] ~~WYSIWYT Editor that saves~~  
+[x] ~~Create seperate file for todos, wysiwyt editor, etc..~~  
 [x] Storage size indicators  
 [x] Update on updates to todos/note  
 [x] ~~Storage meter onhover show numbers~~  
