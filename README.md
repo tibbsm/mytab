@@ -105,7 +105,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] create notes dir for research  
 [x] undo last delete/etc.  
 [x] tab friendly && shortcuts  
-[x] ~~Save to Drive (notes)~~  
 [x] Debounced saves ~~& save button~~  
 [x] Separate file  
 [x] Clean up download file fn (copy pasta)  
