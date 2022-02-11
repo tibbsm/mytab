@@ -115,7 +115,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] Handle saving images to local storage???  
 [x] ~~Handle saving images to file???~~  
 [x] ~~Storable (DOCS)~~  
-[x] ~~WYSIWYT Editor that saves~~  
 [x] ~~Create seperate file for todos, wysiwyt editor, etc..~~  
 [x] Storage size indicators  
 [x] Update on updates to todos/note  
