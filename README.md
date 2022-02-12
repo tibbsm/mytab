@@ -128,7 +128,4 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [X] Add on enter  
 [x] Timestamps  
 [x] Store completed task  
-[x] Save edit on change  
-[x] ~~Add way to dev on this easier?~~  
-[x] ~~Add storage listener~~  
-[x] ~~dismissable/pinnable/customizable shortcuts notes~~
+[x] Save edit on change
