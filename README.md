@@ -118,7 +118,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] ~~Create seperate file for todos, wysiwyt editor, etc..~~  
 [x] Storage size indicators  
 [x] Update on updates to todos/note  
-[x] ~~Storage meter onhover show numbers~~  
 [x] Change color of storage text depending on status  
 [x] Limit Done list. Dont need to see all of them.  
 [x] DEBOUNCE!!!!  
