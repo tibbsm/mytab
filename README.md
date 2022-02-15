@@ -114,7 +114,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] test images  
 [x] Handle saving images to local storage???  
 [x] ~~Handle saving images to file???~~  
-[x] ~~Storable (DOCS)~~  
 [x] Storage size indicators  
 [x] Update on updates to todos/note  
 [x] Change color of storage text depending on status  
