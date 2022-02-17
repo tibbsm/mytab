@@ -90,7 +90,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] typescript  
 [x] add doing column?  
 [x] better way to dev locally (if dev don't use chrome)  
-[x] ~~actionable, small and not just notes...~~  
 [x] dev console stuff?? running commands for me only or something?  
 [x] limit new items after so many undone todos  
 [x] meter styling (red when low on memory)  
