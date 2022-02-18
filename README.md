@@ -79,7 +79,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] Fix drag over done button  
 [x] Fix todo status change  
 [x] ~~setup db?~~  
-[x] ~~fix flow. focus on done. dont let todo grow~~  
 [x] tracker from today (-365) \* gotta switch up how we generate the tracker  
 [x] Hide all dones. click to reveal  
 [x] create separate component for tracker (pass todos to it?)  
