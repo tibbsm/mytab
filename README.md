@@ -82,8 +82,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] Hide all dones. click to reveal  
 [x] create separate component for tracker (pass todos to it?)  
 [x] Tracker: component  
-[x] drag to delete  
-[x] ~~note pages~~  
+[x] drag to delete
 [x] Draggable  
 [x] typescript  
 [x] add doing column?  
