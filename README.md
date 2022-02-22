@@ -58,6 +58,8 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] Subtask drawer? or somthing...  
  [] improve design
 
+### Features
+
 [] Different states(?)
 [] teddit  
  [] nba  
