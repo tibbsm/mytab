@@ -63,7 +63,8 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] Different states(?)
 [] teddit  
  [] nba  
- [] HN  
+[] HN  
+[] Bookmarks
 [] Tracker  
  [] weekday alignment  
 [] count browser open time?? times opened??
