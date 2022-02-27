@@ -60,14 +60,15 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 ### Features
 
-[] Different states(?)
+[] Different states(?)  
 [] teddit  
  [] nba  
 [] HN  
-[] Bookmarks shortcuts
+[] Bookmarks shortcuts  
 [] Tracker  
 [] weekday alignment  
- [] need design
+ [] need design  
+[] calendar  
 [] count browser open time?? times opened??
 
 ## DONE
