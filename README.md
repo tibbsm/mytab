@@ -118,7 +118,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] Update on updates to todos/note  
 [x] Change color of storage text depending on status  
 [x] Limit Done list. Dont need to see all of them.  
-[x] DEBOUNCE!!!!  
+[x] Debounce
 [x] Move todos to README or something  
 [x] Done list  
 [X] ID number for tasks (object???)  
