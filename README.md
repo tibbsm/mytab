@@ -14,6 +14,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
   - read docs and notate
   - less notes more dev
   - just one line... smallest possible advancment
+  - tooday was gonna be the day..
 
 ## Svelte
 
