@@ -35,7 +35,8 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 [] read code from other extensions
 [] grid setup
-[] change todo name
+[] change todo name  
+ [] update btn pops up after change
 
 [] dont break the chain (everday app)
 [] font that doesnt need file
