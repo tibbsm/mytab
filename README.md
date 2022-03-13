@@ -2,6 +2,7 @@
 
 A simple, customizable tab template for new tabs in chrome using Svelte.
 
+- mainichi...
 - Uptime (how long chrome is open / tab open, etc)
 
   - https://developer.chrome.com/docs/extensions/reference/
