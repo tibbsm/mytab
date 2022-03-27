@@ -21,8 +21,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 - learn about event (dispatch) and stores
 - Different project: web clipper to save articles, bibliography
 
-## TODOs
-
 ### Design
 
 [] learn design
