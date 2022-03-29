@@ -32,7 +32,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 ### TODO
 
-[] setup pjm tools on github
+[] setup pjm tools on github (issues etc.)
 [] read code from other extensions
 [] grid setup
 [] change todo name  
