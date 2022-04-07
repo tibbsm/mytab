@@ -10,7 +10,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 - Umberto Eco Writing System
 - Gotta dev, but when?
   - read docs and notate
-  - still good practice to do a little a day, but better to have lil problems to solve???
 
 ## Svelte
 
