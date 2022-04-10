@@ -8,11 +8,11 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
   - (tabs) https://stackoverflow.com/questions/47431376/chrome-api-to-get-the-start-time-of-a
 
 - Umberto Eco Writing System
+- Different project: web clipper to save articles, bibliography
 
 ## Svelte
 
 - learn about event (dispatch) and stores
-- Different project: web clipper to save articles, bibliography
 
 ### Design
 
