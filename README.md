@@ -27,7 +27,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
  [] update btn pops up after change
 [] scanned images (designs, ideas, etc)
 
-[] dont break the chain (everday app)
 [] font that doesnt need file
 [] Reddit r/startpages  
  [] inspiration finds  
