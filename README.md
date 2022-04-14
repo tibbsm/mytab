@@ -29,7 +29,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 [] font that doesnt need file
 [] Reddit r/startpages  
- [] inspiration finds  
+ [] inspiration finds directory  
  [] card designs
 
 - weather, calendar, ...
