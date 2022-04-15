@@ -36,6 +36,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 - start page with todo state
 
 [] "you haven't done anything in x days" msg  
+[] days/hours since last commit
 [] different states ans links/bookmarks  
 [] memory on hover instead (indicate on red)  
 [] clear & clear done buttons
