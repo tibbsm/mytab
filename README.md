@@ -38,8 +38,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] "you haven't done anything in x days" msg  
 [] days/hours since last commit
 [] different states ans links/bookmarks  
-[] memory on hover instead (indicate on red)  
-[] clear & clear done buttons
+[] memory on hover instead (indicate on red)
 
 ### Other ways to contribute?
 
