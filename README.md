@@ -58,7 +58,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 [] Different states(?)  
 [] teddit  
- [] nba  
+ [] nba / news
 [] HN  
 [] Bookmarks shortcuts  
 [] Tracker  
