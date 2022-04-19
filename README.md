@@ -122,5 +122,3 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [x] Timestamps  
 [x] Store completed task  
 [x] Save edit on change
-
-almost there...
