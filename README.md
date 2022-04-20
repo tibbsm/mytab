@@ -50,7 +50,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 ### Code style
 
-[] airbnb rules?
+[] airbnb rules
 [] Subtask drawer? or somthing...  
  [] improve design
 
