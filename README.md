@@ -51,12 +51,12 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 ### Code style
 
 [] Airbnb rules
-[] Subtask drawer
-[] improve design
 
 ### Features
 
-[] Different states(?)  
+[] Subtask drawer
+[] improve design
+[] Different states
 [] teddit  
  [] nba / news
 [] HN  
