@@ -8,6 +8,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 - Umberto Eco Writing System
   - Different project: web clipper to save articles, bibliography
 - [Svelte Docs](https://svelte.dev/docs)
+  - one new thing about svelte a day
   - learn about event (dispatch) and stores
 
 ### Design
