@@ -10,6 +10,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 - [Svelte Docs](https://svelte.dev/docs)
   - one new thing about svelte a day
   - learn about event (dispatch) and stores
+- Wordle link
 
 ### Design
 
