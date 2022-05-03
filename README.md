@@ -9,6 +9,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
   - Different project: web clipper to save articles, bibliography
 - [Svelte Docs](https://svelte.dev/docs)
   - one new thing about svelte a day
+    - array methods (.push, .splice) do not trigger reactivity [link](https://svelte.dev/tutorial/updating-arrays-and-objects)
   - learn about event (dispatch) and stores
 - Wordle link
 
