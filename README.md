@@ -10,6 +10,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 - [Svelte Docs](https://svelte.dev/docs)
   - one new thing about svelte a day
     - array methods (.push, .splice) do not trigger reactivity [link](https://svelte.dev/tutorial/updating-arrays-and-objects)
+    - only values within the `$:` block will trigger reactivity ($: tot = yPlusValue(x) // only x will trigger)
   - learn about event (dispatch) and stores
 - Wordle link
 
