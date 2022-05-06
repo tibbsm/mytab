@@ -12,6 +12,8 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
     - array methods (.push, .splice) do not trigger reactivity [link](https://svelte.dev/tutorial/updating-arrays-and-objects)
     - only values within the `$:` block will trigger reactivity ($: tot = yPlusValue(x) // only x will trigger)
     - <slot> provide fallback if no child is passed to component
+    - there's a CLI
+    - todo: component cli
   - learn about event (dispatch) and stores
 - Wordle link
 
