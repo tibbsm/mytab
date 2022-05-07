@@ -16,6 +16,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
     - todo: component cli
   - learn about event (dispatch) and stores
 - Wordle link
+- Types are correct?
 
 ### Design
 
