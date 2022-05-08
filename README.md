@@ -14,6 +14,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
     - <slot> provide fallback if no child is passed to component
     - there's a CLI
     - todo: component cli
+    - debug tag
   - learn about event (dispatch) and stores
 - Wordle link
 - Types are correct?
