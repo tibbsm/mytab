@@ -11,10 +11,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
   - one new thing about svelte a day
     - array methods (.push, .splice) do not trigger reactivity [link](https://svelte.dev/tutorial/updating-arrays-and-objects)
     - only values within the `$:` block will trigger reactivity ($: tot = yPlusValue(x) // only x will trigger)
-    - <slot> provide fallback if no child is passed to component
-    - there's a CLI
-    - todo: component cli
-    - debug tag
   - learn about event (dispatch) and stores
 - Wordle link
 - Types are correct?
@@ -28,8 +24,8 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] setup pjm tools on github (issues etc.)
 [] read code from other extensions
 [] grid setup
-[] change todo name  
- [] update btn pops up after change
+[] change todo name
+[] update btn pops up after change
 [] scanned images (designs, ideas, etc)
 
 [] font that doesnt need file
