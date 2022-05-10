@@ -1,8 +1,4 @@
 <script lang="ts">
-  let memoryUsed: number;
-  let notesMemoryUsed: number;
-  let todosMemoryUsed: number;
-
   $: memoryUsed = 0;
   $: notesMemoryUsed = 0;
   $: todosMemoryUsed = 0;
