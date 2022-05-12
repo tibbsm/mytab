@@ -23,7 +23,6 @@
     ); // get bytes
 
     // chrome.storage?.sync.get(null, (items) => console.log(items)); // get all
-
     chrome.storage?.onChanged.addListener(({ changes }) => {
       for (const key in changes) {
         if (key == "notes") {
