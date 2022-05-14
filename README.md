@@ -15,10 +15,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 - Wordle link
 - Types are correct?
 
-### Design
-
-[] design
-
 ### TODO
 
 [] setup pjm tools on github (issues etc.)
