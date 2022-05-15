@@ -40,25 +40,25 @@
 
   initializeTodos();
 
-  function addToList() {
+  const addToList = () => {
     if (todoList.length >= 8) {
       alert("Too many undone todos");
       return;
     }
-    todos = [
-      ...todos,
-      {
-        id: new Date().getTime(),
-        text: newItem,
-        completed: false,
-        created_at: new Date().getTime(),
-        complete_at: null,
-        status: "todo",
-      },
-    ];
+    todos = [...todos, createTodo(newItem)];
     newItem = "";
     saveTodos();
-  }
+  };
+
+  const createTodo = (todoDescription: string): Todo => ({
+    id: new Date().getTime(),
+    text: newItem,
+    subtasks: [],
+    completed: false,
+    created_at: new Date().getTime(),
+    complete_at: null,
+    status: "todo",
+  });
 
   function addSubtask(todo: Todo) {
     const newSub = { text: newSubTask, done: false } as SubTask;
