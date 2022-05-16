@@ -23,7 +23,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] change todo name
 [] update btn pops up after change
 [] scanned images (designs, ideas, etc)
-
 [] font that doesnt need file
 [] Reddit r/startpages  
  [] inspiration finds directory  

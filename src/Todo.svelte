@@ -15,6 +15,7 @@
 </script>
 
 <script lang="ts">
+  // TODO Create method to alter update todos and call savetodos()
   import dummyTodos from "./dummydata";
   import TodoCard from "./TodoCard.svelte";
   import Tracker from "./Tracker.svelte";
