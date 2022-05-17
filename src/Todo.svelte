@@ -61,14 +61,14 @@
     status: "todo",
   });
 
-  function addSubtask(todo: Todo) {
+  const addSubtask = (todo: Todo) => {
     const newSub = { text: newSubTask, done: false } as SubTask;
     todo.subtasks = [...(todo.subtasks ? todo.subtasks : []), newSub];
     todos = [...todos.filter(({ id }) => id !== todo.id), todo];
     newSubTask = "";
     activeTodo = todo;
     saveTodos();
-  }
+  };
 
   function removeFromList(id: number) {
     lastTodos.push(["delete", todos.filter((todo) => todo.id == id)]);
