@@ -27,8 +27,8 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] scanned images (designs, ideas, etc)
 [] font that doesnt need file
 [] Reddit r/startpages  
- [] inspiration finds directory  
- [] card designs
+[] inspiration finds directory  
+[] card designs
 
 - weather, calendar, ...
 - start page with todo state
