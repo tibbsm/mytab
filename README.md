@@ -2,6 +2,7 @@
 
 A simple, customizable tab template for new tabs in chrome using Svelte.
 
+- Countdown to dates (events, deadline, etc)
 - Tracker meaning? especially if not using?
 - Uptime (how long chrome is open / tab open, etc)
   - https://developer.chrome.com/docs/extensions/reference/
