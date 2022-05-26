@@ -3,6 +3,7 @@
   import Todo from "./Todo.svelte";
   import Time from "./Time.svelte";
   import Memory from "./Memory.svelte";
+  import Links from "./Links.svelte";
 </script>
 
 <svelte:head>
@@ -20,6 +21,7 @@
 <Notes />
 <Memory />
 <Time />
+<Links />
 
 <style>
   :global(:root) {
