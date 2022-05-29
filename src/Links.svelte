@@ -1,11 +1,25 @@
-<script lang="ts"></script>
+<script lang="ts">
+  const links: string[][] = [
+    ["Wordle", "https://www.nytimes.com/games/wordle/index.html"],
+  ];
+</script>
 
-<div class="links">
-  <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>
+<div class="link-wrapper">
+  <h3 class="link-header">Links</h3>
+  <ul>
+    {#each links as link}
+      <li>
+        <a class="link" href={link[1]}>Wordle</a>
+      </li>
+    {/each}
+  </ul>
 </div>
 
 <style>
-  .links {
-    color: white;
+  .link-header {
+    color: var(--white);
+  }
+  .link {
+    color: var(--white);
   }
 </style>
