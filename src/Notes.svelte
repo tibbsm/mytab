@@ -1,7 +1,7 @@
 <script lang="ts">
   import { debounce } from "lodash-es";
 
-  let notes;
+  let notes: string;
 
   initializeNotes();
 

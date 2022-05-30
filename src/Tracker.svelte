@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Todo } from "./Todo.svelte";
-  export let todos;
+  export let todos: Todo[];
   $: trackerInfo = calculateTrackerInfo(todos);
 
   const thisYear = new Date().getFullYear();

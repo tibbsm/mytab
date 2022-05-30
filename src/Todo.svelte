@@ -53,7 +53,7 @@
 
   const createTodo = (todoDescription: string): Todo => ({
     id: new Date().getTime(),
-    text: newItem,
+    text: todoDescription,
     subtasks: [],
     completed: false,
     created_at: new Date().getTime(),
