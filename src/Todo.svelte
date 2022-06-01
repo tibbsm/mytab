@@ -147,7 +147,7 @@
     }
   };
 
-  const handleDrop = (event, group) => {
+  const handleDrop = (event: DragEvent, group: string) => {
     const currId = event.dataTransfer.getData("item");
     if (currId) {
       if (group === "delete") {
@@ -163,7 +163,7 @@
     saveTodos();
   };
 
-  function dragover(event) {
+  function dragover(event: DragEvent) {
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
   }

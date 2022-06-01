@@ -6,11 +6,11 @@
 
   export let todo: Todo;
 
-  function dragstart(event) {
-    event.dataTransfer.setData("item", todo.id);
+  function dragstart(event: DragEvent) {
+    event.dataTransfer.setData("item", todo.id.toString());
   }
 
-  function dragover(event) {
+  function dragover(event: DragEvent) {
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
   }
