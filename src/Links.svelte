@@ -1,6 +1,7 @@
 <script lang="ts">
   const links: string[][] = [
     ["Wordle", "https://www.nytimes.com/games/wordle/index.html"],
+    ["Hacker News", "https://news.ycombinator.com/"],
   ];
 </script>
 
