@@ -10,7 +10,7 @@
   <ul>
     {#each links as link}
       <li>
-        <a class="link" href={link[1]}>Wordle</a>
+        <a class="link" href={link[1]}>{link[0]}</a>
       </li>
     {/each}
   </ul>
