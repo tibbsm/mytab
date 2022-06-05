@@ -24,4 +24,12 @@
   .link {
     color: var(--white);
   }
+
+  li::before {
+    content: "• ";
+    color: var(--white); /* or whatever color you prefer */
+  }
+  ul {
+    list-style: none;
+  }
 </style>
