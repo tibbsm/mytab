@@ -27,7 +27,7 @@
 
   li::before {
     content: "• ";
-    color: var(--white); /* or whatever color you prefer */
+    color: var(--white); 
   }
   ul {
     list-style: none;
