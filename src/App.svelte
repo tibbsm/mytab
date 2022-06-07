@@ -17,11 +17,11 @@
   />
 </svelte:head>
 
+<Links />
 <Todo />
 <Notes />
 <Memory />
 <Time />
-<Links />
 
 <style>
   :global(:root) {
