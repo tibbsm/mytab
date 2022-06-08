@@ -8,13 +8,11 @@
 
 <div class="link-wrapper">
   <h3 class="link-header">Links</h3>
-  <ul>
+  <div>
     {#each links as link}
-      <li>
-        <a class="link" href={link[1]}>{link[0]}</a>
-      </li>
+      <a class="link" href={link[1]}>{link[0]}</a>
     {/each}
-  </ul>
+  </div>
 </div>
 
 <style>
@@ -27,7 +25,7 @@
 
   li::before {
     content: "• ";
-    color: var(--white); 
+    color: var(--white);
   }
   ul {
     list-style: none;
