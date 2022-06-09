@@ -10,7 +10,9 @@
   <h3 class="link-header">Links</h3>
   <div>
     {#each links as link}
-      <a class="link" href={link[1]}>{link[0]}</a>
+      <div>
+        <a class="link" href={link[1]}>{link[0]}</a>
+      </div>
     {/each}
   </div>
 </div>
@@ -21,13 +23,5 @@
   }
   .link {
     color: var(--white);
-  }
-
-  li::before {
-    content: "• ";
-    color: var(--white);
-  }
-  ul {
-    list-style: none;
   }
 </style>
