@@ -10,9 +10,11 @@
   <h3 class="link-header">Links</h3>
   <div>
     {#each links as link}
-      <div>
-        <a class="link" href={link[1]}>{link[0]}</a>
-      </div>
+      <a class="link" href={link[1]}>
+        <div>
+          {link[0]}
+        </div>
+      </a>
     {/each}
   </div>
 </div>
