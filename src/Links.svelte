@@ -20,6 +20,13 @@
 </div>
 
 <style>
+  .link-wrapper {
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+    width: fit-content;
+  }
   .link-header {
     color: var(--white);
   }
