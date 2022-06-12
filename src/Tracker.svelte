@@ -46,6 +46,9 @@
     width: 60rem;
     height: 10rem;
     padding: 2rem 1rem;
+    margin: 1em;
+    border: 1px solid var(--white);
+    border-radius: 5px;
   }
 
   .square {

@@ -22,53 +22,21 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 ### TODO
 
-[] rebuild  
- [] better docs this time around
-[] better tracker
+[] remove todos and tracker/create branch to save state on first
+[] better git flow for this?
 [] setup pjm tools on github (issues etc.)
 [] read code from other extensions
-[] grid setup
-[] change todo name
-[] update btn pops up after change
 [] scanned images (designs, ideas, etc)
 [] font that doesnt need file
 [] Reddit r/startpages  
-[] inspiration finds directory  
-[] card designs
-
-- weather, calendar, ...
-- start page with todo state
-
+ [] inspiration finds directory  
+[] weather, calendar, ...
 [] "you haven't done anything in x days" msg  
 [] days/hours since last commit
 [] different states ans links/bookmarks  
 [] memory on hover instead (indicate on red)
-
-### Other ways to contribute?
-
-[] Design docs
-[] UI/UX best practices  
-[] redesign, make it actually look good
-[] On hover show date  
-[] button to edit
-
-### Code style
-
 [] Airbnb rules
-
-### Features
-
-[] Subtask drawer
 [] improve design
-[] Different states
-[] teddit  
- [] nba / news
-[] HN  
-[] Bookmarks shortcuts  
-[] Tracker  
-[] weekday alignment  
- [] need design  
-[] calendar  
 [] count browser open time. times opened.
 
 ## DONE
