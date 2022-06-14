@@ -1,9 +1,5 @@
 <script lang="ts">
-  const links: string[][] = [
-    ["Wordle", "https://www.nytimes.com/games/wordle/index.html"],
-    ["Hacker News", "https://news.ycombinator.com/"],
-    ["Teddit NBA", "https://teddit.net/r/nba/"],
-  ];
+  import links from "./links";
 </script>
 
 <div class="link-wrapper">
