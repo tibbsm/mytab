@@ -3,7 +3,6 @@
 </script>
 
 <div class="link-wrapper">
-  <h3 class="link-header">Links</h3>
   <div>
     {#each links as link}
       <a class="link" href={link[1]}>
@@ -22,9 +21,6 @@
     padding: 1em;
     margin: 1em;
     width: fit-content;
-  }
-  .link-header {
-    color: var(--white);
   }
   .link {
     color: var(--white);
