@@ -3,15 +3,13 @@
 </script>
 
 <div class="link-wrapper">
-  <div>
-    {#each links as link}
-      <a class="link" href={link[1]}>
-        <div>
-          {link[0]}
-        </div>
-      </a>
-    {/each}
-  </div>
+  {#each links as link}
+    <a class="link" href={link[1]}>
+      <div>
+        {link[0]}
+      </div>
+    </a>
+  {/each}
 </div>
 
 <style>
