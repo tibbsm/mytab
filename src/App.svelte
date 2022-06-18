@@ -18,7 +18,6 @@
 </svelte:head>
 
 <Links />
-<!-- <Todo /> -->
 <Notes />
 <Memory />
 <Time />
