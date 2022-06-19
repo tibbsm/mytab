@@ -89,8 +89,10 @@
     display: none;
   }
 
-  .memory-wrapper {
-    margin-top: 1em;
+  .memory-wrapper,
+  button {
+    margin: 1em;
+    padding: 1em;
   }
   .meter {
     height: 1em;

@@ -24,6 +24,10 @@
 />
 
 <style>
+  .notes {
+    margin: 1em;
+    padding: 1em;
+  }
   [contenteditable] {
     width: 50%;
     border-radius: 5px;
