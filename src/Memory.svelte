@@ -89,11 +89,6 @@
     display: none;
   }
 
-  .memory-wrapper,
-  button {
-    margin: 1em;
-    padding: 1em;
-  }
   .meter {
     height: 1em;
     width: 25%;

@@ -17,12 +17,15 @@
   />
 </svelte:head>
 
-<Links />
-<Notes />
-<Memory />
-<Time />
+<div class="page-wrapper">
+  <Links />
+  <Notes />
+  <Memory />
+  <Time />
+</div>
 
 <style>
+  /* Global Styles */
   :global(:root) {
     --black: #121212;
     --dark: #52057b;
@@ -39,9 +42,12 @@
   :global(h1, h2) {
     color: var(--light);
   }
-
   :global(input, textarea) {
     background-color: #1b1e23;
     color: var(--light);
+  }
+
+  .page-wrapper {
+    padding: 2em;
   }
 </style>
