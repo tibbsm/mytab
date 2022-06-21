@@ -22,8 +22,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 ### TODO
 
-[] personal config file so I don't push personal data
-[] remove todos and tracker/create branch to save state on first
+[] shortcuts for links
 [] better git flow for this?
 [] setup pjm tools on github (issues etc.)
 [] read code from other extensions
@@ -42,6 +41,8 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 ## DONE
 
+[x] remove todos and tracker/create branch to save state on first
+[x] personal config file so I don't push personal data
 [x] fix read me formatting
 [x] Fix tracker: today's done are not showing
 [x] ENV (for dummy data)  
