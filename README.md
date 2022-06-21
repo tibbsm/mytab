@@ -22,7 +22,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 
 ### TODO
 
-[] shortcuts for links
+[] shortcuts for links (cmd + 1, etc)
 [] better git flow for this?
 [] setup pjm tools on github (issues etc.)
 [] read code from other extensions
