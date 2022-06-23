@@ -32,7 +32,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] weather, calendar, ...
 [] "you haven't done anything in x days" msg  
 [] days/hours since last commit
-[] different states ans links/bookmarks  
+[] different states and links/bookmarks  
 [] memory on hover instead (indicate on red)
 [] Airbnb rules
 [] count browser open time. times opened.
