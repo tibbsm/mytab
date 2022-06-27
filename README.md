@@ -3,8 +3,6 @@
 A simple, customizable tab template for new tabs in chrome using Svelte.
 
 - Fix warning from npm run check
-- Simple blank page seems appealing now
-  - Just links to common pages/minimal
 - Countdown to dates (events, deadline, etc)
 - Uptime (how long chrome is open / tab open, etc)
   - https://developer.chrome.com/docs/extensions/reference/
