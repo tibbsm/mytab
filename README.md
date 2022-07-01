@@ -20,8 +20,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] Reddit r/startpages  
  [] inspiration finds directory  
 [] weather, calendar, ...
-[] "you haven't done anything in x days" msg  
-[] different states and links/bookmarks  
 [] memory on hover instead (indicate on red)
 [] Airbnb rules
 [] count browser open time. times opened.
