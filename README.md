@@ -21,7 +21,6 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
  [] inspiration finds directory  
 [] weather, calendar, ...
 [] "you haven't done anything in x days" msg  
-[] days/hours since last commit
 [] different states and links/bookmarks  
 [] memory on hover instead (indicate on red)
 [] Airbnb rules
