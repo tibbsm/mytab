@@ -17,8 +17,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] better git flow for this?
 [] setup pjm tools on github (issues etc.)
 [] read code from other extensions
-[] Reddit r/startpages  
- [] inspiration finds directory  
+[] Reddit r/startpages: inspiration finds directory  
 [] weather, calendar, ...
 [] memory on hover instead (indicate on red)
 [] Airbnb rules
