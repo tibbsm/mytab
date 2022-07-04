@@ -20,6 +20,7 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 [] Reddit r/startpages: inspiration finds directory  
 [] weather, calendar, ...
 [] memory on hover instead (indicate on red)
+[] get rid of memory?
 [] Airbnb rules
 [] count browser open time. times opened.
 
