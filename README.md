@@ -12,11 +12,11 @@ A simple, customizable tab template for new tabs in chrome using Svelte.
 ### TODO
 
 [] shortcuts for links (cmd + 1, etc)
+[] weather, calendar, ...
+[] get rid of memory?
+[] count browser open time. times opened.
 [] better git flow for this?
 [] setup pjm tools on github (issues etc.)
 [] read code from other extensions
 [] Reddit r/startpages: inspiration finds directory  
-[] weather, calendar, ...
-[] get rid of memory?
 [] Airbnb rules
-[] count browser open time. times opened.
