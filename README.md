@@ -1,4 +1,4 @@
-# My Tab
+# My New Tab
 
 A very simple start page for new tabs in Chrome using Svelte.
 
