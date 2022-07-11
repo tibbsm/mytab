@@ -1,6 +1,6 @@
 # My New Tab
 
-A very simple start page for new tabs in Chrome using Svelte.
+A simple start page for new tabs in Chrome using Svelte.
 
 - Fix warning from npm run check
 - Uptime (how long chrome is open / tab open, etc)
