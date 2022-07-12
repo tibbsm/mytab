@@ -18,5 +18,4 @@ A simple start page for new tabs in Chrome using Svelte.
 [] better git flow for this?
 [] setup pjm tools on github (issues etc.)
 [] read code from other extensions
-[] Reddit r/startpages: inspiration finds directory  
 [] Airbnb rules
