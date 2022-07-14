@@ -14,7 +14,7 @@ A simple start page for new tabs in Chrome using Svelte.
 [] shortcuts for links (cmd + 1, etc)
 [] weather, calendar, ...
 [] get rid of memory?
-[] count browser open time. times opened.
+[] count browser open time & times opened.
 [] better git flow for this? solo dev practices?
 [] setup pjm tools on github (issues etc.)
 [] read code from other extensions
