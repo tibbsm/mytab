@@ -8,10 +8,10 @@ A simple start page for new tabs in Chrome using Svelte.
   - (tabs) https://stackoverflow.com/questions/47431376/chrome-api-to-get-the-start-time-of-a
 - Umberto Eco Writing System: web clipper to save articles, bibliography
 - [Svelte Docs](https://svelte.dev/docs)
+- [React Docs](https://beta.reactjs.org/apis/render)
 
 ### TODO
 
-[] shortcuts for links (cmd + 1, etc)
 [] weather, calendar, ...
 [] get rid of memory?
 [] count browser open time & times opened.
