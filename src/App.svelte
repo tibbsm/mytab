@@ -1,6 +1,5 @@
 <script lang="ts">
   import Notes from "./Notes.svelte";
-  import Todo from "./Todo.svelte";
   import Time from "./Time.svelte";
   import Memory from "./Memory.svelte";
   import Links from "./Links.svelte";
