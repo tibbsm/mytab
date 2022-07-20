@@ -12,7 +12,5 @@ A simple start page for new tabs in Chrome using Svelte.
 ### TODO
 
 [] count browser open time & times opened.
-[] better git flow for this? solo dev practices?
-[] setup pjm tools on github (issues etc.)
 [] read code from other extensions
 [] Airbnb rules
