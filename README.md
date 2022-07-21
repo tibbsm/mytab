@@ -14,3 +14,5 @@ A simple start page for new tabs in Chrome using Svelte.
 [] count browser open time & times opened.
 [] read code from other extensions
 [] Airbnb rules
+
+- https://github.com/orgs/chrome-extensions/repositories?type=all
