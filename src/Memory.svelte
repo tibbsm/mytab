@@ -7,22 +7,20 @@
 
   initializeMemory();
 
-  // FIXME? Do I have to call it 3 times here. More efficient way?
   function initializeMemory() {
     chrome.storage?.sync.getBytesInUse(
       null,
       (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
-    ); // get bytes
+    );
     chrome.storage?.sync.getBytesInUse(
       "notes",
       (bytesInUse) => (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
-    ); // get bytes
+    );
     chrome.storage?.sync.getBytesInUse(
       "todos",
       (bytesInUse) => (todosMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
-    ); // get bytes
+    );
 
-    // chrome.storage?.sync.get(null, (items) => console.log(items)); // get all
     chrome.storage?.onChanged.addListener(({ changes }) => {
       for (const key in changes) {
         if (key == "notes") {
@@ -42,7 +40,7 @@
       chrome.storage?.sync.getBytesInUse(
         null,
         (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
-      ); // get bytes
+      );
     });
   }
 
