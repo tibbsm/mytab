@@ -1,7 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  // fmt(time)
   let time = new Date();
   $: seconds = ("00" + time.getSeconds()).slice(-2);
   $: minutes = ("00" + time.getMinutes()).slice(-2);
