@@ -1,7 +1,5 @@
 <script lang="ts">
   $: memoryUsed = 0;
-  $: notesMemoryUsed = 0;
-  $: todosMemoryUsed = 0;
 
   let hideMemory = true;
 
@@ -12,31 +10,7 @@
       null,
       (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
     );
-    chrome.storage?.sync.getBytesInUse(
-      "notes",
-      (bytesInUse) => (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
-    );
-    chrome.storage?.sync.getBytesInUse(
-      "todos",
-      (bytesInUse) => (todosMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
-    );
-
     chrome.storage?.onChanged.addListener(({ changes }) => {
-      for (const key in changes) {
-        if (key == "notes") {
-          chrome.storage?.sync.getBytesInUse(
-            "notes",
-            (bytesInUse) =>
-              (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
-          );
-        } else if (key == "todos") {
-          chrome.storage?.sync.getBytesInUse(
-            "todos",
-            (bytesInUse) =>
-              (todosMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
-          );
-        }
-      }
       chrome.storage?.sync.getBytesInUse(
         null,
         (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
@@ -57,24 +31,6 @@
   <div class="meter">
     <span
       style={`width: ${memoryUsed}%; background-color: ${getColor(memoryUsed)}`}
-    />
-  </div>
-
-  <p>Notes: ({notesMemoryUsed}%)</p>
-  <div class="meter">
-    <span
-      style={`width: ${notesMemoryUsed}%; background-color: ${getColor(
-        notesMemoryUsed
-      )}`}
-    />
-  </div>
-
-  <p>Todos: ({todosMemoryUsed}%)</p>
-  <div class="meter">
-    <span
-      style={`width: ${todosMemoryUsed}%; background-color: ${getColor(
-        todosMemoryUsed
-      )}`}
     />
   </div>
 </div>
