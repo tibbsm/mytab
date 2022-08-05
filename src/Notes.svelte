@@ -3,17 +3,17 @@
 
   let notes: string;
 
-  initializeNotes();
-
-  function saveNotes() {
+  const saveNotes = () => {
     chrome.storage?.sync.set({ notes: notes });
-  }
+  };
 
-  function initializeNotes() {
-    chrome.storage?.sync.get(["notes"], function (items) {
+  const initializeNotes = () => {
+    chrome.storage?.sync.get(["notes"], (items) => {
       notes = items["notes"] || "";
     });
-  }
+  };
+
+  initializeNotes();
 </script>
 
 <div
