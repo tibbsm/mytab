@@ -2,9 +2,12 @@
   import { onMount } from "svelte";
 
   let time = new Date();
-  $: seconds = ("00" + time.getSeconds()).slice(-2);
-  $: minutes = ("00" + time.getMinutes()).slice(-2);
-  $: hours = ("00" + time.getHours()).slice(-2);
+
+  const padLeft = (t: number) => ("00" + time.getSeconds()).slice(-2);
+
+  $: seconds = padLeft(time.getSeconds());
+  $: minutes = padLeft(time.getMinutes());
+  $: hours = padLeft(time.getHours());
   $: date = time.toLocaleDateString();
 
   onMount(() => {
