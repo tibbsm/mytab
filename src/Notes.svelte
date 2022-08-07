@@ -4,12 +4,12 @@
   let notes: string;
 
   const saveNotes = () => {
-    chrome.storage?.sync.set({ notes: notes });
+    chrome.storage?.sync.set({ notes });
   };
 
   const initializeNotes = () => {
-    chrome.storage?.sync.get(["notes"], (items) => {
-      notes = items["notes"] || "";
+    chrome.storage?.sync.get(["notes"], ({ notes: n }) => {
+      notes = n ?? "";
     });
   };
 

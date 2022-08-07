@@ -3,11 +3,11 @@
 
   let time = new Date();
 
-  const padLeft = (t: number) => ("00" + time.getSeconds()).slice(-2);
+  const padLeft = (t: string) => ("00" + t).slice(-2);
 
-  $: seconds = padLeft(time.getSeconds());
-  $: minutes = padLeft(time.getMinutes());
-  $: hours = padLeft(time.getHours());
+  $: seconds = padLeft(`${time.getSeconds()}`);
+  $: minutes = padLeft(`${time.getMinutes()}`);
+  $: hours = padLeft(`${time.getHours()}`);
   $: date = time.toLocaleDateString();
 
   onMount(() => {
