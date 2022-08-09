@@ -3,9 +3,7 @@
 
   let hideMemory = true;
 
-  initializeMemory();
-
-  function initializeMemory() {
+  const initializeMemory = () => {
     chrome.storage?.sync.getBytesInUse(
       null,
       (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
@@ -16,10 +14,12 @@
         (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
       );
     });
-  }
+  };
+  const getColor = (percent: number): string => {
+    return percent > 90 ? "red" : percent > 70 ? "yellow" : "green";
+  };
 
-  const getColor = (percent: number): string =>
-    percent > 90 ? "red" : percent > 70 ? "yellow" : "green";
+  initializeMemory();
 </script>
 
 <button on:click={() => (hideMemory = !hideMemory)}>
