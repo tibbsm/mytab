@@ -3,18 +3,17 @@
 
   let hideMemory = true;
 
-  const initializeMemory = () => {
+  const getMemoryUsed = () =>
     chrome.storage?.sync.getBytesInUse(
       null,
       (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
     );
-    chrome.storage?.onChanged.addListener(({ changes }) => {
-      chrome.storage?.sync.getBytesInUse(
-        null,
-        (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
-      );
-    });
+
+  const initializeMemory = () => {
+    getMemoryUsed();
+    chrome.storage?.onChanged.addListener(() => getMemoryUsed());
   };
+
   const getColor = (percent: number): string => {
     return percent > 90 ? "red" : percent > 70 ? "yellow" : "green";
   };
