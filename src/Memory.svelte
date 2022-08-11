@@ -41,7 +41,6 @@
   .hide {
     display: none;
   }
-
   .meter {
     height: 1em;
     width: 25%;
