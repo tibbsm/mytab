@@ -1,8 +1,9 @@
 <script lang="ts">
   import links from "./links";
 
+  // XXX fix key logic
   const onKeyDown = (e: KeyboardEvent) => {
-    const key = isNaN(+e.key) ? null : +e.key;
+    const key = isNaN(Number(e.key)) ? null : Number(e.key);
     if (key >= 0 && key <= 9 && links[key - 1]) {
       window.location.href = links[key - 1][1];
     }
