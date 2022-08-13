@@ -14,13 +14,18 @@
     const interval = setInterval(() => {
       time = new Date();
     }, 1000);
+    // NOTE: called when the component is destroy
     return () => clearInterval(interval);
   });
 </script>
 
 <div class="date-time-wrapper">
-  {date}<br />
-  {hours}:{minutes}:{seconds}
+  <div>
+    {date}
+  </div>
+  <div>
+    {hours}:{minutes}:{seconds}
+  </div>
 </div>
 
 <style>
