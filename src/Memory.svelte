@@ -1,4 +1,5 @@
 <script lang="ts">
+  // FIXME: notes memory is not tracked anymore
   $: memoryUsed = 0;
 
   let hideMemory = true;
