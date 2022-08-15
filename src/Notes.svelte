@@ -28,7 +28,6 @@
     border-radius: 5px;
     padding: 0.5em;
     margin-bottom: 1em;
-
     color: #fff;
     border: none;
     border-bottom: 1px solid var(--light);
