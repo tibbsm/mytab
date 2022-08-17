@@ -1,8 +1,10 @@
 <script lang="ts">
-  import Notes from "./Notes.svelte";
   import Time from "./Time.svelte";
   import Memory from "./Memory.svelte";
   import links from "./links";
+  import { debounce } from "lodash-es";
+
+  let notes: string;
 
   // XXX fix key logic
   const onKeyDown = (e: KeyboardEvent) => {
@@ -11,6 +13,18 @@
       window.location.href = links[key - 1][1];
     }
   };
+
+  const saveNotes = () => {
+    chrome.storage?.sync.set({ notes });
+  };
+
+  const initializeNotes = () => {
+    chrome.storage?.sync.get(["notes"], ({ notes: n }) => {
+      notes = n ?? "";
+    });
+  };
+
+  initializeNotes();
 </script>
 
 <svelte:head>
@@ -36,7 +50,11 @@
       </a>
     {/each}
   </div>
-  <Notes />
+  <div
+    bind:innerHTML={notes}
+    on:keyup={debounce(() => saveNotes(), 250)}
+    contenteditable
+  />
   <Memory />
   <Time />
 </div>
@@ -80,5 +98,18 @@
     padding-bottom: 1em;
     text-decoration: underline;
     font-size: 1.25em;
+  }
+
+  /* Notes */
+  [contenteditable] {
+    width: 50%;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid var(--light);
+    background-color: var(--black);
+    outline: none;
   }
 </style>
