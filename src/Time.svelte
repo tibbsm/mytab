@@ -1,13 +1,9 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  let time = new Date();
-
   const padLeft = (t: string, n: number) => ("0".repeat(n) + t).slice(-1 * n);
 
-  $: seconds = padLeft(`${time.getSeconds()}`, 2);
-  $: minutes = padLeft(`${time.getMinutes()}`, 2);
-  $: hours = padLeft(`${time.getHours()}`, 2);
+  $: time = new Date();
   $: date = time.toLocaleDateString();
 
   onMount(() => {
@@ -24,7 +20,10 @@
     {date}
   </div>
   <div>
-    {hours}:{minutes}:{seconds}
+    {padLeft(`${time.getHours()}`, 2)}:{padLeft(
+      `${time.getMinutes()}`,
+      2
+    )}:{padLeft(`${time.getSeconds()}`, 2)}
   </div>
 </div>
 
