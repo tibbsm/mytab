@@ -1,13 +1,16 @@
 <script lang="ts">
-  import Time from "./Time.svelte";
   import links from "./links";
   import { debounce } from "lodash-es";
+  import { onMount } from "svelte";
 
   // FIXME: notes memory is not tracked anymore
   $: memoryUsed = 0;
+  $: time = new Date();
+  $: date = time.toLocaleDateString();
   let hideMemory = true;
   let notes: string;
 
+  const padLeft = (t: string, n: number) => ("0".repeat(n) + t).slice(-1 * n);
   // XXX fix key logic
   const onKeyDown = (e: KeyboardEvent) => {
     const key = isNaN(Number(e.key)) ? null : Number(e.key);
@@ -40,6 +43,14 @@
   const getColor = (percent: number): string => {
     return percent > 90 ? "red" : percent > 70 ? "yellow" : "green";
   };
+
+  onMount(() => {
+    const interval = setInterval(() => {
+      time = new Date();
+    }, 1000);
+    // NOTE: called when the component is destroy
+    return () => clearInterval(interval);
+  });
 
   initializeNotes();
   initializeMemory();
@@ -90,7 +101,17 @@
     </div>
   </div>
 
-  <Time />
+  <div class="date-time-wrapper">
+    <div>
+      {date}
+    </div>
+    <div>
+      {padLeft(`${time.getHours()}`, 2)}:{padLeft(
+        `${time.getMinutes()}`,
+        2
+      )}:{padLeft(`${time.getSeconds()}`, 2)}
+    </div>
+  </div>
 </div>
 
 <style>
@@ -170,5 +191,15 @@
     border-bottom-right-radius: 8px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+  }
+  /* Time */
+  .date-time-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
   }
 </style>
