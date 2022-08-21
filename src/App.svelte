@@ -10,7 +10,16 @@
   let hideMemory = true;
   let notes: string;
 
+  onMount(() => {
+    const interval = setInterval(() => {
+      time = new Date();
+    }, 1000);
+    // NOTE: called when the component is destroy
+    return () => clearInterval(interval);
+  });
+
   const padLeft = (t: string, n: number) => ("0".repeat(n) + t).slice(-1 * n);
+
   // XXX fix key logic
   const onKeyDown = (e: KeyboardEvent) => {
     const key = isNaN(Number(e.key)) ? null : Number(e.key);
@@ -43,14 +52,6 @@
   const getColor = (percent: number): string => {
     return percent > 90 ? "red" : percent > 70 ? "yellow" : "green";
   };
-
-  onMount(() => {
-    const interval = setInterval(() => {
-      time = new Date();
-    }, 1000);
-    // NOTE: called when the component is destroy
-    return () => clearInterval(interval);
-  });
 
   initializeNotes();
   initializeMemory();
