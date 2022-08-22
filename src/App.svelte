@@ -3,8 +3,7 @@
   import { debounce } from "lodash-es";
   import { onMount } from "svelte";
 
-  // FIXME: notes memory is not tracked anymore
-  $: memoryUsed = 0;
+  $: notesMemoryUsed = 0;
   $: time = new Date();
   $: date = time.toLocaleDateString();
   let hideMemory = true;
@@ -38,11 +37,24 @@
     });
   };
 
-  const getMemoryUsed = () =>
+  const getMemoryUsed = () => {
     chrome.storage?.sync.getBytesInUse(
-      null,
-      (bytesInUse) => (memoryUsed = Math.floor((bytesInUse / 102400) * 100))
+      "notes",
+      (bytesInUse) => (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
     );
+
+    chrome.storage?.onChanged.addListener(({ changes }) => {
+      for (const key in changes) {
+        if (key == "notes") {
+          chrome.storage?.sync.getBytesInUse(
+            "notes",
+            (bytesInUse) =>
+              (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
+          );
+        }
+      }
+    });
+  };
 
   const initializeMemory = () => {
     getMemoryUsed();
@@ -91,11 +103,11 @@
     </button>
 
     <div class="memory-wrapper {hideMemory && 'hide'}">
-      <p>Total: ({memoryUsed}%)</p>
+      <p>Total: ({notesMemoryUsed}%)</p>
       <div class="meter">
         <span
-          style={`width: ${memoryUsed}%; background-color: ${getColor(
-            memoryUsed
+          style={`width: ${notesMemoryUsed}%; background-color: ${getColor(
+            notesMemoryUsed
           )}`}
         />
       </div>
