@@ -98,18 +98,14 @@
     contenteditable
   />
   <div>
-    <button on:click={() => (hideMemory = !hideMemory)}>
-      {hideMemory ? "Show Memory" : "Hide Memory"}
-    </button>
-
-    <div class="memory-wrapper {hideMemory && 'hide'}">
-      <p>Total: ({notesMemoryUsed}%)</p>
+    <div class="memory-wrapper">
       <div class="meter">
         <span
           style={`width: ${notesMemoryUsed}%; background-color: ${getColor(
             notesMemoryUsed
           )}`}
         />
+        <p>({notesMemoryUsed}%)</p>
       </div>
     </div>
   </div>
@@ -184,9 +180,6 @@
   /* Memory */
   .memory-wrapper p {
     color: var(--light);
-  }
-  .hide {
-    display: none;
   }
   .meter {
     height: 1em;
