@@ -9,11 +9,11 @@
   let hideMemory = true;
   let notes: string;
 
+  // NOTE: called when the component is destroy
   onMount(() => {
     const interval = setInterval(() => {
       time = new Date();
     }, 1000);
-    // NOTE: called when the component is destroy
     return () => clearInterval(interval);
   });
 
