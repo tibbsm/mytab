@@ -77,7 +77,6 @@
     rel="stylesheet"
   />
 </svelte:head>
-
 <svelte:window on:keydown={onKeyDown} />
 
 <div class="page-wrapper">
