@@ -106,7 +106,6 @@
       </div>
     </div>
   </div>
-
   <div class="date-time-wrapper">
     <div>
       {date}
