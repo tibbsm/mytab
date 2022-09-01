@@ -94,16 +94,14 @@
     on:keyup={debounce(() => saveNotes(), 250)}
     contenteditable
   />
-  <div>
-    <div class="memory-wrapper">
-      <div class="meter">
-        <span
-          style={`width: ${notesMemoryUsed}%; background-color: ${getColor(
-            notesMemoryUsed
-          )}`}
-        />
-        <p>({notesMemoryUsed}%)</p>
-      </div>
+  <div class="memory-wrapper">
+    <div class="meter">
+      <span
+        style={`width: ${notesMemoryUsed}%; background-color: ${getColor(
+          notesMemoryUsed
+        )}`}
+      />
+      <p>({notesMemoryUsed}%)</p>
     </div>
   </div>
   <div class="date-time-wrapper">
