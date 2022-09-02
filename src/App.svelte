@@ -18,6 +18,7 @@
 
   const padLeft = (t: string, n: number) => ("0".repeat(n) + t).slice(-1 * n);
 
+  // FIXME: need to include the meta key..
   const onKeyDown = (e: KeyboardEvent) => {
     const key = isNaN(Number(e.key)) ? null : Number(e.key) - 1;
     if (key != null && key >= 0 && key <= 8 && links[key]) {
