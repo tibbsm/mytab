@@ -19,9 +19,11 @@
   const padLeft = (t: string, n: number) => ("0".repeat(n) + t).slice(-1 * n);
 
   const onKeyDown = (e: KeyboardEvent) => {
-    const key = isNaN(Number(e.key)) ? null : Number(e.key) - 1;
-    if (e.metaKey && key != null && key >= 0 && key <= 8 && links[key]) {
-      window.location.href = links[key][1];
+    if (e.metaKey) {
+      const key = isNaN(Number(e.key)) ? null : Number(e.key) - 1;
+      if (key != null && key >= 0 && key <= 8 && links[key]) {
+        window.location.href = links[key][1];
+      }
     }
   };
 
