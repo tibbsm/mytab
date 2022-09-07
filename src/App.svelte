@@ -16,8 +16,8 @@
     return () => clearInterval(interval);
   });
 
-  const padLeft = (t: string, n: number) => {
-    return ("0".repeat(n) + t).slice(-1 * n);
+  const padLeft = (str: string, padding: number) => {
+    return ("0".repeat(padding) + str).slice(-1 * padding);
   };
 
   const onKeyDown = (e: KeyboardEvent) => {
