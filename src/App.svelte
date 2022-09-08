@@ -39,6 +39,11 @@
     });
   };
 
+  const initializeMemory = () => {
+    getMemoryUsed();
+    chrome.storage?.onChanged.addListener(() => getMemoryUsed());
+  };
+
   const getMemoryUsed = () => {
     chrome.storage?.sync.getBytesInUse(
       "notes",
@@ -56,11 +61,6 @@
         }
       }
     });
-  };
-
-  const initializeMemory = () => {
-    getMemoryUsed();
-    chrome.storage?.onChanged.addListener(() => getMemoryUsed());
   };
 
   const getColor = (percent: number): string => {
