@@ -6,6 +6,7 @@
   $: notesMemoryUsed = 0;
   $: time = new Date();
   $: date = time.toLocaleDateString();
+
   let notes: string;
 
   // NOTE: called when the component is destroy
