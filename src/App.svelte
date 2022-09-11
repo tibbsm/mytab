@@ -3,6 +3,8 @@
   import { debounce } from "lodash-es";
   import { onMount } from "svelte";
 
+  const { storage } = chrome;
+
   $: notesMemoryUsed = 0;
   $: time = new Date();
   $: date = time.toLocaleDateString();
@@ -31,27 +33,27 @@
   };
 
   const saveNotes = () => {
-    chrome.storage?.sync.set({ notes });
+    storage.sync.set({ notes });
   };
 
   const initializeNotes = () => {
-    chrome.storage?.sync.get(["notes"], ({ notes: n }) => {
+    storage.sync.get(["notes"], ({ notes: n }) => {
       notes = n ?? "";
     });
   };
 
   const initializeMemory = () => {
     getMemoryUsed();
-    chrome.storage?.onChanged.addListener(() => getMemoryUsed());
+    storage.onChanged.addListener(() => getMemoryUsed());
   };
 
   const getMemoryUsed = () => {
-    chrome.storage?.sync.getBytesInUse(
+    storage.sync.getBytesInUse(
       "notes",
       (bytesInUse) => (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
     );
 
-    chrome.storage?.onChanged.addListener(({ changes }) => {
+    storage.onChanged.addListener(({ changes }) => {
       for (const key in changes) {
         if (key == "notes") {
           chrome.storage?.sync.getBytesInUse(
