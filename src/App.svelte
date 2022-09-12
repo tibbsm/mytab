@@ -24,7 +24,7 @@
   };
 
   const onKeyDown = (e: KeyboardEvent) => {
-    if (e.metaKey) {
+    if (e.metaKey && e.altKey) {
       const key = isNaN(Number(e.key)) ? null : Number(e.key) - 1;
       if (key != null && key >= 0 && key <= 8 && links[key]) {
         window.location.href = links[key][1];
