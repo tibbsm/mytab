@@ -23,6 +23,7 @@
     return ("0".repeat(padding) + str).slice(-1 * padding);
   };
 
+  // XXX: ctrl + command is annoying?
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.metaKey && e.ctrlKey) {
       const key = isNaN(Number(e.key)) ? null : Number(e.key) - 1;
