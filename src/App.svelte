@@ -24,7 +24,8 @@
   };
 
   // XXX: ctrl + command is annoying?
-  // alternatives?
+  // alternatives? => e.altKey
+  // use e.code ("Digit2")
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.metaKey && e.ctrlKey) {
       const key = isNaN(Number(e.key)) ? null : Number(e.key) - 1;
