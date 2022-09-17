@@ -23,12 +23,12 @@
     return ("0".repeat(padding) + str).slice(-1 * padding);
   };
 
-  // XXX: ctrl + command is annoying?
-  // alternatives? => e.altKey
-  // use e.code ("Digit2")
   const onKeyDown = (e: KeyboardEvent) => {
-    if (e.metaKey && e.ctrlKey) {
-      const key = isNaN(Number(e.key)) ? null : Number(e.key) - 1;
+    if (e.metaKey && e.altKey) {
+      const code = e.code.includes("Digit")
+        ? e.code.replace("Digit", "")
+        : false;
+      const key = isNaN(Number(code)) ? null : Number(code) - 1;
       if (key != null && key >= 0 && key <= 8 && links[key]) {
         window.location.href = links[key][1];
       }
