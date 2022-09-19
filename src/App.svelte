@@ -52,12 +52,12 @@
   };
 
   const getMemoryUsed = () => {
-    storage.sync.getBytesInUse(
+    sync.getBytesInUse(
       "notes",
       (bytesInUse) => (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
     );
 
-    storage.onChanged.addListener(({ changes }) => {
+    onChanged.addListener(({ changes }) => {
       for (const key in changes) {
         if (key == "notes") {
           chrome.storage?.sync.getBytesInUse(
