@@ -4,6 +4,7 @@
   import { onMount } from "svelte";
 
   const { storage } = chrome;
+  const { sync, onChanged } = storage;
 
   $: notesMemoryUsed = 0;
   $: time = new Date();
@@ -36,18 +37,18 @@
   };
 
   const saveNotes = () => {
-    storage.sync.set({ notes });
+    sync.set({ notes });
   };
 
   const initializeNotes = () => {
-    storage.sync.get(["notes"], ({ notes: n }) => {
+    sync.get(["notes"], ({ notes: n }) => {
       notes = n ?? "";
     });
   };
 
   const initializeMemory = () => {
     getMemoryUsed();
-    storage.onChanged.addListener(() => getMemoryUsed());
+    onChanged.addListener(() => getMemoryUsed());
   };
 
   const getMemoryUsed = () => {
