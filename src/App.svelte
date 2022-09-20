@@ -54,7 +54,10 @@
   const getMemoryUsed = () => {
     sync.getBytesInUse(
       "notes",
-      (bytesInUse) => (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
+      (bytesInUse) =>
+        (notesMemoryUsed = Math.floor(
+          (bytesInUse / sync.QUOTA_BYTES_PER_ITEM) * 100
+        ))
     );
 
     onChanged.addListener(({ changes }) => {
@@ -63,7 +66,9 @@
           chrome.storage?.sync.getBytesInUse(
             "notes",
             (bytesInUse) =>
-              (notesMemoryUsed = Math.floor((bytesInUse / 8192) * 100))
+              (notesMemoryUsed = Math.floor(
+                (bytesInUse / sync.QUOTA_BYTES_PER_ITEM) * 100
+              ))
           );
         }
       }
