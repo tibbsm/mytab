@@ -48,10 +48,12 @@
 
   const initializeMemory = () => {
     getMemoryUsed();
+    // XXX: redundant?
     onChanged.addListener(() => getMemoryUsed());
   };
 
   const getMemoryUsed = () => {
+    // Use await rather than callback
     sync.getBytesInUse(
       "notes",
       (bytesInUse) =>
@@ -60,6 +62,7 @@
         ))
     );
 
+    // XXX: redundant?
     onChanged.addListener(({ changes }) => {
       for (const key in changes) {
         if (key == "notes") {
