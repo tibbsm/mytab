@@ -1,4 +1,4 @@
-# Custom New Tab
+# Custom New Chrome Tab
 
 A simple new tab template in Chrome using Svelte.
 
