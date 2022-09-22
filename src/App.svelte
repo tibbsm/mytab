@@ -52,14 +52,10 @@
     onChanged.addListener(() => getMemoryUsed());
   };
 
-  const getMemoryUsed = () => {
-    // Use await rather than callback
-    sync.getBytesInUse(
-      "notes",
-      (bytesInUse) =>
-        (notesMemoryUsed = Math.floor(
-          (bytesInUse / sync.QUOTA_BYTES_PER_ITEM) * 100
-        ))
+  const getMemoryUsed = async () => {
+    const bytesInUse = await sync.getBytesInUse("notes");
+    notesMemoryUsed = Math.floor(
+      (bytesInUse / sync.QUOTA_BYTES_PER_ITEM) * 100
     );
 
     // XXX: redundant?
