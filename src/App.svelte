@@ -59,15 +59,13 @@
     );
 
     // XXX: redundant?
-    onChanged.addListener(({ changes }) => {
+    onChanged.addListener(async ({ changes }) => {
       for (const key in changes) {
         if (key == "notes") {
-          chrome.storage?.sync.getBytesInUse(
-            "notes",
-            (bytesInUse) =>
-              (notesMemoryUsed = Math.floor(
-                (bytesInUse / sync.QUOTA_BYTES_PER_ITEM) * 100
-              ))
+          sync.getBytesInUse("notes");
+          const bytesInUse = await sync.getBytesInUse("notes");
+          notesMemoryUsed = Math.floor(
+            (bytesInUse / sync.QUOTA_BYTES_PER_ITEM) * 100
           );
         }
       }
