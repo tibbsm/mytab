@@ -48,8 +48,6 @@
 
   const initializeMemory = () => {
     getMemoryUsed();
-    // XXX: redundant?
-    onChanged.addListener(() => getMemoryUsed());
   };
 
   const getMemoryUsed = async () => {
