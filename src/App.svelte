@@ -56,7 +56,6 @@
       (bytesInUse / sync.QUOTA_BYTES_PER_ITEM) * 100
     );
 
-    // XXX: redundant?
     onChanged.addListener(async ({ changes }) => {
       for (const key in changes) {
         if (key == "notes") {
