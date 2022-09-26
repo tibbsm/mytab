@@ -52,6 +52,7 @@
 
   const getMemoryUsed = async () => {
     const bytesInUse = await sync.getBytesInUse("notes");
+
     notesMemoryUsed = Math.floor(
       (bytesInUse / sync.QUOTA_BYTES_PER_ITEM) * 100
     );
