@@ -3,8 +3,10 @@
   import { debounce } from "lodash-es";
   import { onMount } from "svelte";
 
-  const { storage } = chrome;
-  const { sync, onChanged } = storage;
+  // XXX: check for chrome?
+  const {
+    storage: { sync, onChanged },
+  } = chrome;
 
   $: notesMemoryUsed = 0;
   $: time = new Date();
