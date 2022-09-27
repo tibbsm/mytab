@@ -71,7 +71,7 @@
   };
 
   const getColor = (percent: number): string => {
-    return percent > 90 ? "red" : percent > 70 ? "yellow" : "green";
+    return percent > 90 ? "#B33A3A" : percent > 70 ? "yellow" : "green";
   };
 
   initializeNotes();
