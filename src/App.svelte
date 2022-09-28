@@ -3,14 +3,13 @@
   import { debounce } from "lodash-es";
   import { onMount } from "svelte";
 
-  // XXX: check for chrome?
-  const {
-    storage: { sync, onChanged },
-  } = chrome;
-
   $: notesMemoryUsed = 0;
   $: time = new Date();
   $: date = time.toLocaleDateString();
+
+  const {
+    storage: { sync, onChanged },
+  } = chrome;
 
   let notes: string;
 
@@ -48,11 +47,7 @@
     });
   };
 
-  const initializeMemory = () => {
-    getMemoryUsed();
-  };
-
-  const getMemoryUsed = async () => {
+  const initializeMemory = async () => {
     const bytesInUse = await sync.getBytesInUse("notes");
 
     notesMemoryUsed = Math.floor(
