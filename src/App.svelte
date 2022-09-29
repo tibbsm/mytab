@@ -56,7 +56,7 @@
 
     onChanged.addListener(async ({ changes }) => {
       for (const key in changes) {
-        if (key == "notes") {
+        if (key === "notes") {
           sync.getBytesInUse("notes");
           const bytesInUse = await sync.getBytesInUse("notes");
           notesMemoryUsed = Math.floor(
