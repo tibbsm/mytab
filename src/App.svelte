@@ -90,10 +90,10 @@
 
 <div class="page-wrapper">
   <div class="link-wrapper">
-    {#each links as link, i}
-      <a href={link[1]}>
+    {#each links as [title, href], i}
+      <a {href}>
         <div class="link">
-          {i + 1}) {link[0]}
+          {i + 1}) {title}
         </div>
       </a>
     {/each}
