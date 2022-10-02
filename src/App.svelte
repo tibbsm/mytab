@@ -67,8 +67,9 @@
     });
   };
 
+  // fixme: change fn name
   const getColor = (percent: number): string => {
-    return percent > 90 ? "#d9534f" : percent > 70 ? "#f0ad4e" : "#5cb85c";
+    return percent > 90 ? "success" : percent > 70 ? "warn" : "danger";
   };
 
   initializeNotes();
@@ -106,9 +107,8 @@
   <div class="memory-wrapper">
     <div class="meter">
       <span
-        style={`width: ${notesMemoryUsed}%; background-color: ${getColor(
-          notesMemoryUsed
-        )}`}
+        style={`width: ${notesMemoryUsed}%;`}
+        class={getColor(notesMemoryUsed)}
       />
       <p>({notesMemoryUsed}%)</p>
     </div>
@@ -201,6 +201,18 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
+  .success {
+    color: #d9534f;
+  }
+
+  .warn {
+    color: #f0ad4e;
+  }
+
+  .danger {
+    color: #5cb85c;
+  }
+
   /* Time */
   .date-time-wrapper {
     position: absolute;
