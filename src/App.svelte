@@ -68,7 +68,7 @@
   };
 
   // fixme: change fn name
-  const getColor = (percent: number): string => {
+  const getStatus = (percent: number): string => {
     return percent > 90 ? "success" : percent > 70 ? "warn" : "danger";
   };
 
@@ -108,7 +108,7 @@
     <div class="meter">
       <span
         style={`width: ${notesMemoryUsed}%;`}
-        class={getColor(notesMemoryUsed)}
+        class={getStatus(notesMemoryUsed)}
       />
       <p>({notesMemoryUsed}%)</p>
     </div>
