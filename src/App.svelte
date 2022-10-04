@@ -67,7 +67,6 @@
     });
   };
 
-  // fixme: change fn name
   const getStatus = (percent: number): string => {
     return percent > 90 ? "success" : percent > 70 ? "warn" : "danger";
   };
