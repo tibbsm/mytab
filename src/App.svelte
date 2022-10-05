@@ -100,7 +100,7 @@
   </div>
   <div
     bind:innerHTML={notes}
-    on:keyup={debounce(() => saveNotes(), 250)}
+    on:keyup={debounce(() => saveNotes(), 300)}
     contenteditable
   />
   <div class="memory-wrapper">
@@ -109,6 +109,7 @@
         style={`width: ${notesMemoryUsed}%;`}
         class={getStatus(notesMemoryUsed)}
       />
+      <!-- FIXME not showing -->
       <p>({notesMemoryUsed}%)</p>
     </div>
   </div>
@@ -200,6 +201,7 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
+
   .success {
     color: #d9534f;
   }
