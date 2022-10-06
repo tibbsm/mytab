@@ -25,6 +25,13 @@
     return ("0".repeat(padding) + str).slice(-1 * padding);
   };
 
+  const getFormattedTime = (time: Date) => {
+    return `${padLeft(`${time.getHours()}`, 2)}:${padLeft(
+      `${time.getMinutes()}`,
+      2
+    )}:${padLeft(`${time.getSeconds()}`, 2)}`;
+  };
+
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.metaKey && e.altKey) {
       const code = e.code.includes("Digit")
@@ -118,10 +125,7 @@
       {date}
     </div>
     <div>
-      {padLeft(`${time.getHours()}`, 2)}:{padLeft(
-        `${time.getMinutes()}`,
-        2
-      )}:{padLeft(`${time.getSeconds()}`, 2)}
+      {getFormattedTime(time)}
     </div>
   </div>
 </div>
