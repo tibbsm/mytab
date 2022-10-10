@@ -32,6 +32,7 @@
       .join(":");
   };
 
+  // FIXME:...
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.metaKey && e.altKey) {
       const code = e.code.includes("Digit")
