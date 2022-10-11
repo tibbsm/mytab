@@ -32,15 +32,13 @@
       .join(":");
   };
 
-  // FIXME:...
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.metaKey && e.altKey) {
-      const code = e.code.includes("Digit")
-        ? e.code.replace("Digit", "")
-        : false;
-      const key = isNaN(Number(code)) ? null : Number(code) - 1;
-      if (key != null && key >= 0 && key <= 8 && links[key]) {
-        window.location.href = links[key][1];
+      if (e.code.includes("Digit")) {
+        const key = Number(e.code.at(-1)) - 1;
+        if (key != null && key >= 0 && key <= 8 && links[key]) {
+          window.location.href = links[key][1];
+        }
       }
     }
   };
