@@ -97,7 +97,7 @@
     {#each links as [title, href], i}
       <a {href}>
         <div class="link">
-          {i + 1}) {title}
+          {`${i + 1}) ${title}`}
         </div>
       </a>
     {/each}
