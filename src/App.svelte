@@ -113,9 +113,7 @@
         style={`width: ${notesMemoryUsed}%;`}
         class={getStatus(notesMemoryUsed)}
       />
-      {() => {
-        /* FIXME: notes memory not showing */
-      }}
+      {() => /* FIXME: notes memory not showing */ {}}
       <p>({notesMemoryUsed}%)</p>
     </div>
   </div>
