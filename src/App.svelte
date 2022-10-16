@@ -4,8 +4,8 @@
   import { onMount } from "svelte";
 
   $: notesMemoryUsed = 0;
-  $: time = new Date();
-  $: date = time.toLocaleDateString();
+  $: now = new Date();
+  $: localeDateString = now.toLocaleDateString();
 
   const {
     storage: { sync: chromeSync, onChanged: chromeOnChanged },
@@ -16,7 +16,7 @@
 
   onMount(() => {
     const interval = setInterval(() => {
-      time = new Date();
+      now = new Date();
     }, 1000);
     // NOTE: called when the component is unmounted
     return () => clearInterval(interval);
@@ -119,10 +119,10 @@
   </div>
   <div class="date-time-wrapper">
     <div>
-      {date}
+      {localeDateString}
     </div>
     <div>
-      {getFormattedTime(time)}
+      {getFormattedTime(now)}
     </div>
   </div>
 </div>
