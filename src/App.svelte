@@ -5,7 +5,6 @@
 
   $: notesMemoryUsed = 0;
   $: now = new Date();
-  $: localeDateString = now.toLocaleDateString();
 
   const {
     storage: { sync: chromeSync, onChanged: chromeOnChanged },
@@ -119,7 +118,7 @@
   </div>
   <div class="date-time-wrapper">
     <div>
-      {localeDateString}
+      {now.toLocaleDateString()}
     </div>
     <div>
       {getFormattedTime(now)}
