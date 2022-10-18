@@ -110,7 +110,7 @@
     <div class="meter">
       <span
         style={`width: ${notesMemoryUsed}%;`}
-        class={getStatus(notesMemoryUsed)}
+        class={`meter-progress ${getStatus(notesMemoryUsed)}`}
       />
       {() => /* FIXME: notes memory not showing */ {}}
       <p>({notesMemoryUsed}%)</p>
@@ -191,7 +191,7 @@
     border-radius: 25px;
     overflow: hidden;
   }
-  .memory-wrapper .meter > span {
+  .memory-wrapper .meter > .meter-progress {
     position: relative;
     overflow: hidden;
     display: block;
