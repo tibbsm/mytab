@@ -9,9 +9,10 @@
   const {
     storage: { sync: chromeSync, onChanged: chromeOnChanged },
   } = chrome;
+
   const { QUOTA_BYTES_PER_ITEM } = chromeSync;
 
-  let notes: string;
+  let notes = "";
 
   onMount(() => {
     const interval = setInterval(() => {
@@ -21,8 +22,8 @@
     return () => clearInterval(interval);
   });
 
-  const padLeft = (str: string, padding: number) => {
-    return ("0".repeat(padding) + str).slice(-1 * padding);
+  const padLeft = (s: string, padding: number) => {
+    return ("0".repeat(padding) + s).slice(-1 * padding);
   };
 
   const getFormattedTime = (time: Date) => {
@@ -113,7 +114,7 @@
         class={`meter-progress ${getStatus(notesMemoryUsed)}`}
       />
       {() => /* FIXME: notes memory not showing */ {}}
-      <p>({notesMemoryUsed}%)</p>
+      <p class="meter-text">({notesMemoryUsed}%)</p>
     </div>
   </div>
   <div class="date-time-wrapper">
@@ -181,7 +182,7 @@
   }
 
   /* Memory */
-  .memory-wrapper p {
+  .memory-wrapper .meter-text {
     color: var(--light);
   }
   .meter {
