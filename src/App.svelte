@@ -1,4 +1,5 @@
 <script lang="ts">
+  // FIXME: make object instead of array
   import links from "./links";
   import { debounce } from "lodash-es";
   import { onMount } from "svelte";
@@ -33,12 +34,10 @@
   };
 
   const onKeyDown = (e: KeyboardEvent) => {
-    if (e.metaKey && e.altKey) {
-      if (e.code.includes("Digit")) {
-        const key = Number(e.code.at(-1)) - 1;
-        if (key != null && key >= 0 && key <= 8 && links[key]) {
-          window.location.href = links[key][1];
-        }
+    if (e.metaKey && e.altKey && e.code.includes("Digit")) {
+      const key = Number(e.code.at(-1)) - 1;
+      if (key != null && key >= 0 && key <= 8 && links[key]) {
+        window.location.href = links[key][1];
       }
     }
   };
