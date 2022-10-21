@@ -42,10 +42,6 @@
     }
   };
 
-  const saveNotes = () => {
-    chromeSync.set({ notes });
-  };
-
   const initializeNotes = () => {
     chromeSync.get(["notes"], ({ notes: n }) => {
       notes = n ?? "";
@@ -103,7 +99,7 @@
   </div>
   <div
     bind:innerHTML={notes}
-    on:keyup={debounce(() => saveNotes(), 300)}
+    on:keyup={debounce(() => chromeSync.set({ notes }), 300)}
     contenteditable
   />
   <div class="memory-wrapper">
