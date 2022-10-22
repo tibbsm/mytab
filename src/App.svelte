@@ -88,6 +88,7 @@
 <svelte:window on:keydown={onKeyDown} />
 
 <div class="page-wrapper">
+  <!-- LINKS -->
   <div class="link-wrapper">
     {#each links as [title, href], i}
       <a {href}>
@@ -97,21 +98,32 @@
       </a>
     {/each}
   </div>
+
+  <!-- NOTES -->
   <div
+    class="notes"
     bind:innerHTML={notes}
     on:keyup={debounce(() => chromeSync.set({ notes }), 300)}
     contenteditable
   />
+
+  <!-- MEMORY -->
   <div class="memory-wrapper">
     <div class="meter">
       <span
         style={`width: ${notesMemoryUsed}%;`}
         class={`meter-progress ${getStatus(notesMemoryUsed)}`}
       />
-      {() => /* FIXME: notes memory not showing */ {}}
+      {() => /* 
+      FIXME: notes memory not showing 
+      FIXME: only show when low
+      FIXME: save to disk option when low
+      */ {}}
       <p class="meter-text">({notesMemoryUsed}%)</p>
     </div>
   </div>
+
+  <!-- DATE TIME -->
   <div class="date-time-wrapper">
     <div>
       {now.toLocaleDateString()}
@@ -150,12 +162,6 @@
   }
 
   /* Links */
-  .link-wrapper {
-    border: 1px solid var(--white);
-    border-radius: 5px;
-    padding: 1em;
-    width: fit-content;
-  }
   .link {
     color: var(--white);
     padding-bottom: 1em;
@@ -163,8 +169,15 @@
     font-size: 1.25em;
   }
 
+  .link-wrapper {
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    padding: 1em;
+    width: fit-content;
+  }
+
   /* Notes */
-  [contenteditable] {
+  .notes[contenteditable] {
     width: 50%;
     border-radius: 5px;
     padding: 0.5em;
@@ -180,6 +193,7 @@
   .memory-wrapper .meter-text {
     color: var(--light);
   }
+
   .meter {
     height: 1em;
     width: 25%;
@@ -187,6 +201,7 @@
     border-radius: 25px;
     overflow: hidden;
   }
+
   .memory-wrapper .meter > .meter-progress {
     position: relative;
     overflow: hidden;
