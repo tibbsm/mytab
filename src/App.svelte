@@ -1,6 +1,6 @@
 <script lang="ts">
   // FIXME: make object instead of array
-  import links from "./links";
+  import { links } from "./links";
   import { debounce } from "lodash-es";
   import { onMount } from "svelte";
 
