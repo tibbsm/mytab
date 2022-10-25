@@ -88,7 +88,6 @@
 <svelte:window on:keydown={onKeyDown} />
 
 <div class="page-wrapper">
-  
   <!-- LINKS -->
   <div class="link-wrapper">
     {#each links as [title, href], i}
@@ -116,9 +115,9 @@
         class={`meter-progress ${getStatus(notesMemoryUsed)}`}
       />
       {() => /* 
-      FIXME: notes memory not showing 
-      FIXME: only show when low
-      FIXME: save to disk option when low
+      FIXME: memory not showing 
+      TODO: only show when low
+      TODO: save to disk option when low
       */ {}}
       <p class="meter-text">({notesMemoryUsed}%)</p>
     </div>
