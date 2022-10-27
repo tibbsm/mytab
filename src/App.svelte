@@ -10,7 +10,6 @@
   const {
     storage: { sync: chromeSync, onChanged: chromeOnChanged },
   } = chrome;
-
   const { QUOTA_BYTES_PER_ITEM } = chromeSync;
 
   let notes = "";
@@ -50,7 +49,6 @@
 
   const initializeMemory = async () => {
     const bytesInUse = await chromeSync.getBytesInUse("notes");
-
     notesMemoryUsed = Math.floor((bytesInUse / QUOTA_BYTES_PER_ITEM) * 100);
 
     chromeOnChanged.addListener(async ({ changes }) => {
