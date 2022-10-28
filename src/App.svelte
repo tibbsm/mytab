@@ -106,17 +106,17 @@
   />
 
   <!-- MEMORY -->
+  <!-- 
+    TODO: save to disk option when low
+    TODO: only show when low
+   -->
+
   <div class="memory-wrapper">
     <div class="meter">
       <span
         style={`width: ${notesMemoryUsed}%;`}
         class={`meter-progress ${getStatus(notesMemoryUsed)}`}
       />
-      {() => /* 
-      FIXME: memory not showing 
-      TODO: only show when low
-      TODO: save to disk option when low
-      */ {}}
       <p class="meter-text">({notesMemoryUsed}%)</p>
     </div>
   </div>
@@ -190,6 +190,7 @@
   /* Memory */
   .memory-wrapper .meter-text {
     color: var(--light);
+    margin: 0;
   }
 
   .meter {
@@ -197,7 +198,6 @@
     width: 25%;
     background: #555;
     border-radius: 25px;
-    overflow: hidden;
   }
 
   .memory-wrapper .meter > .meter-progress {
@@ -212,15 +212,15 @@
   }
 
   .success {
-    color: #d9534f;
+    background-color: #d9534f;
   }
 
   .warn {
-    color: #f0ad4e;
+    background-color: #f0ad4e;
   }
 
   .danger {
-    color: #5cb85c;
+    background-color: #5cb85c;
   }
 
   /* Time */
