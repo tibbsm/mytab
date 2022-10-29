@@ -51,7 +51,7 @@
     const bytesInUse = await chromeSync.getBytesInUse("notes");
     notesMemoryUsed = Math.floor((bytesInUse / QUOTA_BYTES_PER_ITEM) * 100);
 
-    chromeOnChanged.addListener(async ({ changes }) => {
+    chromeOnChanged.addListener(async (changes) => {
       for (const key in changes) {
         if (key === "notes") {
           chromeSync.getBytesInUse("notes");
