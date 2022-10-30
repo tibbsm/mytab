@@ -1,8 +1,8 @@
 <script lang="ts">
   // FIXME: make object instead of array
-  import { links } from "./links";
-  import { debounce } from "lodash-es";
-  import { onMount } from "svelte";
+  import { links } from './links';
+  import { debounce } from 'lodash-es';
+  import { onMount } from 'svelte';
 
   $: notesMemoryUsed = 0;
   $: now = new Date();
@@ -12,7 +12,7 @@
   } = chrome;
   const { QUOTA_BYTES_PER_ITEM } = chromeSync;
 
-  let notes = "";
+  let notes = '';
 
   onMount(() => {
     const interval = setInterval(() => {
@@ -23,17 +23,17 @@
   });
 
   const padLeft = (s: string, padding: number) => {
-    return ("0".repeat(padding) + s).slice(-1 * padding);
+    return ('0'.repeat(padding) + s).slice(-1 * padding);
   };
 
   const getFormattedTime = (time: Date) => {
     return [time.getHours(), time.getMinutes(), time.getSeconds()]
       .map((unit) => `${padLeft(`${unit}`, 2)}`)
-      .join(":");
+      .join(':');
   };
 
   const onKeyDown = (e: KeyboardEvent) => {
-    if (e.metaKey && e.altKey && e.code.includes("Digit")) {
+    if (e.metaKey && e.altKey && e.code.includes('Digit')) {
       const key = Number(e.code.at(-1)) - 1;
       if (key != null && key >= 0 && key <= 8 && links[key]) {
         window.location.href = links[key][1];
@@ -42,20 +42,20 @@
   };
 
   const initializeNotes = () => {
-    chromeSync.get(["notes"], ({ notes: n }) => {
-      notes = n ?? "";
+    chromeSync.get(['notes'], ({ notes: n }) => {
+      notes = n ?? '';
     });
   };
 
   const initializeMemory = async () => {
-    const bytesInUse = await chromeSync.getBytesInUse("notes");
+    const bytesInUse = await chromeSync.getBytesInUse('notes');
     notesMemoryUsed = Math.floor((bytesInUse / QUOTA_BYTES_PER_ITEM) * 100);
 
     chromeOnChanged.addListener(async (changes) => {
       for (const key in changes) {
-        if (key === "notes") {
-          chromeSync.getBytesInUse("notes");
-          const bytesInUse = await chromeSync.getBytesInUse("notes");
+        if (key === 'notes') {
+          chromeSync.getBytesInUse('notes');
+          const bytesInUse = await chromeSync.getBytesInUse('notes');
           notesMemoryUsed = Math.floor(
             (bytesInUse / QUOTA_BYTES_PER_ITEM) * 100
           );
@@ -65,7 +65,7 @@
   };
 
   const getStatus = (percent: number): string => {
-    return percent > 90 ? "success" : percent > 70 ? "warn" : "danger";
+    return percent > 90 ? 'success' : percent > 70 ? 'warn' : 'danger';
   };
 
   initializeNotes();
@@ -74,7 +74,7 @@
 
 <svelte:head>
   <title>My Tab</title>
-  <html lang="en" />
+  <html lang="en"></html>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
   <link
@@ -83,13 +83,13 @@
   />
 </svelte:head>
 
-<svelte:window on:keydown={onKeyDown} />
+<svelte:window on:keydown="{onKeyDown}" />
 
 <div class="page-wrapper">
   <!-- LINKS -->
   <div class="link-wrapper">
     {#each links as [title, href], i}
-      <a {href}>
+      <a href="{href}">
         <div class="link">
           {`${i + 1}) ${title}`}
         </div>
@@ -100,10 +100,10 @@
   <!-- NOTES -->
   <div
     class="notes"
-    bind:innerHTML={notes}
-    on:keyup={debounce(() => chromeSync.set({ notes }), 300)}
+    bind:innerHTML="{notes}"
+    on:keyup="{debounce(() => chromeSync.set({ notes }), 300)}"
     contenteditable
-  />
+  ></div>
 
   <!-- MEMORY -->
   <!-- 
@@ -114,9 +114,8 @@
   <div class="memory-wrapper">
     <div class="meter">
       <span
-        style={`width: ${notesMemoryUsed}%;`}
-        class={`meter-progress ${getStatus(notesMemoryUsed)}`}
-      />
+        style="{`width: ${notesMemoryUsed}%;`}"
+        class="{`meter-progress ${getStatus(notesMemoryUsed)}`}"></span>
       <p class="meter-text">({notesMemoryUsed}%)</p>
     </div>
   </div>
@@ -142,7 +141,7 @@
     --white: #ffffff;
   }
   :global(*) {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   :global(body) {
     background-color: var(--black);
