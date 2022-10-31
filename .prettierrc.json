@@ -1,4 +1,6 @@
 {
   "singleQuote": true,
-  "svelteStrictMode": true
+  "svelteStrictMode": true,
+  "arrowParens": "always",
+  "svelteIndentScriptAndStyle": true
 }
