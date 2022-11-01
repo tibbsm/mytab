@@ -2,5 +2,6 @@
   "singleQuote": true,
   "svelteStrictMode": true,
   "arrowParens": "always",
-  "svelteIndentScriptAndStyle": true
+  "svelteIndentScriptAndStyle": true,
+  "printWidth": 80
 }
