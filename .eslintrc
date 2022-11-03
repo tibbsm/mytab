@@ -11,5 +11,7 @@
   "rules": {
     "no-console": "error"
   },
+  // FIXME: extend standard eslint? & prettier
+  // "extends": [""],
   "parser": "@babel/eslint-parser"
 }
