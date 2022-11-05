@@ -8,6 +8,7 @@
     "dev": "rollup -c -w",
     "start": "sirv public",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "check": "svelte-check"
   },
   "devDependencies": {
@@ -21,6 +22,8 @@
     "@types/chrome": "0.0.157",
     "@types/lodash-es": "^4.17.4",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.4.0",
     "prettier-plugin-svelte": "^2.4.0",
     "rollup": "^2.56.3",
