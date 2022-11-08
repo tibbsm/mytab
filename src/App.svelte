@@ -139,15 +139,19 @@
     --light: #bc6ff1;
     --white: #ffffff;
   }
+
   :global(*) {
     font-family: 'Roboto', sans-serif;
   }
+
   :global(body) {
     background-color: var(--black);
   }
+
   :global(h1, h2) {
     color: var(--light);
   }
+
   :global(input, textarea) {
     background-color: #1b1e23;
     color: var(--light);
