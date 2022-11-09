@@ -131,6 +131,7 @@
 </div>
 
 <style>
+  /* TODO: reset css */
   /* Global Styles */
   :global(:root) {
     --black: #121212;
