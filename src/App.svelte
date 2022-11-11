@@ -111,11 +111,11 @@
    -->
 
   <div class="memory-wrapper">
-    <div class="meter">
+    <div class="memory-meter">
       <span
         style="{`width: ${notesMemoryUsed}%;`}"
         class="{`meter-progress ${getStatus(notesMemoryUsed)}`}"></span>
-      <p class="meter-text">({notesMemoryUsed}%)</p>
+      <p class="memory-meter-text">({notesMemoryUsed}%)</p>
     </div>
   </div>
 
@@ -203,7 +203,7 @@
     border-radius: 25px;
   }
 
-  .memory-wrapper .meter > .meter-progress {
+  .memory-meter > .meter-progress {
     position: relative;
     overflow: hidden;
     display: block;
