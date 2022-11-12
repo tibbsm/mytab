@@ -191,7 +191,7 @@
   }
 
   /* Memory */
-  .memory-wrapper .meter-text {
+  .meter-text {
     color: var(--light);
     margin: 0;
   }
@@ -203,7 +203,7 @@
     border-radius: 25px;
   }
 
-  .memory-meter > .meter-progress {
+  .meter-progress {
     position: relative;
     overflow: hidden;
     display: block;
