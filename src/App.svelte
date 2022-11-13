@@ -6,6 +6,9 @@
   $: notesMemoryUsed = 0;
   $: now = new Date();
 
+  // XXX: What is better here?
+  // 1) destructure
+  // 2) access each time using chrome.storage...
   const {
     storage: { sync: chromeSync, onChanged: chromeOnChanged },
   } = chrome;
