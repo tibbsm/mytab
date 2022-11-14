@@ -24,8 +24,8 @@
     return () => clearInterval(interval);
   });
 
-  const padLeft = (s: string, padding: number) => {
-    return ('0'.repeat(padding) + s).slice(-1 * padding);
+  const padLeft = (s: string, padding: number, padWith = '0') => {
+    return (padWith.repeat(padding) + s).slice(-1 * padding);
   };
 
   const getFormattedTime = (time: Date) => {
