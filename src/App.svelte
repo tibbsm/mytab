@@ -29,9 +29,11 @@
   };
 
   const getFormattedTime = (time: Date) => {
-    return [time.getHours(), time.getMinutes(), time.getSeconds()]
-      .map((unit) => `${padLeft(`${unit}`, 2)}`)
-      .join(':');
+    return [
+      padLeft(`${time.getHours()}`, 2),
+      padLeft(`${time.getMinutes()}`, 2),
+      padLeft(`${time.getSeconds()}`, 2),
+    ].join(':');
   };
 
   const onKeyDown = (e: KeyboardEvent) => {
