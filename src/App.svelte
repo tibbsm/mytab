@@ -113,7 +113,6 @@
     TODO: save to disk option when low
     TODO: only show when low
    -->
-
   <div class="memory-wrapper">
     <div class="memory-meter">
       <span
