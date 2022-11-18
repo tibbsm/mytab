@@ -68,7 +68,7 @@
   };
 
   const getStatus = (percent: number): string => {
-    return percent > 90 ? 'success' : percent > 70 ? 'warn' : 'danger';
+    return percent > 90 ? 'danger' : percent > 70 ? 'warn' : 'success';
   };
 
   initializeNotes();
@@ -111,9 +111,12 @@
   <!-- MEMORY -->
   <!-- 
     TODO: save to disk option when low
-    TODO: only show when low
+    TODO: remove success class?
    -->
-  <div class="memory-wrapper">
+  <div
+    class="memory-wrapper"
+    style="{notesMemoryUsed > 70 ? '' : 'display: none'}"
+  >
     <div class="memory-meter">
       <span
         style="{`width: ${notesMemoryUsed}%;`}"
@@ -194,12 +197,12 @@
   }
 
   /* Memory */
-  .meter-text {
+  .memory-meter-text {
     color: var(--light);
     margin: 0;
   }
 
-  .meter {
+  .memory-meter {
     height: 1em;
     width: 25%;
     background: #555;
@@ -218,7 +221,7 @@
   }
 
   .success {
-    background-color: #d9534f;
+    background-color: #5cb85c;
   }
 
   .warn {
@@ -226,7 +229,7 @@
   }
 
   .danger {
-    background-color: #5cb85c;
+    background-color: #d9534f;
   }
 
   /* Time */
