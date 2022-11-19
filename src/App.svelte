@@ -71,6 +71,12 @@
     return percent > 90 ? 'danger' : percent > 70 ? 'warn' : 'success';
   };
 
+  const saveToFile = (text: string) => {
+    const plainText = notes.replace('</div>', '\n').replace(/<[^>]*>?/gm, '');
+    window.open('data:text/csv;charset=utf-8,' + plainText);
+    notes = '';
+  };
+
   initializeNotes();
   initializeMemory();
 </script>
@@ -107,6 +113,7 @@
     on:keyup="{debounce(() => chromeSync.set({ notes }), 300)}"
     contenteditable
   ></div>
+  <button on:click="{() => saveToFile(notes)}">Save to file</button>
 
   <!-- MEMORY -->
   <!-- 
