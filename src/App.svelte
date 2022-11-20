@@ -116,10 +116,6 @@
   <button on:click="{() => saveToFile(notes)}">Save to file</button>
 
   <!-- MEMORY -->
-  <!-- 
-    TODO: save to disk option when low
-    TODO: remove success class?
-   -->
   <div
     class="memory-wrapper"
     style="{notesMemoryUsed > 70 ? '' : 'display: none'}"
