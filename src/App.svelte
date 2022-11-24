@@ -40,7 +40,8 @@
     if (e.metaKey && e.altKey && e.code.includes('Digit')) {
       const key = Number(e.code.at(-1)) - 1;
       if (key != null && key >= 0 && key <= 8 && links[key]) {
-        window.location.href = links[key][1];
+        const { url } = links[key];
+        window.location.href = url;
       }
     }
   };
@@ -97,10 +98,10 @@
 <div class="page-wrapper">
   <!-- LINKS -->
   <div class="link-wrapper">
-    {#each links as [title, href], i}
-      <a href="{href}">
+    {#each Object.entries(links) as [i, { name, url }]}
+      <a href="{url}">
         <div class="link">
-          {`${i + 1}) ${title}`}
+          {`${i + 1}) ${name}`}
         </div>
       </a>
     {/each}
