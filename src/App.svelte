@@ -38,6 +38,7 @@
 
   const onKeyDown = (e: KeyboardEvent) => {
     if (e.metaKey && e.altKey && e.code.includes('Digit')) {
+      // NOTE: 0-index the passed keycode e.g. (1 => 0)
       const key = Number(e.code.at(-1)) - 1;
       if (key != null && key >= 0 && key <= 8 && links[key]) {
         const { url } = links[key];
