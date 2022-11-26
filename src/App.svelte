@@ -6,6 +6,9 @@
   $: notesMemoryUsed = 0;
   $: now = new Date();
 
+  // TODO: Setup TS correctly
+  // https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
+
   // XXX: What is better here?
   // 1) destructure
   // 2) access each time using chrome.storage...
@@ -48,8 +51,8 @@
   };
 
   const initializeNotes = () => {
-    chromeSync.get(['notes'], ({ notes: n }) => {
-      notes = n ?? '';
+    chromeSync.get(['notes'], ({ notes: savedNotes }) => {
+      notes = savedNotes ?? '';
     });
   };
 
