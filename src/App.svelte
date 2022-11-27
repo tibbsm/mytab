@@ -8,6 +8,7 @@
 
   // TODO: Setup TS correctly
   // https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript
+  // any values should not be allowed (strict)
 
   // XXX: What is better here?
   // 1) destructure
