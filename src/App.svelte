@@ -58,17 +58,18 @@
     });
   };
 
-  const initializeMemory = async () => {
-    const bytesInUse = await chromeSync.getBytesInUse('notes');
+  const getMemUsed = async (key: string) => {
+    const bytesInUse = await chromeSync.getBytesInUse(key);
     notesMemoryUsed = Math.floor((bytesInUse / QUOTA_BYTES_PER_ITEM) * 100);
+  };
 
-    chromeOnChanged.addListener(async (changes) => {
+  const initializeMemory = async () => {
+    getMemUsed('notes');
+    chromeOnChanged.addListener((changes) => {
+      // TODO: Instead of iterating, just look for key and assign
       for (const key in changes) {
         if (key === 'notes') {
-          const bytesInUse = await chromeSync.getBytesInUse('notes');
-          notesMemoryUsed = Math.floor(
-            (bytesInUse / QUOTA_BYTES_PER_ITEM) * 100
-          );
+          getMemUsed('notes');
         }
       }
     });
@@ -78,6 +79,7 @@
     return percent > 90 ? 'danger' : percent > 70 ? 'warn' : 'success';
   };
 
+  // FIXME: Is this the best way? Will it suffice for my usage?
   const saveToFile = (text: string) => {
     const plainText = notes.replace('</div>', '\n').replace(/<[^>]*>?/gm, '');
     window.open('data:text/csv;charset=utf-8,' + plainText);
@@ -114,13 +116,15 @@
   </div>
 
   <!-- NOTES -->
-  <div
-    class="notes"
-    bind:innerHTML="{notes}"
-    on:keyup="{debounce(() => chromeSync.set({ notes }), 300)}"
-    contenteditable
-  ></div>
-  <button on:click="{() => saveToFile(notes)}">Save to file</button>
+  <div class="notes-wrapper">
+    <div
+      class="notes"
+      bind:innerHTML="{notes}"
+      on:keyup="{debounce(() => chromeSync.set({ notes }), 300)}"
+      contenteditable
+    ></div>
+    <button on:click="{() => saveToFile(notes)}">Save to file</button>
+  </div>
 
   <!-- MEMORY -->
   <div
@@ -149,6 +153,7 @@
 <style>
   /* Global Styles */
 
+  /* FIXME: Move to separate file? */
   /* Reset CSS */
   :global(html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video) {
     margin: 0;
