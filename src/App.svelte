@@ -14,9 +14,10 @@
   // 1) destructure
   // 2) access each time using chrome.storage...
   const {
-    storage: { sync: chromeSync, onChanged: chromeOnChanged },
+    storage: { sync: chromeStorageSync, onChanged: chromeStorageOnChanged },
   } = chrome;
-  const { QUOTA_BYTES_PER_ITEM } = chromeSync;
+
+  const { QUOTA_BYTES_PER_ITEM } = chromeStorageSync;
 
   let notes = '';
 
@@ -53,19 +54,19 @@
   };
 
   const initializeNotes = () => {
-    chromeSync.get(['notes'], ({ notes: savedNotes }) => {
+    chromeStorageSync.get(['notes'], ({ notes: savedNotes }) => {
       notes = savedNotes ?? '';
     });
   };
 
   const getMemUsed = async (key: string) => {
-    const bytesInUse = await chromeSync.getBytesInUse(key);
+    const bytesInUse = await chromeStorageSync.getBytesInUse(key);
     notesMemoryUsed = Math.floor((bytesInUse / QUOTA_BYTES_PER_ITEM) * 100);
   };
 
   const initializeMemory = async () => {
     getMemUsed('notes');
-    chromeOnChanged.addListener((changes) => {
+    chromeStorageOnChanged.addListener((changes) => {
       // TODO: Instead of iterating, just look for key and assign
       for (const key in changes) {
         if (key === 'notes') {
@@ -120,7 +121,7 @@
     <div
       class="notes"
       bind:innerHTML="{notes}"
-      on:keyup="{debounce(() => chromeSync.set({ notes }), 300)}"
+      on:keyup="{debounce(() => chromeStorageSync.set({ notes }), 300)}"
       contenteditable
     ></div>
     <button on:click="{() => saveToFile(notes)}">Save to file</button>
