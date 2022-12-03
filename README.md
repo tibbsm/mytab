@@ -1,6 +1,6 @@
 # Custom New Chrome Tab
 
-A simple new tab Chrome extension. 
+A simple Chrome extension for customizing new tabs. 
 
 Made with Svelte.
 
