@@ -13,6 +13,7 @@
   // XXX: What is better here?
   // 1) destructure
   // 2) access each time using chrome.storage...
+  // 3) don't destructure but define (ie let xxx = chrome.sync...)
   const {
     storage: { sync: chromeStorageSync, onChanged: chromeStorageOnChanged },
   } = chrome;
