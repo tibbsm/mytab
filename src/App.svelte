@@ -30,7 +30,6 @@
     return () => clearInterval(interval);
   });
 
-  // XXX: Move to utils file?
   const padLeft = (s: string, padding: number, padWith = '0') => {
     return (padWith.repeat(padding) + s).slice(-1 * padding);
   };
