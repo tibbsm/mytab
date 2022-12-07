@@ -23,11 +23,9 @@
   let notes = '';
 
   onMount(() => {
-    const interval = setInterval(() => {
+    setInterval(() => {
       now = new Date();
     }, 1000);
-    // NOTE: called when the component is unmounted
-    return () => clearInterval(interval);
   });
 
   const padLeft = (s: string, padding: number, padWith = '0') => {
