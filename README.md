@@ -7,3 +7,7 @@ Made with Svelte.
 ## Build project
 
 Use `npm run build` to build the extension.
+
+## Dev
+
+Use `npm run build` to run the local dev environment. 
