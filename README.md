@@ -10,4 +10,4 @@ Use `npm run build` to build the extension.
 
 ## Dev
 
-Use `npm run build` to run the local dev environment. 
+Use `npm run dev` to run the local dev environment. 
