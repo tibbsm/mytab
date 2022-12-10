@@ -57,18 +57,18 @@
     });
   };
 
-  const getMemUsed = async (key: string) => {
+  const getMemoryUsed = async (key: string) => {
     const bytesInUse = await chromeStorageSync.getBytesInUse(key);
     notesMemoryUsed = Math.floor((bytesInUse / QUOTA_BYTES_PER_ITEM) * 100);
   };
 
   const initializeMemory = async () => {
-    getMemUsed('notes');
+    getMemoryUsed('notes');
     chromeStorageOnChanged.addListener((changes) => {
       // TODO: Instead of iterating, just look for key and assign
       for (const key in changes) {
         if (key === 'notes') {
-          getMemUsed('notes');
+          getMemoryUsed('notes');
         }
       }
     });
