@@ -82,7 +82,7 @@
   const saveToFile = (text: string) => {
     const plainText = notes.replace('</div>', '\n').replace(/<[^>]*>?/gm, '');
     window.open('data:text/csv;charset=utf-8,' + plainText);
-    // Prompt to delete before deleting
+    // TODO: Prompt to delete before deleting
     notes = '';
   };
 
