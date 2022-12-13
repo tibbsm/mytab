@@ -83,7 +83,9 @@
     const plainText = notes.replace('</div>', '\n').replace(/<[^>]*>?/gm, '');
     window.open('data:text/csv;charset=utf-8,' + plainText);
     // TODO: Prompt to delete before deleting
-    notes = '';
+    if (confirm('Delete notes?')) {
+      notes = '';
+    }
   };
 
   initializeNotes();
