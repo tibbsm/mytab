@@ -111,7 +111,7 @@
     {#each Object.entries(links) as [i, { name, url }]}
       <a href="{url}">
         <div class="link">
-          {`${i + 1}) ${name}`}
+          {`${+i + 1}) ${name}`}
         </div>
       </a>
     {/each}
