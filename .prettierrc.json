@@ -1,7 +1,0 @@
-{
-  "singleQuote": true,
-  "svelteStrictMode": true,
-  "arrowParens": "always",
-  "svelteIndentScriptAndStyle": true,
-  "printWidth": 80
-}
