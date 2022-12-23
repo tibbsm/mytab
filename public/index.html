@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-
     <title>My Tab</title>
-
-    <!-- XXX: Do I even need HTMX? -->
+    <!-- FIXME: not a popup -->
     <script src="./popup.js"></script>
   </head>
 
@@ -15,6 +13,7 @@
     <ul>
       <li>Theme (dark)</li>
       <!-- NOTE: Combine memory to make it store more notes. -->
+      <!-- NOTE: Or read from memory -->
       <li>Notes</li>
       <li>Shortcuts/Links</li>
       <li>Website tracker</li>
@@ -26,6 +25,7 @@
     </ul>
 
     <!-- NOTES -->
+    <!-- FIXME: Set notes to saved notes -->
     <textarea id="note"></textarea>
     <button id="save">Save</button>
   </body>
