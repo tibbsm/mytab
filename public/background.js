@@ -1,11 +1,13 @@
-// NOTE: wait for msg from front to save
-chrome.storage.local.get("note", function (items) {
-  var note = items.note;
-  // Save the note to a file
-  console.log(chrome);
-  console.log(chrome.downloads);
-  chrome.downloads.download({
-    url: "data:text/plain," + encodeURIComponent(note),
-    filename: "notes.txt",
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  console.log(request, sender);
+
+  // Save the notes to a file
+  chrome.storage.local.get("note", function (items) {
+    chrome.downloads.download({
+      url: "data:text/plain," + encodeURIComponent(items.note),
+      filename: "notes.txt",
+    });
   });
+
+  sendResponse({ saveNotes: "saved" });
 });
