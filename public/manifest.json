@@ -1,9 +1,11 @@
 {
   "name": "My Tab",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "version": "1.0.0",
-
-  "permissions": ["tabs", "storage"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["tabs", "storage", "downloads"],
   "chrome_url_overrides": {
     "newtab": "index.html"
   }
