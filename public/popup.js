@@ -10,9 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     chrome.runtime.sendMessage({ saveNotes: true });
   });
 
-  // FIXME: add debounce
+  // FIXME: add debounce => lib?
   // noteEl.addEventListener("input", function () {
-  //   console.log("notes updated");
   //   var note = document.getElementById("note").value;
   //   chrome.storage.local.set({ note });
   // });
