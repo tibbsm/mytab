@@ -2,8 +2,15 @@
 console.log("popup.js");
 
 document.addEventListener("DOMContentLoaded", function () {
-  const noteEl = document.getElementById("save");
-  noteEl.addEventListener("click", function () {
+  const saveBtn = document.getElementById("save");
+  const note = document.getElementById("note");
+  console.log(note);
+  chrome.storage.local.get("note", function (items) {
+    note.value = items.note;
+    console.log("note initialized");
+  });
+
+  saveBtn.addEventListener("click", function () {
     console.log("save button clicked");
     var note = document.getElementById("note").value;
     chrome.storage.local.set({ note });
@@ -11,8 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // FIXME: add debounce => lib?
-  // noteEl.addEventListener("input", function () {
-  //   var note = document.getElementById("note").value;
-  //   chrome.storage.local.set({ note });
-  // });
+  note.addEventListener("input", () => {
+    processChange();
+  });
 });
+
+function debounce(func, timeout = 300) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+}
+function saveNote() {
+  var note = document.getElementById("note").value;
+  chrome.storage.local.set({ note });
+  console.log("note saved");
+}
+const processChange = debounce(() => saveNote());
