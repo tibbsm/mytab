@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// XXX What does args do in this context?
 function debounce(func, timeout = 300) {
   let timer;
   return (...args) => {
@@ -32,9 +33,11 @@ function debounce(func, timeout = 300) {
     }, timeout);
   };
 }
+
 function saveNote() {
   var note = document.getElementById("note").value;
   chrome.storage.local.set({ note });
   console.log("note saved");
 }
+
 const processChange = debounce(() => saveNote());
