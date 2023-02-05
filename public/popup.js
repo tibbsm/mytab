@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
     chrome.runtime.sendMessage({ saveNotes: true });
   });
 
-  // FIXME: add debounce => lib?
   note.addEventListener("input", () => {
     processChange();
   });
 });
 
+// FIXME: add debounce => lib?
 // XXX What does args do in this context?
 function debounce(func, timeout = 300) {
   let timer;
