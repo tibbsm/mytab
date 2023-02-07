@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // FIXME: add debounce => lib?
 // XXX What does args do in this context?
+// XXX how is timer shared between the different functions calls?
 function debounce(func, timeout = 300) {
   let timer;
   return (...args) => {
