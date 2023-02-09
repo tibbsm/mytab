@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // FIXME: add debounce => lib directory
 // XXX What does args do in this context?
 // XXX how is timer shared between the different functions calls?
+// NOTE: The rest parameter syntax allows a function to accept an indefinite number of arguments as an array,
 function debounce(func, timeout = 300) {
   let timer;
   return (...args) => {
