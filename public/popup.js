@@ -35,6 +35,8 @@ function debounce(func, timeout = 300) {
 
     // create a new timers, which calls the passed in functions with the passed in args
     timer = setTimeout(() => {
+      // apply takes this () and calls function with args
+      // NOTE: whats the difference between .call(), .apply(), bind(),
       func.apply(this, args);
     }, timeout);
   };
