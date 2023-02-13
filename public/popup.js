@@ -37,6 +37,8 @@ function debounce(func, timeout = 300) {
     timer = setTimeout(() => {
       // apply takes this () and calls function with args
       // NOTE: whats the difference between .call(), .apply(), bind(),
+      // NOTE: bind does not call the function, just creates it.
+      // NOTE: call just calls it while apply allows you to pass args
       // NOTE: So if Im correct you are passing the context of this function to the next one
       // NOTE: Therefore you are able to have access to timer (to clear it and redefine it)
       func.apply(this, args);
