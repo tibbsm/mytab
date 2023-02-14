@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // NOTE: The rest parameter syntax allows a function to accept an indefinite number of arguments as an array,
 function debounce(func, timeout = 300) {
   let timer;
-  // return a function
+  // return a function and spread the args (pass an array to it)
   return (...args) => {
     // which first clears the existing times. how? (this)
     clearTimeout(timer);
