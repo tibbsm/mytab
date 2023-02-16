@@ -35,7 +35,8 @@ function debounce(func, timeout = 300) {
 
     // create a new timers, which calls the passed in functions with the passed in args
     timer = setTimeout(() => {
-      // apply takes this context and calls func with args
+      // TODO: move this to notes
+      // NOTE: apply takes this context and calls func with args
       // NOTE: whats the difference between .call(), .apply(), bind(),
       // NOTE: bind does not call the function, just creates it.
       // NOTE: call just calls it while apply allows you to pass args
