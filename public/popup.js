@@ -23,25 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // FIXME: add debounce => lib directory
-// XXX What does args do in this context?
-// XXX how is timer shared between the different functions calls?
-// NOTE: The rest parameter syntax allows a function to accept an indefinite number of arguments as an array,
 function debounce(func, timeout = 300) {
   let timer;
-  // return a function and spread the args (pass an array to it)
   return (...args) => {
-    // which first clears the existing times. how? (this)
     clearTimeout(timer);
-
-    // create a new timers, which calls the passed in functions with the passed in args
     timer = setTimeout(() => {
-      // TODO: move this to notes
-      // NOTE: apply takes this context and calls func with args
-      // NOTE: whats the difference between .call(), .apply(), bind(),
-      // NOTE: bind does not call the function, just creates it.
-      // NOTE: call just calls it while apply allows you to pass args
-      // NOTE: So if Im correct you are passing the context of this function to the next one
-      // NOTE: Therefore you are able to have access to timer (to clear it and redefine it)
       func.apply(this, args);
     }, timeout);
   };
