@@ -1,17 +1,16 @@
 // FIXME: file name, not a popup
 console.log("popup.js");
 
+// TODO: Useful logs (needed?)
 document.addEventListener("DOMContentLoaded", function () {
-  const saveBtn = document.getElementById("save");
+  const saveButton = document.getElementById("save");
   const note = document.getElementById("note");
-  console.log(note);
   chrome.storage.local.get("note", function (items) {
     note.value = items.note;
     console.log("note initialized");
   });
 
-  saveBtn.addEventListener("click", function () {
-    console.log("save button clicked");
+  saveButton.addEventListener("click", function () {
     var note = document.getElementById("note").value;
     chrome.storage.local.set({ note });
     chrome.runtime.sendMessage({ saveNotes: true });
