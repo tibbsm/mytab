@@ -4,19 +4,27 @@ console.log("popup.js");
 // TODO: Useful logs (needed?)
 document.addEventListener("DOMContentLoaded", function () {
   const saveButton = document.getElementById("save");
-  const note = document.getElementById("note");
-  chrome.storage.local.get("note", function (items) {
-    note.value = items.note;
-    console.log("note initialized");
-  });
+  const noteEl = document.getElementById("note");
+
+  if (noteEl != null) {
+    chrome.storage.local.get("note", function (items) {
+      if (items.note != null) {
+        noteEl.value = items.note;
+        console.log("note initialized");
+      }
+      console.log("note was not found in local storage");
+    });
+  } else {
+    console.log("Could note fund note element");
+  }
 
   saveButton.addEventListener("click", function () {
-    var note = document.getElementById("note").value;
+    var note = noteEl.value;
     chrome.storage.local.set({ note });
     chrome.runtime.sendMessage({ saveNotes: true });
   });
 
-  note.addEventListener("input", () => {
+  noteEl.addEventListener("input", () => {
     processChange();
   });
 });
