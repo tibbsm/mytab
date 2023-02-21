@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   noteEl.addEventListener("input", () => {
-    processChange();
+    debounce(() => saveNote(), 300);
   });
 });
 
@@ -46,5 +46,3 @@ function saveNote() {
   chrome.storage.local.set({ note });
   console.log("note saved");
 }
-
-const processChange = debounce(() => saveNote());
