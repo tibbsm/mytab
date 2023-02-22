@@ -43,6 +43,8 @@ function debounce(func, timeout = 300) {
 
 function saveNote() {
   var note = document.getElementById("note").value;
-  chrome.storage.local.set({ note });
-  console.log("note saved");
+  if (note != null && note !== "") {
+    chrome.storage.local.set({ note });
+    console.log("note saved");
+  }
 }
