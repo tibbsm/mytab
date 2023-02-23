@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   saveButton.addEventListener("click", function () {
-    var note = noteEl.value;
-    chrome.storage.local.set({ note });
+    const noteValue = noteEl.value;
+    chrome.storage.local.set({ note: noteValue });
     chrome.runtime.sendMessage({ saveNotes: true });
   });
 
@@ -42,9 +42,11 @@ function debounce(func, timeout = 300) {
 }
 
 function saveNote() {
-  var note = document.getElementById("note").value;
-  if (note != null && note !== "") {
-    chrome.storage.local.set({ note });
-    console.log("note saved");
+  const noteEl = document.getElementById("note");
+  var noteElValue = noteEl.value;
+  if (noteElValue != null && noteElValue !== "") {
+    chrome.storage.local.set({ note: noteElValue }).then(() => {
+      console.log("note saved");
+    });
   }
 }
