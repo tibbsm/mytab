@@ -10,9 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     chrome.storage.local.get("note", function (items) {
       if (items.note != null) {
         noteEl.value = items.note;
-        console.log("note initialized");
+        console.log("Note initialized");
+      } else {
+        console.log("Note was not found in local storage");
       }
-      console.log("note was not found in local storage");
     });
   } else {
     console.log("Could note fund note element");
@@ -25,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   noteEl.addEventListener("input", () => {
-    debounce(() => saveNote(), 300);
+    // NOTE: not the prettiest thing in the world?
+    debounce(() => saveNote(), 300)();
   });
 });
 
