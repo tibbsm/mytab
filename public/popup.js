@@ -26,10 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   noteEl.addEventListener("input", () => {
-    // NOTE: not the prettiest thing in the world?
-    debounce(() => saveNote(), 300)();
+    debouncedSaveNote();
   });
 });
+
+const debouncedSaveNote = debounce(() => saveNote(), 300);
 
 // FIXME: add debounce => lib directory
 // TODO: How would I do this?
