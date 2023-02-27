@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   } else {
-    console.log("Could note fund note element");
+    console.log("Could note find note element");
   }
 
   saveButton.addEventListener("click", function () {
