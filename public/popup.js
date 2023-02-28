@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const debouncedSaveNote = debounce(() => saveNote(), 300);
+const debouncedSaveNote = debounce(() => saveNote());
 
 // FIXME: add debounce => lib directory
 // TODO: How would I do this?
