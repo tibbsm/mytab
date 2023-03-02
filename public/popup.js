@@ -32,8 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const debouncedSaveNote = debounce(() => saveNote());
 
-// FIXME: add debounce => lib directory
-// TODO: How would I do this?
+// FIXME: add debounce => lib directory. How would I do this?
 function debounce(func, timeout = 300) {
   let timer;
   return (...args) => {
