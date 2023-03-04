@@ -3,4 +3,5 @@
 A simple Chrome extension for customizing new tabs.
 
 ## Features 
+* Favorite links
 * TODO 
