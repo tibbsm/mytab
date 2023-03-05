@@ -1,6 +1,30 @@
 // FIXME: file name, not a popup
 console.log("popup.js");
 
+const debounce = (func, timeout = 300) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+};
+
+const debouncedSaveNote = debounce(() => saveNote());
+
+const saveNote = () => {
+  const noteEl = document.getElementById("note");
+  const noteElValue = noteEl.value;
+  if (noteElValue != null && noteElValue !== "") {
+    chrome.storage.local.set({ note: noteElValue });
+    // FIXME: gets called on undefined
+    // .then(() => {
+    //   console.log("note saved");
+    // });
+  }
+};
+
 // TODO: Useful logs (needed?)
 document.addEventListener("DOMContentLoaded", function () {
   const saveButton = document.getElementById("save");
@@ -29,25 +53,3 @@ document.addEventListener("DOMContentLoaded", function () {
     debouncedSaveNote();
   });
 });
-
-const debouncedSaveNote = debounce(() => saveNote());
-
-function debounce(func, timeout = 300) {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      func.apply(this, args);
-    }, timeout);
-  };
-}
-
-function saveNote() {
-  const noteEl = document.getElementById("note");
-  const noteElValue = noteEl.value;
-  if (noteElValue != null && noteElValue !== "") {
-    chrome.storage.local.set({ note: noteElValue }).then(() => {
-      console.log("note saved");
-    });
-  }
-}
