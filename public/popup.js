@@ -17,11 +17,9 @@ const saveNote = () => {
   const noteEl = document.getElementById("note");
   const noteElValue = noteEl.value;
   if (noteElValue != null && noteElValue !== "") {
-    chrome.storage.local.set({ note: noteElValue });
-    // FIXME: gets called on undefined
-    // .then(() => {
-    //   console.log("note saved");
-    // });
+    chrome.storage.local.set({ note: noteElValue })?.then(() => {
+      console.log("note saved");
+    });
   }
 };
 
