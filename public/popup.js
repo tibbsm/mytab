@@ -17,7 +17,7 @@ const saveNote = () => {
   const noteEl = document.getElementById("note");
   const noteElValue = noteEl.value;
   if (noteElValue != null && noteElValue !== "") {
-    chrome.storage.local.set({ note: noteElValue })?.then(() => {
+    chrome.storage.local.set({ note: noteElValue }, () => {
       console.log("note saved");
     });
   }
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const noteEl = document.getElementById("note");
 
   if (noteEl != null) {
-    chrome.storage.local.get("note", function (items) {
+    chrome.storage.local.get("note", (items) => {
       if (items.note != null) {
         noteEl.value = items.note;
         console.log("Note initialized");
@@ -41,9 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Could note find note element");
   }
 
-  saveButton.addEventListener("click", function () {
+  saveButton.addEventListener("click", () => {
     const noteValue = noteEl.value;
-    chrome.storage.local.set({ note: noteValue });
+    chrome.storage.local.set({ note: noteValue }, () => {
+      console.log("note set to: ", noteValue);
+    });
     chrome.runtime.sendMessage({ saveNotes: true });
   });
 
