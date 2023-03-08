@@ -41,13 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Could note find note element");
   }
 
-  saveButton.addEventListener("click", () => {
-    const noteValue = noteEl.value;
-    chrome.storage.local.set({ note: noteValue }, () => {
-      console.log("note set to: ", noteValue);
+  if (saveButton != null) {
+    saveButton.addEventListener("click", () => {
+      const noteValue = noteEl.value;
+      chrome.storage.local.set({ note: noteValue }, () => {
+        console.log("note set to: ", noteValue);
+      });
+      chrome.runtime.sendMessage({ saveNotes: true });
     });
-    chrome.runtime.sendMessage({ saveNotes: true });
-  });
+  } else {
+    console.log("Could note find save button element");
+  }
 
   noteEl.addEventListener("input", () => {
     debouncedSaveNote();
