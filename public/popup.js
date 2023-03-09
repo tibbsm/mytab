@@ -23,7 +23,6 @@ const saveNote = () => {
   }
 };
 
-// TODO: Useful logs (needed?)
 document.addEventListener("DOMContentLoaded", function () {
   const saveButton = document.getElementById("save");
   const noteEl = document.getElementById("note");
