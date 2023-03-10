@@ -1,10 +1,58 @@
-console.log("popup");
+// FIXME: file name, not a popup
+console.log("popup.js");
+
+const debounce = (func, timeout = 300) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
+  };
+};
+
+const debouncedSaveNote = debounce(() => saveNote());
+
+const saveNote = () => {
+  const noteEl = document.getElementById("note");
+  const noteElValue = noteEl.value;
+  if (noteElValue != null && noteElValue !== "") {
+    chrome.storage.local.set({ note: noteElValue }, () => {
+      console.log("note saved");
+    });
+  }
+};
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("save").addEventListener("click", function () {
-    console.log("save button clicked");
-    var note = document.getElementById("note").value;
-    chrome.storage.local.set({ note });
-    chrome.runtime.sendMessage({ saveNotes: true });
+  const saveButton = document.getElementById("save");
+  const noteEl = document.getElementById("note");
+
+  if (noteEl != null) {
+    chrome.storage.local.get("note", (items) => {
+      if (items.note != null) {
+        noteEl.value = items.note;
+        console.log("Note initialized");
+      } else {
+        console.log("Note was not found in local storage");
+      }
+    });
+  } else {
+    console.log("Could note find note element");
+  }
+
+  if (saveButton != null) {
+    saveButton.addEventListener("click", () => {
+      const noteValue = noteEl.value;
+      chrome.storage.local.set({ note: noteValue }, () => {
+        console.log("note set to: ", noteValue);
+      });
+      chrome.runtime.sendMessage({ saveNotes: true });
+    });
+  } else {
+    console.log("Could note find save button element");
+  }
+
+  noteEl.addEventListener("input", () => {
+    debouncedSaveNote();
   });
 });
