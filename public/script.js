@@ -1,5 +1,4 @@
-// FIXME: file name, not a popup
-console.log("popup.js");
+console.log("script.js");
 
 const debounce = (func, timeout = 300) => {
   let timer;
