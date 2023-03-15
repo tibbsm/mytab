@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   console.log("background: ,", request, sender);
 
-  // Save the notes to a file
+  // NOTE: save the notes to a file
   chrome.storage.local.get("note", (items) => {
     if (items.note != null) {
       chrome.downloads.download({
