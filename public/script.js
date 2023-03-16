@@ -15,7 +15,7 @@ const debouncedSaveNote = debounce(() => saveNote());
 const saveNote = () => {
   const noteEl = document.getElementById("note");
   const noteElValue = noteEl.value;
-  if (noteElValue != null && noteElValue !== "") {
+  if (noteElValue !== "") {
     chrome.storage.local.set({ note: noteElValue }, () => {
       console.log("note saved");
     });
