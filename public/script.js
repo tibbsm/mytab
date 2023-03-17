@@ -1,5 +1,6 @@
 console.log("script.js");
 
+// NOTE: preferred notes for functions and such
 const debounce = (func, timeout = 300) => {
   let timer;
   return (...args) => {
