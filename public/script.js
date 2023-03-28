@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       chrome.runtime.sendMessage({ saveNotes: true });
     });
   } else {
-    console.log("Could note find save button element");
+    console.log("Could not find save button element");
   }
 
   noteEl.addEventListener("input", () => {
