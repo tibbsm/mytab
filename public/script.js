@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   } else {
-    console.log("Could note find note element");
+    console.log("Could not find note element");
   }
 
   if (saveButton != null) {
