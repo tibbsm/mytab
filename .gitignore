@@ -1,4 +1,2 @@
-/node_modules/
-/public/build/
-/src/links.ts
+/public
 .DS_Store
