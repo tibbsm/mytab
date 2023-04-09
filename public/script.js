@@ -13,12 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Note was not found in local storage");
       }
     });
-
     if (counterEl != null) {
       noteEl.addEventListener("input", () => {
         const count = noteEl.value.length;
         counterEl.textContent = `${count} / 5000`;
       });
+    } else {
+      console.log("Could not find counter element");
     }
   } else {
     console.log("Could not find note element");
