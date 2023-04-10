@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     chrome.storage.local.get("note", (items) => {
       if (items.note != null) {
         noteEl.value = items.note;
-        const count = noteEl.value.length;
-        counterEl.textContent = `${count} / 5000`;
+        counterEl.textContent = `${items.note.length} / 5000`;
         console.log("Note initialized");
       } else {
         console.log("Note was not found in local storage");
@@ -15,8 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     if (counterEl != null) {
       noteEl.addEventListener("input", () => {
-        const count = noteEl.value.length;
-        counterEl.textContent = `${count} / 5000`;
+        counterEl.textContent = `${noteEl.value.length} / 5000`;
       });
     } else {
       console.log("Could not find counter element");
