@@ -1,7 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const noteEl = document.getElementById("note");
   const counterEl = document.getElementById("counter");
-
   if (noteEl != null) {
     chrome.storage.local.get("note", (items) => {
       if (items.note != null) {
