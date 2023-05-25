@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (counterEl != null) {
       noteEl.addEventListener("input", () => {
         counterEl.textContent = `${noteEl.value.length} / 5000`;
+        chrome.storage.local.set({ note: noteEl.value });
       });
     } else {
       console.log("Could not find counter element");
